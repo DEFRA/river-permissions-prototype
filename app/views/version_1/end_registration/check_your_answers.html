@@ -1,0 +1,94 @@
+{% extends "layout.html" %} {% block page_title %} Check your answers {% endblock %} {% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Check your answers before sending your application
+  </h1>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
+            Licence details
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Tom Riddle
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Contact details
+        </td>
+        <td>
+          15 Maple Drive
+          <br /> Kendal
+          <br /> LA9 5BN
+          <br /> Tel: 01539 725 345
+          <br /> Email: tomriddle@gmail.com
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Location of thing
+        </td>
+        <td>
+          TQ 16570 73746
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Thing
+        </td>
+        <td>
+          Scaffolding
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-medium">Now send your application</h2>
+
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>
+
+  <div class="form-group">
+    <a href="confirmation-page" class="button">Accept and finish registering</a>
+  </div>
+
+</main>
+
+{% endblock %}

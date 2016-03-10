@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          What are your contact details?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Your business contact details</legend>
+
+          <!-- Full name -->
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full name</label>
+            <p class="form-hint">For example, John Smith</p>
+            <input type="text" class="form-control" id="full-name" />
+          </div>
+
+          <!-- Telephone number -->
+          <div class="form-group">
+            <label class="form-label" for="telephone">Your business telephone number</label>
+            <p class="form-hint">This can be a landline or mobile</p>
+            <input type="text" class="form-control" id="telephone" />
+          </div>
+
+          <!-- Email address -->
+          <div class="form-group">
+            <label class="form-label" for="email">Your business email address</label>
+            <p class="form-hint">We'll use this to confirm the registration</p>
+            <input type="text" class="form-control" id="confirm-telephone" />
+          </div>
+
+          <!-- Confirm email address -->
+          <div class="form-group">
+            <label class="form-label" for="confirm-email">Confirm business email address</label>
+            <input type="text" class="form-control" id="confirm-email" />
+          </div>
+
+        </fieldset>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue" />
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

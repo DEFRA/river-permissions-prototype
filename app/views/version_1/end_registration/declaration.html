@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Declaration
+        </h1>
+
+        <div class="heading-with-border">
+          <img src="/public/images/icon-important.png" alt="Important notice" class="inline icon-important" />
+          <p class="bold-small inline">You can be prosecuted and fined if you provide false or misleading information</p>
+        </div>
+
+        <br />
+
+        <p>I confirm that:</p>
+
+        <ul class="list-bullet">
+          <li>the information I have provided is true</li>
+          <li>the business or organisation carrying out the thing has authorised me to provide this information</li>
+        </ul>
+
+        <br />
+
+        <p class="">See the Environment Agency's <a href="">privacy policy</a> to find out how it uses personal information</p>
+
+        <br />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Accept - complete this registration" />
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

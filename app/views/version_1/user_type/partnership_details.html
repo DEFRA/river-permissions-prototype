@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Who's accountable for the thing?
+        </h1>
+
+        <h2 class="heading-medium">
+          Accountable partners
+        </h2>
+
+        <table summary="partner-details-summary" class="summary-table" role="presentation">
+          <thead>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>
+                <span class="bold-xsmall">Partnership name</span>
+                <br /> Premises
+                <br /> Streetline 1
+                <br /> Streetline 2
+                <br /> City
+                <br /> Postcode
+              </td>
+              <td></td>
+              <td><a href="" class="link">Remove details</a></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+        <div class="form-group">
+          <a href="" class="example-back-link">Add another partner</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue" />
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

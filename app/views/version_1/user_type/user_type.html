@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          What type of user are you?
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              What type of user are you?
+            </legend>
+
+            <label for="radio-part-1" class="block-label">
+              <input id="radio-part-1" type="radio" name="housing-act" value="Part 1" />
+              <span>Public organisation, for example local authority</span>
+            </label>
+
+            <label for="radio-part-2" class="block-label">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2" />
+              <span>Company</span>
+            </label>
+
+            <label for="radio-part-3" class="block-label">
+              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3" />
+              <span>Partnership</span>
+            </label>
+
+            <label for="radio-part-4" class="block-label">
+              <input id="radio-part-4" type="radio" name="housing-act" value="Part 4" />
+              <span>Individual, for example soletrader</span>
+            </label>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

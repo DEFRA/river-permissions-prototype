@@ -1,0 +1,181 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight">
+          <h1 class="heading-large">
+            Registration complete
+          </h1>
+        </div>
+
+        <h2 class="heading-medium">Your responsibilities</h2>
+
+        <p>The business or organisation responsible for carrying out the thing, agrees to:</p>
+
+        <ul class="list-bullet">
+          <li>comply with all conditions</li>
+          <li>carry out the thing without putting human health in danger or causing harm to the environment</li>
+        </ul>
+
+        <p>For the activity to remain exempt it must be carried out without:</p>
+
+        <ul class="list-bullet">
+          <li>causing risk to water, air, soil, plants or animals</li>
+          <li>causing a nuisance through noise and odours</li>
+          <li>negatively affecting the countryside or places of special interest</li>
+        </ul>
+
+        <p>In sensitive locations extra controls may be needed over and above those set out in the exemptions to make sure this happens.</p>
+
+
+        <table summary="business-contact-details-summary" class="summary-table" role="presentation">
+          <thead>
+            <tr>
+              <td class="bold-medium">Registration details</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Reference number</td>
+              <td>000001</td>
+            </tr>
+            <tr>
+              <td>Activation date</td>
+              <td>12 December 2015</td>
+            </tr>
+            <tr>
+              <td>Expiry date</td>
+              <td>11 December 2018</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+
+        <table summary="business-contact-details-summary" class="summary-table" role="presentation">
+          <thead>
+            <tr>
+              <td class="bold-medium">Type of user</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Type of user</td>
+              <td>Public organisation</td>
+            </tr>
+
+            <tr>
+              <td>Person responsible for the thing</td>
+              <td>John Smith</td>
+            </tr>
+
+            <tr>
+              <td>Address of person responsible</td>
+              <td>
+                Deanery Road, Bristol, BS1 5AH
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+        <table summary="business-contact-details-summary" class="summary-table" role="presentation">
+          <thead>
+            <tr>
+              <td class="bold-medium">Contact for the thing</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Name</td>
+              <td>Lesley Smith</td>
+            </tr>
+            <tr>
+              <td>Position</td>
+              <td>Manager</td>
+            </tr>
+            <tr>
+              <td>Telephone number</td>
+              <td>0117 900 1000</td>
+            </tr>
+
+            <tr>
+              <td>Address</td>
+              <td>
+                Deanery Road, Bristol, BS1 5AH
+              </td>
+            </tr>
+
+            <tr>
+              <td>Email</td>
+              <td>lesley@email.co.uk</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+        <table summary="business-contact-details-summary" class="summary-table" role="presentation">
+          <thead>
+            <tr>
+              <td class="bold-medium">Details about the thing</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Location of the thing</td>
+              <td>Deanery Road, Bristol, BS1 5AH</td>
+            </tr>
+
+            <tr>
+              <td>The thing</td>
+              <td>Exemption type</td>
+            </tr>
+
+            <tr>
+              <td>National grid reference</td>
+              <td>ST 58132 72695</td>
+            </tr>
+
+            <tr>
+              <td>Site details</td>
+              <td>Near the first cattle grid</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+        <br />
+
+        <p>If you need assistance, call the Environment Agency helpline: 03708 506506.</p>
+
+        <p>It's open Monday to Friday, between 8am and 6pm.</p>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

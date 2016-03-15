@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Check these exemptions before completing this registration
+        </h1>
+
+        <table summary="exemption-codes" role="presentation" class="exemption-table">
+          <thead>
+            <tr>
+              <th class="exemption-description"><span class="heading-small">Exemption</span></th>
+              <th class="exemption-description"><span class="heading-small">Description</span></th>
+              <th class="exemption-description"><span class="heading-small">Change</span></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="exemption">
+                <p class="heading-xlarge">4</p>
+              </td>
+              <td class="exemption-description">
+                <p>The construction of footbridges</p>
+              </td>
+              <td class="change-exemption">
+                <p><a href="">Change</a></p>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <br />
+
+        <p><a href="">Add another exemption</a></p>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Save and continue" />
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          What's the registration number of the company?
+        </h1>
+
+        <div class="form-group">
+          <details>
+            <summary id="show-hide-details-summary-0" aria controls="details-content-0" tabindex="0" aria-controls="details-content-0" role="button">
+              <span class="summary">What's this?</span>
+            </summary>
+
+            <div style="display:block" class="panel-indent" id="details-content-0">
+              <p> A company registration number is allocated by Companies House when a limited company is registered.</p>
+              <p>It comprises an 8 digit number or 2 letters followed by a 6 digit number.</p>
+            </div>
+          </details>
+        </div>
+
+        <fieldset>
+          <legend class="visuallyhidden">What's the registration number of the company?</legend>
+
+          <!-- Company number -->
+          <div class="form-group">
+            <label class="form-label" for="company-number">Company registration number</label>
+            <input type="text" class="form-control" id="company-number" />
+          </div>
+
+        </fieldset>
+
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue" />
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

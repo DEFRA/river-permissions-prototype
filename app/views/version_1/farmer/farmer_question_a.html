@@ -1,43 +1,44 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
-
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <form action="/" method="post" class="form">
 
-      <form action="/" method="post" class="form">
+    <a class="link-back" href="">Back</a>
 
-        <a class="link-back" href="">Back</a>
+    <div class="grid-row">
+      <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          Is this a new registration?
+          Will the thing take place on a farm?
         </h1>
 
         <div class="form-group">
           <fieldset>
 
             <legend class="visuallyhidden">
-              Is this a new registration?
+              Will the thing take place on a farm?
             </legend>
 
-            <label class="block-label" for="radio-home-address">
+            <label class="block-label" for="radio-farm-a">
               <input id="radio-yes" type="radio" name="radio-indent-group" value="Yes" /> Yes
             </label>
 
-            <label class="block-label" for="radio-other-address" data-target="example-other-address">
+            <label class="block-label" for="radio-farm-b" data-target="example-other-address">
               <input id="radio-no" type="radio" name="radio-indent-group" value="No" /> No
             </label>
 
           </fieldset>
         </div>
 
+
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />
         </div>
 
-      </form>
+      </div>
     </div>
-  </div>
-</main>
 
+  </form>
+
+</main>
 {% endblock %}

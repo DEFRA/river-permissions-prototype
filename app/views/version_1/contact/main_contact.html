@@ -9,7 +9,7 @@
       <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          Who should we contact about the thing?
+          Who should we contact about the activity?
         </h1>
 
         <fieldset>
@@ -44,6 +44,46 @@
             <div>Bristol</div>
             <div>BS1 5AH</div>
           </div>
+
+          <!-- Show and hide address-->
+          <details>
+            <summary id="show-hide-details-summary-1" aria controls="details-content-0" tabindex="0" aria-controls="details-content-0" role="button">
+              <span class="summary">Change this address</span>
+            </summary>
+            <div style="display:block" id="details-content-1">
+
+              <!-- Manual address look-up -->
+              <br />
+
+              <div class="form-group">
+                <label class="form-label" for="premises">Building name or number
+                </label>
+                <div class="form-hint">For example, a business premises name or house number</div>
+                <input type="text" class="form-control-1-2" id="premises" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="street_address">Street line 1</label>
+                <input type="text" class="form-control-1-2" id="street_address" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="locality">Street line 2 <span class="inline form-hint">(Optional)</span></label>
+                <input type="text" class="form-control-1-2" id="locality" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="city">Town</label>
+                <input type="text" class="form-control-1-2" id="city" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="postcode">Postcode</label>
+                <input type="text" class="form-control-1-4" id="postcode-2" />
+              </div>
+
+            </div>
+          </details>
 
           <!-- Email address -->
           <div class="form-group">

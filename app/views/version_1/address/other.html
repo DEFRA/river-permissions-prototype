@@ -9,17 +9,21 @@
       <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          What's the address of the public organisation?
+          What's the address of the business or organisation?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">What's the address of the public organisation?</legend>
+          <legend class="visuallyhidden">Address</legend>
 
-          <!-- Postcode look-up -->
+          <!-- Address -->
           <div class="form-group">
-            <label class="form-label" for="postcode">Enter a UK postcode</label>
-            <span class="form-hint">For example, BS1 5AH</span>
-            <input type="text" class="form-control" id="postcode" />
+            <label class="form-label" for="business_address">Select address</label>
+            <select class="address-select form-control">
+              <option value="business_address">3 addresses found</option>
+              <option value="business_address">Deanery Rd, Bristol, BS1 5AH</option>
+              <option value="business_address">Example address</option>
+              <option value="business_address">Example address</option>
+            </select>
           </div>
 
         </fieldset>
@@ -65,7 +69,7 @@
 
         <!-- Primary button -->
         <div class="form-group">
-          <input type="submit" class="button" value="Find address" />
+          <input type="submit" class="button" value="Continue" />
         </div>
 
       </div>

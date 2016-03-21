@@ -1,15 +1,16 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <form action="/" method="post" class="form">
 
-    <a class="link-back" href="">Back</a>
+  <a class="link-back" href="">Back</a>
 
-    <div class="grid-row">
-      <div class="column-two-thirds">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/" method="post" class="form">
 
         <h1 class="heading-large">
-          Add exemptions to this registration
+          Add all exemptions that apply to the activity
         </h1>
 
         <table summary="exemption-codes" role="presentation" class="exemption-table">
@@ -23,7 +24,7 @@
           <tbody>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">1</p>
+                <span class="heading-xlarge">1</span>
               </td>
               <td class="exemption-description">
                 <p>The erection of an electrical cable service crossing over a main river</p>
@@ -39,7 +40,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">2</p>
+                <span class="heading-xlarge">2</span>
               </td>
               <td class="exemption-description">
                 <p>The erection of a service crossing below the bed of a main river by directional drilling not involving an open cut technique.</p>
@@ -55,7 +56,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">3</p>
+                <span class="heading-xlarge">3</span>
               </td>
               <td class="exemption-description">
                 <p>Service crossings attached to the outside of existing structures over a main river</p>
@@ -71,7 +72,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">4</p>
+                <span class="heading-xlarge">4</span>
               </td>
               <td class="exemption-description">
                 <p>The construction of footbridges</p>
@@ -87,7 +88,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">5</p>
+                <span class="heading-xlarge">5</span>
               </td>
               <td class="exemption-description">
                 <p>The erection and use of temporary scaffolding in or over a main river in England</p>
@@ -103,7 +104,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">6</p>
+                <span class="heading-xlarge">6</span>
               </td>
               <td class="exemption-description">
                 <p>The temporary dewatering of a work area in England</p>
@@ -119,7 +120,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">7</p>
+                <span class="heading-xlarge">7</span>
               </td>
               <td class="exemption-description">
                 <p>Using effluent to clean a highway gravel bed</p>
@@ -135,7 +136,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">8</p>
+                <span class="heading-xlarge">8</span>
               </td>
               <td class="exemption-description">
                 <p>The maintenance of structures within the channel of a main river other than raised river or sea defences</p>
@@ -151,7 +152,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">9</p>
+                <span class="heading-xlarge">9</span>
               </td>
               <td class="exemption-description">
                 <p>The construction of a drinking bay on the bank of a main river</p>
@@ -167,7 +168,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">10</p>
+                <span class="heading-xlarge">10</span>
               </td>
               <td class="exemption-description">
                 <p>The construction of access platforms on the bank of a main river or that project into or over a main river</p>
@@ -183,7 +184,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">11</p>
+                <span class="heading-xlarge">11</span>
               </td>
               <td class="exemption-description">
                 <p>The construction of small outfall pipes and headwalls to main rivers</p>
@@ -199,7 +200,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">12</p>
+                <span class="heading-xlarge">12</span>
               </td>
               <td class="exemption-description">
                 <p>The repair and protection of main river banks using natural materials</p>
@@ -215,7 +216,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">13</p>
+                <span class="heading-xlarge">13</span>
               </td>
               <td class="exemption-description">
                 <p>Repair of bank slips and erosion</p>
@@ -231,7 +232,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">14</p>
+                <span class="heading-xlarge">14</span>
               </td>
               <td class="exemption-description">
                 <p>The installation of channel habitat structures made of natural materials excluding weirs and berms</p>
@@ -247,7 +248,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">15</p>
+                <span class="heading-xlarge">15</span>
               </td>
               <td class="exemption-description">
                 <p>The installation of rafts for surveys</p>
@@ -263,7 +264,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">16</p>
+                <span class="heading-xlarge">16</span>
               </td>
               <td class="exemption-description">
                 <p>Gravel-cleaning for fish-spawning beds</p>
@@ -279,7 +280,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">17</p>
+                <span class="heading-xlarge">17</span>
               </td>
               <td class="exemption-description">
                 <p>Placement of stones or logs in the channel of a main river in England for habitat enhancement</p>
@@ -295,7 +296,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">18</p>
+                <span class="heading-xlarge">18</span>
               </td>
               <td class="exemption-description">
                 <p>Construction of eel pass devices on existing structures</p>
@@ -311,7 +312,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">19</p>
+                <span class="heading-xlarge">19</span>
               </td>
               <td class="exemption-description">
                 <p>Construction of fish passage notches on an existing impoundment</p>
@@ -327,7 +328,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">20</p>
+                <span class="heading-xlarge">20</span>
               </td>
               <td class="exemption-description">
                 <p>The removal of silt and sand from within bridge arches in England and any material from within culverts in England</p>
@@ -343,7 +344,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">21</p>
+                <span class="heading-xlarge">21</span>
               </td>
               <td class="exemption-description">
                 <p>The removal of silt and sand adjacent to in-river structures in England</p>
@@ -359,7 +360,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">22</p>
+                <span class="heading-xlarge">22</span>
               </td>
               <td class="exemption-description">
                 <p>Dredging of no more than 1.5 kilometres of man-made ditches, land drains, agricultural drains and previously straightened watercourses classified as main rivers in England</p>
@@ -375,7 +376,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">23</p>
+                <span class="heading-xlarge">23</span>
               </td>
               <td class="exemption-description">
                 <p>Dredging of no more than 20 metres of any main river in England</p>
@@ -391,7 +392,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">24</p>
+                <span class="heading-xlarge">24</span>
               </td>
               <td class="exemption-description">
                 <p>The excavation of scrapes and shallow wetland features in a floodplain</p>
@@ -407,7 +408,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">25</p>
+                <span class="heading-xlarge">25</span>
               </td>
               <td class="exemption-description">
                 <p>The construction of raised flood defences around one to six adjoining properties in England</p>
@@ -423,7 +424,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">26</p>
+                <span class="heading-xlarge">26</span>
               </td>
               <td class="exemption-description">
                 <p>Construction of bankside wildlife refuge structures</p>
@@ -439,7 +440,7 @@
             </tr>
             <tr>
               <td class="exemption-description">
-                <p class="heading-xlarge">27</p>
+                <span class="heading-xlarge">27</span>
               </td>
               <td class="exemption-description">
                 <p>Improvement works for tracks and paths</p>
@@ -461,13 +462,13 @@
         <br />
 
         <div class="form-group">
-          <input type="submit" class="button" value="Check exemptions" />
+          <a class="button" href="/version_1/exemptions/check_exemptions" role="button">Add exemptions and continue</a>
         </div>
 
-      </div>
-    </div>
+      </form>
 
-  </form>
+    </div>
+  </div>
 
 </main>
 {% endblock %}

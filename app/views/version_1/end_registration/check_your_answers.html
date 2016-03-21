@@ -1,116 +1,128 @@
 {% extends "layout.html" %} {% block page_title %} Check your answers {% endblock %} {% block content %}
-
 <main id="content" role="main">
-  <form action="/" method="post" class="form">
+  {% include "includes/phase_banner_alpha.html" %}
 
-    <h1 class="heading-large">
+  <a class="link-back" href="">Back</a>
+
+  <h1 class="heading-large">
     Check your answers before completing this registration
   </h1>
 
-    <p class="panel-indent">
-      We’ll send a copy of this summary in the confirmation email
-    </p>
+  <p class="panel panel-border-wide">
+    We’ll send a copy of this summary in the confirmation email
+  </p>
 
-    <table class="check-your-answers">
+  <table class="check-your-answers">
 
-      <thead>
-        <tr>
-          <th colspan="2">
-            <h2 class="heading-medium">
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
             Registration details
           </h2>
-          </th>
-          <th>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Grid reference
-          </td>
-          <td>
-            ST 58132 72695
-          </td>
-          <td class="change-answer">
-            <a href="#">
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Grid reference
+        </td>
+        <td>
+          ST 58132 72695
+        </td>
+        <td class="change-answer">
+          <a href="#">
             Change <span class="visuallyhidden">Change grid reference</span>
           </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Exemption
-          </td>
-          <td>
-            Construction of footbridges
-          </td>
-          <td class="change-answer">
-            <a href="#">
-            Change <span class="visuallyhidden">Change exemption</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Exemption 4
+        </td>
+        <td>
+          Construction of footbridges
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Change exemption 4</span>
           </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Contact details
-          </td>
-          <td>
-            Tom Riddle
-            <br />15 Maple Drive
-            <br /> Kendal
-            <br /> LA9 5BN
-            <br /> Tel: 01539 725 345
-            <br /> Email: tom.riddle@email.com
-          </td>
-          <td class="change-answer">
-            <a href="#">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Exemption 8
+        </td>
+        <td>
+          Maintenance of structures within the channel of a main river
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Change <span class="visuallyhidden">Change exemption 8</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Contact details
+        </td>
+        <td>
+          Tom Riddle
+          <br />15 Maple Drive
+          <br /> Kendal
+          <br /> LA9 5BN
+          <br /> Tel: 01539 725 345
+          <br /> Email: tom.riddle@email.com
+        </td>
+        <td class="change-answer">
+          <a href="#">
             Change <span class="visuallyhidden">Change contact details</span>
           </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Type of user
-          </td>
-          <td>
-            Local authority
-          </td>
-          <td class="change-answer">
-            <a href="#">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Business type
+        </td>
+        <td>
+          Local authority
+        </td>
+        <td class="change-answer">
+          <a href="#">
             Change <span class="visuallyhidden">Change local authority</span>
           </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Activity contact
-          </td>
-          <td>
-            Tom Riddle
-            <br />15 Maple Drive
-            <br /> Kendal
-            <br /> LA9 5BN
-            <br /> Tel: 01539 725 345
-            <br /> Email: tom.riddle@email.com
-          </td>
-          <td class="change-answer">
-            <a href="#">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Activity contact
+        </td>
+        <td>
+          Tom Riddle
+          <br />15 Maple Drive
+          <br /> Kendal
+          <br /> LA9 5BN
+          <br /> Tel: 01539 725 345
+          <br /> Email: tom.riddle@email.com
+        </td>
+        <td class="change-answer">
+          <a href="#">
             Change <span class="visuallyhidden">Change contact details</span>
           </a>
-          </td>
-        </tr>
+        </td>
+      </tr>
 
-      </tbody>
-    </table>
+    </tbody>
+  </table>
 
-    <br />
+  <br />
 
-    <div class="form-group">
-      <a href="confirmation-page" class="button">Continue</a>
-    </div>
-
-  </form>
+  <div class="form-group">
+    <a class="button" href="/version_1/end_registration/declaration" role="button">Continue</a>
+  </div>
 
 </main>
 

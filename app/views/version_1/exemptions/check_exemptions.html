@@ -1,51 +1,65 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
   <form action="/" method="post" class="form">
 
-    <a class="link-back" href="">Back</a>
+    <h1 class="heading-large">
+      Check your answers before continuing
+    </h1>
 
-    <div class="grid-row">
-      <div class="column-two-thirds">
+    <div class="panel panel-border-wide">
+      <p>You have selected 2 exemptions for this registration</p>
+    </div>
 
-        <h1 class="heading-large">
-          Check these exemptions before completing this registration
-        </h1>
+    <table class="check-your-answers">
+      <thead>
+        <th colspan="3">
+          <h2 class="heading-medium">
+              Exemption details
+            </h2>
+        </th>
+      </thead>
+      <tbody>
 
-        <table summary="exemption-codes" role="presentation" class="exemption-table">
-          <thead>
-            <tr>
-              <th class="exemption-description"><span class="heading-small">Exemption</span></th>
-              <th class="exemption-description"><span class="heading-small">Description</span></th>
-              <th class="exemption-description"><span class="heading-small">Change</span></th>
-            </tr>
-          </thead>
-          <tbody>
+        <tr>
+          <td>
+            <span class="heading-large">4</span>
+          </td>
+          <td>
+            <p>The construction of footbridges</p>
+          </td>
+          <td class="change-answer">
+            <a href="#">Change <span class="visuallyhidden">Change exemption 4</span></a>
+          </td>
+        </tr>
 
-            <tr>
-              <td class="exemption">
-                <p class="heading-xlarge">4</p>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of footbridges</p>
-              </td>
-              <td class="change-exemption">
-                <p><a href="">Change</a></p>
-              </td>
-            </tr>
+        <tr>
+          <td>
+            <span class="heading-large">8</span>
+          </td>
+          <td>
+            <p>Maintenance of structures within the channel of a main river</p>
+          </td>
+          <td class="change-answer">
+            <a href="#">Change <span class="visuallyhidden">Change exemption 8</span></a>
+          </td>
+        </tr>
 
-          </tbody>
-        </table>
+      </tbody>
+    </table>
 
-        <br />
+    <br />
+    <br />
 
-        <p><a href="">Add another exemption</a></p>
+    <div class="form-group">
+      <a href="/version_1/exemptions/add_exemptions">Add another exemption</a>
+    </div>
 
-        <div class="form-group">
-          <input type="submit" class="button" value="Save and continue" />
-        </div>
-
-      </div>
+    <div class="form-group">
+      <a class="button" href="/version_1/contact/applicant_contact" role="button">Save and continue</a>
     </div>
 
   </form>

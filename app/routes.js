@@ -265,4 +265,23 @@ router.post('/version_1/end_registration/declaration', function(req, res) {
 });
 
 
+// DESIGN AREA ROUTING
+
+// Location
+
+// Redirects for grid reference
+
+router.post('/version_1/location/abstract_grid_references/choose_location_type', function (req,res) {
+  if (req.body['radio-inline-group']==="single_grid_reference"){
+    res.redirect('/version_1/location/abstract_grid_references/single_grid_reference');
+  }
+  if (req.body['radio-inline-group']==="two_more_grid_references"){
+    res.redirect('/version_1/location/abstract_grid_references/start_and_end_grid_references');
+  }
+  if (req.body['radio-inline-group']==="start_and_end_grid_references"){
+    res.redirect('/version_1/location/abstract_grid_references/two_more_grid_references');
+  }
+
+});
+
 module.exports = router;

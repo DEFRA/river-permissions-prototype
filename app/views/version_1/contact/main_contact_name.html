@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Contact name {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,17 +10,24 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          Who's carrying out the activity?
+          Who is responsible for the activity?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Name of person carrying out the activity</legend>
+          <legend class="visuallyhidden">Main contact name</legend>
 
           <!-- Full name -->
           <div class="form-group">
             <label class="form-label" for="full-name">Full name</label>
             <p class="form-hint">For example, John Smith</p>
             <input type="text" class="form-control" id="full-name" />
+          </div>
+
+          <!-- Position -->
+          <div class="form-group">
+            <label class="form-label" for="position">Position</label>
+            <p class="form-hint">For example, manager</p>
+            <input type="text" class="form-control" id="position" />
           </div>
 
         </fieldset>

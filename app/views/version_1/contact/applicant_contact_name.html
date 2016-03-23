@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Applicant name {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,16 +10,17 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          What's the registered name of the partnership?
+          What is your name?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Registered partnership name</legend>
+          <legend class="visuallyhidden">Applicant contact name</legend>
 
-          <!-- Company name -->
+          <!-- Full name -->
           <div class="form-group">
-            <label class="form-label" for="partnership-name">Partnership name</label>
-            <input type="text" class="form-control" id="partnership-name" />
+            <label class="form-label" for="full-name">Full name</label>
+            <p class="form-hint">For example, John Smith</p>
+            <input type="text" class="form-control" id="full-name" />
           </div>
 
         </fieldset>

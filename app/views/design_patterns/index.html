@@ -1,0 +1,57 @@
+{% extends "layout.html" %} {% block page_title %} Design index {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/" method="post" class="form">
+
+        <h1 class="heading-large">
+          New design patterns
+        </h1>
+
+        <p>
+          This is an area for designers to try new patterns and ideas.
+        </p>
+
+        <h2 class="heading-medium">Contact details</h2>
+        <ul class="list list-bullet">
+          <li>
+            <a href="/design_patterns/main_contact_name">Main contact journey</a>
+          </li>
+        </ul>
+
+        <h2 class="heading-medium">Addresses</h2>
+        <ul class="list list-bullet">
+          <li>
+            <a href="">Postcode look-up</a>
+          </li>
+        </ul>
+
+        <h2 class="heading-medium">Location</h2>
+        <ul class="list list-bullet">
+          <li>
+            <a href="">Grid reference number</a>
+          </li>
+          <li>
+            <a href="">Mapping</a>
+          </li>
+        </ul>
+
+        <h2 class="heading-medium">Routing questions</h2>
+        <ul class="list list-bullet">
+          <li>
+            <a href="">User sorting questions</a>
+          </li>
+        </ul>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

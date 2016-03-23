@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Contact telephone {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,16 +10,17 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          What's the registered name of the partnership?
+          What is 'Tom Riddles' telephone number?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Registered partnership name</legend>
+          <legend class="visuallyhidden">Contact telephone</legend>
 
-          <!-- Company name -->
+          <!-- Telephone number -->
           <div class="form-group">
-            <label class="form-label" for="partnership-name">Partnership name</label>
-            <input type="text" class="form-control" id="partnership-name" />
+            <label class="form-label" for="telephone">Telephone number</label>
+            <p class="form-hint">This can be a landline or mobile</p>
+            <input type="text" class="form-control" id="telephone" />
           </div>
 
         </fieldset>

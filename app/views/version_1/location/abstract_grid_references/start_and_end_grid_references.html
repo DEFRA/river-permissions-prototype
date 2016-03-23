@@ -1,12 +1,13 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <form action="/" method="post" class="form">
 
-    <a class="link-back" href="">Back</a>
+  <a class="link-back" href="">Back</a>
 
-    <div class="grid-row">
-      <div class="column-two-thirds">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
 
         <h1 class="heading-large">
           Tell us where the activity is taking place
@@ -21,16 +22,16 @@
 
           <!-- Grid reference -->
           <div class="form-group">
-            <label class="form-label" for="grid-reference">1st grid reference if needed</label>
+            <label class="form-label" for="grid-reference-1">1st grid reference if needed</label>
             <p class="form-hint">For example, ST 58132 72695</p>
-            <input type="text" class="form-control" id="grid-reference" />
+            <input type="text" class="form-control" id="grid-reference-1" />
           </div>
 
           <!-- Grid reference -->
           <div class="form-group">
-            <label class="form-label" for="grid-reference">2nd grid reference if needed</label>
+            <label class="form-label" for="grid-reference-2">2nd grid reference if needed</label>
             <p class="form-hint">For example, ST 58132 72695</p>
-            <input type="text" class="form-control" id="grid-reference" />
+            <input type="text" class="form-control" id="grid-reference-2" />
           </div>
 
         </fieldset>
@@ -40,10 +41,10 @@
           <input type="submit" class="button" value="Continue" />
         </div>
 
-      </div>
-    </div>
+      </form>
 
-  </form>
+    </div>
+  </div>
 
 </main>
 {% endblock %}

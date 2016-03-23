@@ -37,7 +37,7 @@ router.get('/examples/over-18', function (req, res) {
 
 // Route location to exemptions page
 
-  router.post('/version_1/location/grid_reference', function(req, res) {
+  router.post('/version_1/location/activity_specific/bridge_grid_reference', function(req, res) {
     res.redirect('/version_1/exemptions/add_exemptions');
   });
 

@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/phone_questions/remove_sand_silt" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Are the cables or services being installed under the riverbed, in the river itself, or above the river?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Are the cables or services being installed under the riverbed, in the river itself, or above the river?
+          </legend>
+
+          <div class="form-group">
+
+            <label for="permission_type" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_14">
+              Under the riverbed
+            </label>
+
+            <label for="permission_type" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_2">
+              Within the river
+            </label>
+
+            <label for="permission_type" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_2">
+              Above the river
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

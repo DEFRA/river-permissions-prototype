@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/scaffolding" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Are you digging holes or taking samples from the river for scientific or exploratory work?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Are you digging holes or taking samples from the river for scientific or exploratory work?</legend>
+
+          <div class="form-group">
+            <label for="minor_works" class="block-label">
+              <input type="radio" name="science_holes_samples" value="1">
+              Yes
+            </label>
+
+            <label for="minor_works" class="block-label">
+              <input type="radio" name="science_holes_samples" value="0">
+              No
+            </label>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

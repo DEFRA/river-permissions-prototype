@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/permission_types/declaration" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Follow up question?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Follow up question?
+          </legend>
+
+          <div class="form-group">
+            <label for="minor_works" class="block-label">
+              <input type="radio" name="" value="1">
+              Yes
+            </label>
+
+            <label for="minor_works" class="block-label">
+              <input type="radio" name="" value="0">
+              No
+            </label>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

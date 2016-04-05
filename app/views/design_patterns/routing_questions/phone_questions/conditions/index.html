@@ -1,0 +1,86 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Declaration
+        </h1>
+
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            There are rules that you must follow to do this activity. 
+          </strong>
+        </div>
+
+        <br />
+        
+        {% if data.minor_works=="1" %}
+
+          <h3 class="heading-medium">
+            Rules for Minor works
+          </h3>
+
+
+          <ol class="list list-number">
+            <li>Scaffolding cannot be up for more than 4 weeks</li>
+          </ol>
+
+        {% endif %}
+
+        <!-- detwatering rules -->
+        {% if data.permission_type=="exemption_6" %}
+
+          <h3 class="heading-medium">
+            Condition and rules for dewatering
+          </h3>
+
+
+          <ol class="list list-number">
+            <li>the duration of dewatering is no longer than 4 weeks</li>
+            <li>No more than 10m of the river is dewatered at any time.</li>
+          </ol>
+
+        {% endif %}
+
+        <br />
+
+        <div class="panel panel-border-wide">
+          <p>
+            If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+          </p>
+        </div>
+
+        <br>
+
+        <p>I confirm that:</p>
+
+        <ul class="list-bullet">
+          <li>the rules about will be kept to</li>
+          <li>the information I have provided is true</li>
+        </ul>
+
+        <br />
+
+        <p class="">See the Environment Agency's <a href="">privacy policy</a> to find out how it uses personal information</p>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Accept - complete this registration" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

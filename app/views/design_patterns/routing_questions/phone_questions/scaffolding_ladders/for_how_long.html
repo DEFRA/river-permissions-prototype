@@ -1,0 +1,48 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/phone_questions/floodplain" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          Will the structure be in place for longer than a day?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            Will the structure be in place for longer than a day?
+          </legend>
+
+          <div class="form-group">
+            <label for="scaffolding_ladders_time" class="block-label">
+              <input type="radio" name="scaffolding_ladders_time" value="exemption_5">
+              Yes
+            </label>
+
+            <label for="scaffolding_ladders_time" class="block-label">
+              <input type="radio" name="scaffolding_ladders_time" value="exclusion_4">
+              No
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

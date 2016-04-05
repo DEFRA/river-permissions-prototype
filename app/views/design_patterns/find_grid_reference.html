@@ -1,0 +1,31 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form action="/" method="post" class="form">
+
+    <a class="link-back" href="">Back</a>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Way to find a grid reference 
+        </h1>
+
+
+
+        <ul class="list list-bullet">
+          <li>Way 1</li>
+          <li>Way 2</li>
+          <li>Way 3</li>
+          <li>Way 4</li>
+          <li>Way 5</li>
+        </ul>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

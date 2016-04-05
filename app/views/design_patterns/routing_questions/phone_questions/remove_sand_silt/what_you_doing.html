@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/phone_questions/repair_maintain" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          What are you doing?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            What are you doing? 
+          </legend>
+
+          <div class="form-group">
+
+            <label for="buidling_new_structure" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_21">
+              Removing silt or sand from around a bridge
+            </label>
+
+            <label for="buidling_new_structure" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_20">
+              Removing silt or sand from around a culvert
+            </label>
+
+            <label for="buidling_new_structure" class="block-label">
+              <input type="radio" name="permission_type" value="exemption_22">
+              Removing silt or sand from around another type of structure
+            </label>
+          
+            <label for="buidling_new_structure" class="block-label">
+              <input type="radio" name="permission_type" value="exclusion_11">
+              Removing silt or sand from a purpose built sediment trap
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

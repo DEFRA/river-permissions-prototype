@@ -561,8 +561,9 @@ router.get('/design_patterns/routing_questions/phone_questions/repair_maintain',
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var building = req.query.building;
+  var what_you_building = req.query.what_you_building;
 
-  if (building == "yes"){
+  if (building == "yes" && what_you_building==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/building/what_you_building" + res.locals.formQuery);
@@ -585,11 +586,12 @@ router.get('/design_patterns/routing_questions/phone_questions/animal_welfare', 
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var repair_maintain = req.query.repair_maintain;
+  var what_you_repairing = req.query.what_you_repairing;
 
-  if (repair_maintain == "yes"){
+  if (repair_maintain == "yes" && what_you_repairing==undefined){
 
     // if users IS using scaffolding
-    res.redirect("/design_patterns/routing_questions/phone_questions/repair_maintain/what_you_doing" + res.locals.formQuery);
+    res.redirect("/design_patterns/routing_questions/phone_questions/repair_maintain/what_you_repairing" + res.locals.formQuery);
 
   } else {
 
@@ -609,8 +611,9 @@ router.get('/design_patterns/routing_questions/phone_questions/scaffolding_ladde
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var animal_welfare = req.query.animal_welfare;
+  var what_is_it = req.query.what_is_it;
 
-  if (animal_welfare == "yes"){
+  if (animal_welfare == "yes" && what_is_it==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/animal_welfare/what_is_it" + res.locals.formQuery);
@@ -633,8 +636,9 @@ router.get('/design_patterns/routing_questions/phone_questions/floodplain', func
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var scaffolding_ladders = req.query.scaffolding_ladders;
+  var scaffolding_ladders_time = req.query.scaffolding_ladders_time;
 
-  if (scaffolding_ladders == "yes"){
+  if (scaffolding_ladders == "yes" && scaffolding_ladders_time==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/scaffolding_ladders/for_how_long" + res.locals.formQuery);
@@ -658,8 +662,9 @@ router.get('/design_patterns/routing_questions/phone_questions/cables', function
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var floodplain = req.query.floodplain;
+  var what_you_digging = req.query.what_you_digging;
 
-  if (floodplain == "yes"){
+  if (floodplain == "yes" && what_you_digging==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/floodplain/what_you_digging" + res.locals.formQuery);
@@ -682,8 +687,9 @@ router.get('/design_patterns/routing_questions/phone_questions/remove_sand_silt'
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var cables = req.query.cables;
+  var existing_or_new_thing = req.query.existing_or_new_thing;
 
-  if (cables == "yes"){
+  if (cables == "yes" && existing_or_new_thing==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/cables/existing_or_new_thing" + res.locals.formQuery);
@@ -698,24 +704,24 @@ router.get('/design_patterns/routing_questions/phone_questions/remove_sand_silt'
 });
 
 // cables folder questions
-// Question for cables index.html
-
-router.get('/design_patterns/routing_questions/phone_questions/cables/on_existing_thing', function (req, res) {
+// Question for cables existing_or_new_thing.html
+router.get('/design_patterns/routing_questions/phone_questions/cables/on_new_thing', function (req, res) {
 
   console.log("WHAT");
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var existing_or_new_thing = req.query.existing_or_new_thing;
+  var on_existing_thing = req.query.on_existing_thing;
 
-  if (existing_or_new_thing == "yes"){
+  if (existing_or_new_thing == "yes" && on_existing_thing==undefined){
 
     // if users IS using scaffolding
-    res.redirect("/design_patterns/routing_questions/phone_questions/cables/on_new_thing" + res.locals.formQuery);
+    res.redirect("/design_patterns/routing_questions/phone_questions/cables/on_existing_thing" + res.locals.formQuery);
 
   } else {
 
     // if users is NOT using scaffolding
-    res.render('design_patterns/routing_questions/phone_questions/cables/on_existing_thing/index.html');
+    res.render('design_patterns/routing_questions/phone_questions/cables/on_new_thing.html');
 
   }
 
@@ -730,8 +736,9 @@ router.get('/design_patterns/routing_questions/phone_questions/dewatering', func
 
   // get the answer from the query string (eg. ?scaffolding=1)
   var remove_sand_silt = req.query.remove_sand_silt;
+  var are_you_dredging = req.query.are_you_dredging;
 
-  if (remove_sand_silt == "yes"){
+  if (remove_sand_silt == "yes" && are_you_dredging==undefined){
 
     // if users IS using scaffolding
     res.redirect("/design_patterns/routing_questions/phone_questions/remove_sand_silt/are_you_dredging" + res.locals.formQuery);
@@ -740,6 +747,30 @@ router.get('/design_patterns/routing_questions/phone_questions/dewatering', func
 
     // if users is NOT using scaffolding
     res.render('design_patterns/routing_questions/phone_questions/dewatering/index.html');
+
+  }
+
+});
+
+// remove_sand_silt folder questions
+// Question for cables existing_or_new_thing.html
+router.get('/design_patterns/routing_questions/phone_questions/remove_sand_silt/what_you_removing', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var are_you_dredging = req.query.are_you_dredging;
+  var dredging_distance = req.query.dredging_distance;
+
+  if (are_you_dredging == "yes" && dredging_distance==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/remove_sand_silt/dredging_distance" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/remove_sand_silt/what_you_removing.html');
 
   }
 

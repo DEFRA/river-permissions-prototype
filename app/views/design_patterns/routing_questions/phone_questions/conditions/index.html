@@ -8,59 +8,385 @@
     <div class="column-two-thirds">
 
       <form method="post" class="form">
-
-        <h1 class="heading-large">
-          Declaration
-        </h1>
-
-        <div class="notice">
-          <i class="icon icon-important">
-            <span class="visuallyhidden">Warning</span>
-          </i>
-          <strong class="bold-small">
-            There are rules that you must follow to do this activity. 
-          </strong>
-        </div>
-
-        <br />
         
-        {% if data.minor_works=="1" %}
+        <!-- exclusion fencing -->
+        {% if data.what_you_building=="exclusion_12" %}
+
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
 
           <h3 class="heading-medium">
-            Rules for Minor works
+            Rules for Fencing
           </h3>
 
 
           <ol class="list list-number">
-            <li>Scaffolding cannot be up for more than 4 weeks</li>
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
           </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
+            </p>
+          </div>
 
         {% endif %}
 
-        <!-- detwatering rules -->
-        {% if data.permission_type=="exemption_6" %}
+        <!-- exclusion flood protection device -->
+        {% if data.what_you_building=="exclusion_6" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
 
           <h3 class="heading-medium">
-            Condition and rules for dewatering
+            Rules for building flood protection device attached to a building
           </h3>
 
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exclusion notice board -->
+        {% if data.what_you_building=="exclusion_10" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a notice board
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exemption footbridges -->
+        {% if data.what_you_building=="exemption_4" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a footbridge
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exemption outfalls -->
+        {% if data.what_you_building=="exemption_11" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a outfall or headwall
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exemption raised flood defence -->
+        {% if data.what_you_building=="exemption_25" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a raised flood defence
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exemption access platform -->
+        {% if data.what_you_building=="exemption_10" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a access platform on the riverbank
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exemption access platform -->
+        {% if data.what_you_building=="exemption_15" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for building a survey raft
+          </h3>
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
+        {% endif %}
+
+        <!-- exclusion minor works -->
+        {% if data.what_you_repairing=="exclusion_7" %}
+
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for doing minor works
+          </h3>
+
+
+          <ol class="list list-number">
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ol>
+
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
+            </p>
+          </div>
+
+        {% endif %}
+
+        <!-- exemption dewatering -->
+        {% if data.what_you_repairing=="exemption_7" %}
+
+          <h1 class="heading-large">
+            Declaration
+          </h1>
+
+          <div class="notice">
+            <i class="icon icon-important">
+              <span class="visuallyhidden">Warning</span>
+            </i>
+            <strong class="bold-small">
+              There are rules that you must follow to do this activity. 
+            </strong>
+          </div>
+
+          <br />
+
+          <h3 class="heading-medium">
+            Rules for dewatering part of a river
+          </h3>
 
           <ol class="list list-number">
             <li>the duration of dewatering is no longer than 4 weeks</li>
             <li>No more than 10m of the river is dewatered at any time.</li>
           </ol>
 
+          <div class="panel panel-border-wide">
+            <p>
+              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+            </p>
+          </div>
+
+          <br>
+
         {% endif %}
-
-        <br />
-
-        <div class="panel panel-border-wide">
-          <p>
-            If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-          </p>
-        </div>
-
-        <br>
 
         <p>I confirm that:</p>
 

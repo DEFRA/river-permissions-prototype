@@ -290,7 +290,7 @@ router.post('/version_1/end_registration/declaration', function(req, res) {
 });
 
 router.post('/version_1/end_registration/check_your_answers_no_contact', function(req, res) {
-  res.redirect('/version_1/contact/applicant_contact_telephone'); });
+  res.redirect('/version_1/end_registration/declaration'); });
 
 
 // DESIGN AREA ROUTING

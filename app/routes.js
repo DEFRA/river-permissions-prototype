@@ -1,6 +1,27 @@
 var express = require('express');
 var router = express.Router();
 
+router.use(function (req, res, next) {
+
+ // Store common vars
+
+ res.locals.formData = "";
+ res.locals.formQuery = "?";
+ res.locals.data = {};
+
+ for (var name in req.query){
+   var value = req.query[name];
+   res.locals.formData += '<input type="hidden" name="'+name+'" value="' + value + '">\n';
+   res.locals.formQuery += name + "=" + value + "&";
+   res.locals.data[name] = value;
+ }
+
+ res.locals.formQuery = res.locals.formQuery.slice(0,-1);
+
+ next();
+ 
+});
+
 router.get('/', function (req, res) {
   res.render('index');
 
@@ -280,6 +301,477 @@ router.post('/version_1/location/abstract_grid_references/choose_location_type',
   }
   if (req.body['radio-inline-group']==="start_and_end_grid_references"){
     res.redirect('/version_1/location/abstract_grid_references/two_more_grid_references');
+  }
+
+});
+
+// Routing questions
+
+// scaffolding questions
+// scaffolding index.html 
+
+router.get('/design_patterns/routing_questions/bridges_outfalls_culverts', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var scaffolding = req.query.scaffolding;
+
+  if (scaffolding == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/scaffolding/take_down_daily" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/bridges_outfalls_culverts/index.html');
+
+  }
+
+});
+
+
+// Bridges, outfalls, culverts questions
+// Question for bridges_outfalls_culverts index.html
+
+router.get('/design_patterns/routing_questions/defences_scrapes_drinking_bays', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var bridges_outfalls_culverts = req.query.bridges_outfalls_culverts;
+
+  if (bridges_outfalls_culverts == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/bridges_outfalls_culverts/what_you_building" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/defences_scrapes_drinking_bays/index.html');
+
+  }
+
+});
+
+
+
+// Defences, scrapes, drinking bays questions
+// Question for defences_scrapes_drinking_bays index.html
+
+router.get('/design_patterns/routing_questions/tracks_paths', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var defences_scrapes_drinking_bays = req.query.defences_scrapes_drinking_bays;
+
+  if (defences_scrapes_drinking_bays == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/defences_scrapes_drinking_bays/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/tracks_paths/index.html');
+
+  }
+
+});
+
+// stones_gravel_sand_silt_logs
+// Question for stones_gravel_sand_silt_logs index.html
+
+router.get('/design_patterns/routing_questions/wildlife_welfare', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var stones_gravel_sand_silt_logs = req.query.stones_gravel_sand_silt_logs;
+
+  if (stones_gravel_sand_silt_logs == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/stones_gravel_sand_silt_logs/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/wildlife_welfare/index.html');
+
+  }
+
+});
+
+
+// wildlife_welfare
+// Question for stones_gravel_sand_silt_logs index.html
+
+router.get('/design_patterns/routing_questions/cables_service_crossings', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var wildlife_welfare = req.query.wildlife_welfare;
+
+  if (wildlife_welfare == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/wildlife_welfare/what_you_building" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/cables_service_crossings/index.html');
+
+  }
+
+});
+
+// Cables, service crossings
+// Question for cables_service_crossings index.html
+
+router.get('/design_patterns/routing_questions/constructions_channelstructures_surveyrafts', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var cables_service_crossings = req.query.cables_service_crossings;
+
+  if (cables_service_crossings == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/cables_service_crossings/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/constructions_channelstructures_surveyrafts/index.html');
+
+  }
+
+});
+
+// Constructions, channel structures, surveyrafts Questions
+// Question for constructions_channelstructures_surveyrafts index.html
+
+router.get('/design_patterns/routing_questions/riverbanks', function (req, res) {
+
+  console.log("WHAT");
+
+  // constructions_channelstructures_surveyraftset the answer from the query string (eg. ?scaffolding=1)
+  var constructions_channelstructures_surveyrafts = req.query.constructions_channelstructures_surveyrafts;
+
+  if (constructions_channelstructures_surveyrafts == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/constructions_channelstructures_surveyrafts/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/riverbanks/index.html');
+
+  }
+
+});
+
+// Riverbank Questions
+// Question for riverbanks index.html
+
+router.get('/design_patterns/routing_questions/dredging', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var riverbanks = req.query.riverbanks;
+
+  if (riverbanks == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/riverbanks/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/dredging/index.html');
+
+  }
+
+});
+
+// Dredging questions
+// Question for dredging index.html
+
+router.get('/design_patterns/routing_questions/dewatering', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var dredging = req.query.dredging;
+
+  if (dredging == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/dredging/dredge_length" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/dewatering/index.html');
+
+  }
+
+});
+
+// Dewatering questions
+// Question for dewatering index.html
+
+router.get('/design_patterns/routing_questions/permission_types/declaration', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var dewatering = req.query.dewatering;
+
+  if (dewatering == "1"){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/dewatering/follow_up_question" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/permission_types/declaration.html');
+
+  }
+
+});
+
+// phone_questions folder
+// building folder questions
+// Question for building index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/repair_maintain', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var building = req.query.building;
+  var what_you_building = req.query.what_you_building;
+
+  if (building == "yes" && what_you_building==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/building/what_you_building" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/repair_maintain/index.html');
+
+  }
+
+});
+
+// repair_maintain folder questions
+// Question for repair_maintain index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/animal_welfare', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var repair_maintain = req.query.repair_maintain;
+  var what_you_repairing = req.query.what_you_repairing;
+
+  if (repair_maintain == "yes" && what_you_repairing==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/repair_maintain/what_you_repairing" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/animal_welfare/index.html');
+
+  }
+
+});
+
+// animal_welfare folder questions
+// Question for animal_welfare index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/scaffolding_ladders', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var animal_welfare = req.query.animal_welfare;
+  var what_is_it = req.query.what_is_it;
+
+  if (animal_welfare == "yes" && what_is_it==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/animal_welfare/what_is_it" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/scaffolding_ladders/index.html');
+
+  }
+
+});
+
+// scaffolding_ladders folder questions
+// Question for animal_welfare index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/floodplain', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var scaffolding_ladders = req.query.scaffolding_ladders;
+  var scaffolding_ladders_time = req.query.scaffolding_ladders_time;
+
+  if (scaffolding_ladders == "yes" && scaffolding_ladders_time==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/scaffolding_ladders/for_how_long" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/floodplain/index.html');
+
+  }
+
+});
+
+
+// floodplain folder questions
+// Question for animal_welfare index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/cables', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var floodplain = req.query.floodplain;
+  var what_you_digging = req.query.what_you_digging;
+
+  if (floodplain == "yes" && what_you_digging==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/floodplain/what_you_digging" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/cables/index.html');
+
+  }
+
+});
+
+// cables folder questions
+// Question for cables index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/remove_sand_silt', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var cables = req.query.cables;
+  var existing_or_new_thing = req.query.existing_or_new_thing;
+
+  if (cables == "yes" && existing_or_new_thing==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/cables/existing_or_new_thing" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/remove_sand_silt/index.html');
+
+  }
+
+});
+
+// cables folder questions
+// Question for cables existing_or_new_thing.html
+router.get('/design_patterns/routing_questions/phone_questions/cables/on_new_thing', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var existing_or_new_thing = req.query.existing_or_new_thing;
+  var on_existing_thing = req.query.on_existing_thing;
+
+  if (existing_or_new_thing == "yes" && on_existing_thing==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/cables/on_existing_thing" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/cables/on_new_thing.html');
+
+  }
+
+});
+
+// remove_sand_silt folder questions
+// Question for animal_welfare index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/dewatering', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var remove_sand_silt = req.query.remove_sand_silt;
+  var are_you_dredging = req.query.are_you_dredging;
+
+  if (remove_sand_silt == "yes" && are_you_dredging==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/remove_sand_silt/are_you_dredging" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/dewatering/index.html');
+
+  }
+
+});
+
+// remove_sand_silt folder questions
+// Question for cables existing_or_new_thing.html
+router.get('/design_patterns/routing_questions/phone_questions/remove_sand_silt/what_you_removing', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var are_you_dredging = req.query.are_you_dredging;
+  var dredging_distance = req.query.dredging_distance;
+
+  if (are_you_dredging == "yes" && dredging_distance==undefined){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/remove_sand_silt/dredging_distance" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/remove_sand_silt/what_you_removing.html');
+
   }
 
 });

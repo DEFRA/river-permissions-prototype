@@ -1,0 +1,69 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" action="/design_patterns/routing_questions/phone_questions/animal_welfare" class="form">
+
+      {{formData | safe}}
+
+        <h1 class="heading-large">
+          What are you doing?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">
+            What are you doing? 
+          </legend>
+
+          <div class="form-group">
+
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exclusion_7">
+              Minor works affecting bridges or culverts
+            </label>
+
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exemption_27">
+              Improvement works for tracks or paths
+            </label>
+
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exemption_7">
+              Maintaining of a raised river or sea defence
+            </label>
+          
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exemption_8">
+              Maintaining structures within the river other than raised river or sea defences
+            </label>
+
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exemption_12">
+              Repairing and protecting riverbanks using natural materials
+            </label>
+
+            <label for="what_you_repairing" class="block-label">
+              <input type="radio" name="what_you_repairing" value="exemption_16">
+              Cleaning gravel for fish spawning
+            </label>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

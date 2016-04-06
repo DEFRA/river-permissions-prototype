@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Declaration
+        </h1>
+
+        <div class="notice">
+          <i class="icon icon-important">
+            <span class="visuallyhidden">Warning</span>
+          </i>
+          <strong class="bold-small">
+            There are rules that you must kept for doing this activity. 
+          </strong>
+        </div>
+
+        <br />
+
+        <h3 class="heading-medium">
+          Rules for dregding main river
+        </h3>
+
+
+        <ol class="list list-number">
+          <li>You cannot dredge more than 20m of the river</li>
+          <li>The same part river has not been dredged in the last year</li>
+          <li>The dredging only removes built up silt and sand</li>
+          <li>Vehicle or machinery cannot be used on the bed or bank of the river</li>
+          <li>No vegetation or gravel is removed from or by the river</li>
+        </ol>
+
+
+        <br />
+
+        <div class="panel panel-border-wide">
+          <p>
+            If you cannot keep to these rules for the activity you need to do, then <a href="#">apply for a permit</a>.
+          </p>
+        </div>
+
+        <br />
+
+        <br>
+
+        <p>I confirm that:</p>
+
+        <ul class="list-bullet">
+          <li>the rules about will be kept to</li>
+          <li>the information I have provided is true</li>
+        </ul>
+
+        <br />
+
+        <p class="">See the Environment Agency's <a href="">privacy policy</a> to find out how it uses personal information</p>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Accept - complete this registration" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -19,7 +19,7 @@ router.use(function (req, res, next) {
  res.locals.formQuery = res.locals.formQuery.slice(0,-1);
 
  next();
- 
+
 });
 
 router.get('/', function (req, res) {
@@ -124,6 +124,10 @@ router.post('/version_1/contact/main_contact_email', function(req, res) {
 });
 
 router.post('/version_1/contact/main_contact_address', function(req, res) {
+  res.redirect('/version_1/contact/main_contact_postcode');
+});
+
+router.post('/version_1/contact/main_contact_postcode', function(req, res) {
   res.redirect('/version_1/contact/applicant_contact');
 });
 
@@ -285,6 +289,9 @@ router.post('/version_1/end_registration/declaration', function(req, res) {
   res.redirect('/version_1/end_registration/confirmation');
 });
 
+router.post('/version_1/end_registration/check_your_answers_no_contact', function(req, res) {
+  res.redirect('/version_1/contact/applicant_contact_telephone'); });
+
 
 // DESIGN AREA ROUTING
 
@@ -308,7 +315,7 @@ router.post('/version_1/location/abstract_grid_references/choose_location_type',
 // Routing questions
 
 // scaffolding questions
-// scaffolding index.html 
+// scaffolding index.html
 
 router.get('/design_patterns/routing_questions/bridges_outfalls_culverts', function (req, res) {
 

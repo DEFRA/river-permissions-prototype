@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block page_title %} Applicant email {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          What is your email address?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Applicant contact email</legend>
+
+          <!-- Email address -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <p class="form-hint">We'll use this to confirm the registration</p>
+            <input type="text" class="form-control" id="email" />
+          </div>
+
+          <!-- Confirm email address -->
+          <div class="form-group">
+            <label class="form-label" for="confirm-email">Confirm email address</label>
+            <input type="text" class="form-control" id="confirm-email" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

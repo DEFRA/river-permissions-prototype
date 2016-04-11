@@ -56,6 +56,10 @@ router.get('/examples/over-18', function (req, res) {
 // add your routes here
 // River permissions prototype version 1
 
+// anything beginning with "/smart_start" will go into this
+router.use('/smart_start', require('./smart_start'));
+
+
 // Route location to exemptions page
 
   router.post('/version_1/location/activity_specific/bridge_grid_reference', function(req, res) {

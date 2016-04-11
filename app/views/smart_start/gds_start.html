@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% block page_title %} Start page example {% endblock %} {% block proposition_header %}
+<!-- blank to remove the proposition header -->
+{% endblock %} {% block header_class %}
+<!-- blank to remove the proposition header -->
+{% endblock %} {% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="http://www.gov.uk">Home</a></li>
+      <li><a href="">Section</a></li>
+      <li>Subsection</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Register your flood risk activity
+      </h1>
+
+      <p class="text">Use this service to register your flood risk activity exemptions.</p>
+
+      <p>
+        <a class="button button-start" href="q-main-river" role="button">Start now</a>
+      </p>
+
+      <p>You'll need:</p>
+
+      <ul class="list list-bullet">
+        <li>the grid reference where the work will happen</li>
+        <li>the name and address of the person or organisation responsible for the work</li>
+        <li>for a company, its registration number and registered address</li>
+        <li>for a partnership, name and address of all partners</li>
+        <li>contact details, if different to the person or organisation responsible</li>
+      </ul>
+
+      <div class="contact">
+        <h3 class="heading-medium">Contact the Environment Agency</h3>
+        <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>
+        <br /> Telephone: 03708 506 506
+        <br /> Minicom: 03702 422 549
+        <br /> Monday to Friday, 8am to 6pm
+      </div>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Flood risk activities</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="https://www.gov.uk/guidance/register-your-flood-risk-exemption-environmental-permits">Flood risk activities guidance</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

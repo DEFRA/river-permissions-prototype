@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% set title = "Is the work on a main river or flood or sea defence?" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" class="form" action="{{ formaction }}">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <div class="panel panel-border-wide">
+          <p>Main rivers are the ones marked on the Environment Agency <a href="http://maps.environment-agency.gov.uk/wiyby/wiybyController?topic=floodmap&layerGroups=default&lang=_e&ep=map&scale=7&x=531500&y=181500#x=401675&y=352758&lg=1,2,10,&scale=1">
+            main rivers map
+          </a>.
+            You only need to register an exemption or get permits for work on main rivers.</p>
+        </div>
+
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% set radios = [
+          { label: "Yes, it’s on a main river", value: "yes", id: 1 },
+          { label: "No it's not", value: "no", id: 2 },
+          { label: "I don't know", value: "dontknow", id: 3 }
+        ] -%}
+
+        {% for radio in radios %}
+          {{ formelement.input( loop.index, radio.label, radio.value, "on_main_river", "radio") }}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

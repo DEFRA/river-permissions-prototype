@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% set title = "Check where the work is happening" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <div class="panel panel-border-wide">
+          <p class="text">
+            Contact the Environment Agency and they will check if there are any reasons why you can’t register an exemption in that location.
+          </p>
+        </div>
+
+        <p class="text">
+          <span class="bold-medium">Call the Environment Agency on 03708 506 506</span>
+        to check if your activities are on a main river and if they are near any sensitive areas such as a nature reserve.
+        You will need to provide details of the exemption you want to register and a postcode or National Grid reference for the location where you want to carry out the work.
+      </p>
+
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

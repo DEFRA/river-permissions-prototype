@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% set title = "You said the work needs a permit" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <div class="panel panel-border-wide">
+          <p class="text">
+            If you need a permit to do the work you need to contact us to apply for the permit.
+          </p>
+        </div>
+
+        <p class="text">
+          <span class="bold-medium">Contact the Environment Agency</span><br>
+          <a href="#">enquiries@environment-agency.gov.uk</a><br>
+          Telephone: 03708 506 506<br>
+          Minicom: 03702 422 549<br>
+          Monday to Friday, 8am to 6pm<br>
+        </p>
+
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

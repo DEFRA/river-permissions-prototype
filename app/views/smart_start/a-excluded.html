@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% set title = "You said the work is excluded from needing a permit" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <div class="panel panel-border-wide">
+          <p class="text">
+            If the work is exempt then you don’t need a permit and you don’t need to register.
+          </p>
+          <p class="text">
+            You are responsible for making sure your work complies with the exclusion conditions.
+          </p>
+        </div>
+
+        <p class="text">
+          <a href="#">Check the conditions for exclusions</a>  
+        </p>
+
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

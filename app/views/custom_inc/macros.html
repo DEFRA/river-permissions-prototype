@@ -1,0 +1,6 @@
+{% macro input(id, label, value, name, type) %}
+<label for="idnum_{{ id }}" class="block-label">
+  <input id="idnum_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  {{ label|safe }}
+</label>
+{% endmacro %}

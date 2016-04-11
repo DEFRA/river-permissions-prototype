@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% set title = "Is the work covered by an exemption?" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" class="form" action="{{ formaction }}">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% set radios = [
+          { label: "Yes, the work covered by an exemption", value: "yes", id: 1 },
+          { label: "No, I need a permit", value: "no", id: 2 }
+        ] -%}
+
+        {% for radio in radios %}
+          {{ formelement.input( loop.index, radio.label, radio.value, "is_exempt", "radio") }}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+
+        <!-- Find grid reference -->
+        <details style="padding-bottom: 18px;">
+          <summary><span class="summary">Work that is exempt</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              List of works that are exempt and link to guidance.
+            </p>
+          </div>
+        </details>
+
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

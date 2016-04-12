@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% set title = "Add all exemptions that apply to the work" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="get" class="form" action="{{ formaction }}">
+
+        <h1 class="heading-large">
+          {{ title }}
+        </h1>
+
+        <style>
+          span.exmpt{
+            font-weight:bold;
+            float:right;
+          }
+
+        label.exemption{
+          width:30em;
+          background-color:#ededed;
+          border-color:#ededed;
+        }
+
+
+        </style>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% set exemptions = [
+          {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2'},
+          {'label' : 'Service crossing below river bed by directional drilling' , 'id' : 'FRA3'},
+          {'label' : 'Service crossings attached to the outside a structure' , 'id' : 'FRA4'},
+          {'label' : 'Footbridge construction' , 'id' : 'FRA5'},
+          {'label' : 'Scaffolding (temporary)' , 'id' : 'FRA6'},
+          {'label' : 'Dewatering (temporary)' , 'id' : 'FRA7'},
+          {'label' : 'Maintenance of raised river or sea defences' , 'id' : 'FRA8'},
+          {'label' : 'Maintenance of structures in the channel of a river' , 'id' : 'FRA9'},
+          {'label' : 'Drinking bay for cattle' , 'id' : 'FRA10'},
+          {'label' : 'Access platform (eg jetty, angling platform)' , 'id' : 'FRA11'},
+          {'label' : 'Outfall pipes (small) and headwalls' , 'id' : 'FRA12'},
+          {'label' : 'Repair of river banks using natural materials' , 'id' : 'FRA13'},
+          {'label' : 'Repair of bank slips and erosion' , 'id' : 'FRA14'},
+          {'label' : 'Channel habitat structures made of natural materials' , 'id' : 'FRA15'},
+          {'label' : 'Survey raft' , 'id' : 'FRA16'},
+          {'label' : 'Gravel-cleaning for fish-spawning beds' , 'id' : 'FRA17'},
+          {'label' : 'Placing stones or logs in a river for habitat enhancement' , 'id' : 'FRA18'},
+          {'label' : 'Eel pass devices on existing structures' , 'id' : 'FRA19'},
+          {'label' : 'Fish passage notches on existing structures' , 'id' : 'FRA20'},
+          {'label' : 'Removal of silt from bridge arches and culverts' , 'id' : 'FRA21'},
+          {'label' : 'Removal of silt and sand next to in-river structures' , 'id' : 'FRA22'},
+          {'label' : 'Dredging of ditches, drains and straightened watercourses' , 'id' : 'FRA23'},
+          {'label' : 'Dredging of a river' , 'id' : 'FRA24'},
+          {'label' : 'Excavation of scrapes and shallow wetland features' , 'id' : 'FRA25'},
+          {'label' : 'Raised flood defences (construction)' , 'id' : 'FRA26'},
+          {'label' : 'Wildlife refuge structures on the bankside' , 'id' : 'FRA27'},
+          {'label' : 'Track and path improvements' , 'id' : 'FRA28'}
+        ] -%}
+
+        {% for ex in exemptions %}
+          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, "checkbox") }}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

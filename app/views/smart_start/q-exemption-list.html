@@ -28,11 +28,15 @@
           }
 
         label.exemption{
-          width:30em;
           background-color:#ededed;
           border-color:#ededed;
         }
 
+        @media screen and (min-width: 320px) {
+          label.exemption{
+            width:99%;
+            }
+        }
 
         </style>
 
@@ -43,37 +47,37 @@
         {% import "custom_inc/macros.html" as formelement %}
 
         {% set exemptions = [
-          {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2'},
-          {'label' : 'Service crossing below river bed by directional drilling' , 'id' : 'FRA3'},
-          {'label' : 'Service crossings attached to the outside a structure' , 'id' : 'FRA4'},
-          {'label' : 'Footbridge construction' , 'id' : 'FRA5'},
-          {'label' : 'Scaffolding (temporary)' , 'id' : 'FRA6'},
-          {'label' : 'Dewatering (temporary)' , 'id' : 'FRA7'},
-          {'label' : 'Maintenance of raised river or sea defences' , 'id' : 'FRA8'},
-          {'label' : 'Maintenance of structures in the channel of a river' , 'id' : 'FRA9'},
-          {'label' : 'Drinking bay for cattle' , 'id' : 'FRA10'},
-          {'label' : 'Access platform (eg jetty, angling platform)' , 'id' : 'FRA11'},
-          {'label' : 'Outfall pipes (small) and headwalls' , 'id' : 'FRA12'},
-          {'label' : 'Repair of river banks using natural materials' , 'id' : 'FRA13'},
-          {'label' : 'Repair of bank slips and erosion' , 'id' : 'FRA14'},
-          {'label' : 'Channel habitat structures made of natural materials' , 'id' : 'FRA15'},
-          {'label' : 'Survey raft' , 'id' : 'FRA16'},
-          {'label' : 'Gravel-cleaning for fish-spawning beds' , 'id' : 'FRA17'},
-          {'label' : 'Placing stones or logs in a river for habitat enhancement' , 'id' : 'FRA18'},
-          {'label' : 'Eel pass devices on existing structures' , 'id' : 'FRA19'},
-          {'label' : 'Fish passage notches on existing structures' , 'id' : 'FRA20'},
-          {'label' : 'Removal of silt from bridge arches and culverts' , 'id' : 'FRA21'},
-          {'label' : 'Removal of silt and sand next to in-river structures' , 'id' : 'FRA22'},
-          {'label' : 'Dredging of ditches, drains and straightened watercourses' , 'id' : 'FRA23'},
-          {'label' : 'Dredging of a river' , 'id' : 'FRA24'},
-          {'label' : 'Excavation of scrapes and shallow wetland features' , 'id' : 'FRA25'},
-          {'label' : 'Raised flood defences (construction)' , 'id' : 'FRA26'},
-          {'label' : 'Wildlife refuge structures on the bankside' , 'id' : 'FRA27'},
-          {'label' : 'Track and path improvements' , 'id' : 'FRA28'}
+          {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2' , 'desc' : 'Allows electrical cable and supports above river. Not for cable on the bed or channel or in a duct. Minimum clearances apply depending on voltage.'},
+          {'label' : 'Service crossing below river bed by directional drilling' , 'id' : 'FRA3' , 'desc' : 'Intended for directional drilling not open trench. Must be at least 1.5m under the bed.'},
+          {'label' : 'Service crossings attached to the outside a structure' , 'id' : 'FRA4' , 'desc' : 'For example, attaching a duct to bridge parapet. You cannot erect a new structure or fix a duct across the opening of a bridge. The crossing must not project more than 1m from structure.'},
+          {'label' : 'Footbridge construction' , 'id' : 'FRA5' , 'desc' : 'Footbridge max length 8m. Deck max width 1.5m. No supports in water. Must not reduce the cross-sectional area of the channel or affect bed. Parapets of open construction. Not for vehicles.'},
+          {'label' : 'Scaffolding (temporary)' , 'id' : 'FRA6' , 'desc' : 'Can\'t be up for more than four weeks or between 15 March and 15 June. Not for scaffolding across whole structures such as bridges or weirs. Should not occupy more than 10m of a bank or 1.2m or 10% of river width. At least 0.6m above water.'},
+          {'label' : 'Dewatering (temporary)' , 'id' : 'FRA7' , 'desc' : 'None'},
+          {'label' : 'Maintenance of raised river or sea defences' , 'id' : 'FRA8' , 'desc' : 'None'},
+          {'label' : 'Maintenance of structures in the channel of a river' , 'id' : 'FRA9' , 'desc' : 'None'},
+          {'label' : 'Drinking bay for cattle' , 'id' : 'FRA10' , 'desc' : 'None'},
+          {'label' : 'Access platform (eg jetty, angling platform)' , 'id' : 'FRA11' , 'desc' : 'None'},
+          {'label' : 'Outfall pipes (small) and headwalls' , 'id' : 'FRA12' , 'desc' : 'None'},
+          {'label' : 'Repair of river banks using natural materials' , 'id' : 'FRA13' , 'desc' : 'None'},
+          {'label' : 'Repair of bank slips and erosion' , 'id' : 'FRA14' , 'desc' : 'None'},
+          {'label' : 'Channel habitat structures made of natural materials' , 'id' : 'FRA15' , 'desc' : 'None'},
+          {'label' : 'Survey raft' , 'id' : 'FRA16' , 'desc' : 'None'},
+          {'label' : 'Gravel-cleaning for fish-spawning beds' , 'id' : 'FRA17' , 'desc' : 'None'},
+          {'label' : 'Placing stones or logs in a river for habitat enhancement' , 'id' : 'FRA18' , 'desc' : 'None'},
+          {'label' : 'Eel pass devices on existing structures' , 'id' : 'FRA19' , 'desc' : 'None'},
+          {'label' : 'Fish passage notches on existing structures' , 'id' : 'FRA20' , 'desc' : 'None'},
+          {'label' : 'Removal of silt from bridge arches and culverts' , 'id' : 'FRA21' , 'desc' : 'None'},
+          {'label' : 'Removal of silt and sand next to in-river structures' , 'id' : 'FRA22' , 'desc' : 'None'},
+          {'label' : 'Dredging of ditches, drains and straightened watercourses' , 'id' : 'FRA23' , 'desc' : 'None'},
+          {'label' : 'Dredging of a river' , 'id' : 'FRA24' , 'desc' : 'None'},
+          {'label' : 'Excavation of scrapes and shallow wetland features' , 'id' : 'FRA25' , 'desc' : 'None'},
+          {'label' : 'Raised flood defences (construction)' , 'id' : 'FRA26' , 'desc' : 'None'},
+          {'label' : 'Wildlife refuge structures on the bankside' , 'id' : 'FRA27' , 'desc' : 'None'},
+          {'label' : 'Track and path improvements' , 'id' : 'FRA28' , 'desc' : 'None'}
         ] -%}
 
         {% for ex in exemptions %}
-          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, "checkbox") }}
+          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
         {% else %}
           <p>No radio buttons</p>
         {% endfor %}

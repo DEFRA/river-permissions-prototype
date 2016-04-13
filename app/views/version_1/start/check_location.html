@@ -1,14 +1,14 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <form action="/" method="post" class="form">
+  <form method="post" class="form">
 
     <a class="link-back" href="">Back</a>
 
     <div class="grid-row">
       <div class="column-two-thirds">
 
-        <form method="post" class="form">
+        <form method="post" class="form" action="/">
 
           <h1 class="heading-large">
             Have you called us to check the location of your activity?
@@ -36,10 +36,10 @@
 
             <div class="form-group">
               <label class="block-label" for="location_check_yes">
-                <input id="location_check_yes" type="radio" name="radio-inline-group" value="location_check_yes" /> Yes, the activity has been checked
+                <input id="location_check_yes" type="radio" name="location_check" value="location_check_yes" /> Yes, the activity has been checked
               </label>
               <label class="block-label" for="location_check_no">
-                <input id="location_check_no" type="radio" name="radio-inline-group" value="location_check_no" /> No
+                <input id="location_check_no" type="radio" name="location_check" value="location_check_no" /> No
               </label>
             </div>
 

@@ -56,6 +56,27 @@ router.get('/examples/over-18', function (req, res) {
 // add your routes here
 // River permissions prototype version 1
 
+// Start
+// Have you called us to check the location of your activity?                   /version_1/start/check_location
+// ###  location_check_no = Contact the Environment Agency                      /version_1/contact/contact_ea
+// ###  location_check_yes = Add the exemptions you want to register            /version_1/exemptions/add_exemptions
+// Check your exemptions                                                        /version_1/exemptions/check_exemptions
+// Where will the exemption activity take place?                                /version_1/location/grid_reference_2
+// Who is legally responsible for the activity?                                 /version_1/user_type/user_type
+// ###  public = What’s the name of the local authority or public body?         /version_1/user_type/local_authority
+// What’s the postcode of the local authority or public body?                   /version_1/address/local_authority_postcode
+// What’s the address of the local authority or public body?                    /version_1/address/local_authority
+// Who should we contact about this activity?                                   /version_1/contact/main_contact_name
+// What’s the telephone number of the person we should contact?                 /version_1/contact/main_contact_telephone
+// What’s the email address of the person we should contact?                    /version_1/contact/main_contact_email
+// What’s the postcode of the person we should contact?                         /version_1/contact/main_contact_address
+// What’s the address of the person we should contact?                          /version_1/contact/main_contact_postcode
+// Would you like a copy of the registration email sent to someone else?        /version_1/contact/email_someone_else
+// Check your answers before completing this registration                       /version_1/end_registration/check_your_answers
+// Declaration                                                                  /version_1/end_registration/declaration
+// Registration complete                                                        /version_1/end_registration/confirmation
+
+
 // Route location to exemptions page
 
   router.post('/version_1/location/activity_specific/bridge_grid_reference', function(req, res) {

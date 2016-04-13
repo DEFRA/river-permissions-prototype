@@ -1,0 +1,14 @@
+{% macro input(id, label, value, name, type) %}
+<label for="idnum_{{ id }}" class="block-label">
+  <input id="idnum_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  {{ label|safe }}
+</label>
+{% endmacro %}
+
+
+{% macro exemption(id, label, value, name, desc, type) %}
+<label for="id_{{ id }}" class="block-label exemption">
+  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  {{ label|safe }} <span class="exmpt">{{ id }}</span>
+</label>
+{% endmacro %}

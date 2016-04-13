@@ -1,468 +1,102 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %}
+
+{% set title = "Add the exemptions you want to register" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  <a class="link-back" href="">Back</a>
+  {% include "custom_inc/backlink.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
+
+    <h1 class="heading-large">
+      {{ title }}
+    </h1>
+
+      <p class="panel panel-border-wide">
+        You can register more than one exemption but they must all be at the same location.
+        You should check you can meet the conditions for each exemption.
+        <a target="blank" href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">
+          Exempt flood risk activities guidance
+        </a>.
+      </p>
+
       <form method="post" class="form">
 
-        <h1 class="heading-large">
-          Add all exemptions that apply to the activity
-        </h1>
 
-        <table summary="exemption-codes" role="presentation" class="exemption-table">
-          <thead>
-            <tr>
-              <th class="exemption-description"><span class="heading-small">Exemption</span></th>
-              <th class="exemption-description"><span class="heading-small">Description</span></th>
-              <th class="exemption-checkbox"><span class="heading-small">Select exemptions</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA2</span>
-              </td>
-              <td class="exemption-description">
-                <p>The erection of an electrical cable service crossing over a main river</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-1">
-                    <input id="checkbox-1" type="checkbox" value="1" name="exemption-1" /> Electrical cable services
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA3</span>
-              </td>
-              <td class="exemption-description">
-                <p>The erection of a service crossing below the bed of a main river by directional drilling not involving an open cut technique.</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-2">
-                    <input id="checkbox-2" type="checkbox" value="2" name="exemption-2" /> Service crossings
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA4</span>
-              </td>
-              <td class="exemption-description">
-                <p>Service crossings attached to the outside of existing structures over a main river</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-3">
-                    <input id="checkbox-3" type="checkbox" value="3" name="exemption-3" /> Service crossings attached
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA5</span>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of footbridges</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-4">
-                    <input id="checkbox-4" type="checkbox" value="4" name="exemption-4" /> Footbridges
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA6</span>
-              </td>
-              <td class="exemption-description">
-                <p>The erection and use of temporary scaffolding in or over a main river in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-5">
-                    <input id="checkbox-5" type="checkbox" value="5" name="exemption-5" /> Temporary scaffolding in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA7</span>
-              </td>
-              <td class="exemption-description">
-                <p>The temporary dewatering of a work area in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-6">
-                    <input id="checkbox-6" type="checkbox" value="6" name="exemption-6" /> Temporary dewatering in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA8</span>
-              </td>
-              <td class="exemption-description">
-                <p>Using effluent to clean a highway gravel bed</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Maintenance of raised river or sea defences</legend>
-                  <label class="block-label" for="checkbox-U7">
-                    <input id="checkbox-U7" type="checkbox" value="7" name="exemption-7" /> The maintenance of raised river or sea defences
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA9</span>
-              </td>
-              <td class="exemption-description">
-                <p>The maintenance of structures within the channel of a main river other than raised river or sea defences</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-8">
-                    <input id="checkbox-8" type="checkbox" value="8" name="exemption-8" /> Maintenance of structures within the channel of a main river
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA10</span>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of a drinking bay on the bank of a main river</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-9">
-                    <input id="checkbox-9" type="checkbox" value="9" name="exemption-9" /> Drinking bays
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA11</span>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of access platforms on the bank of a main river or that project into or over a main river</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-10">
-                    <input id="checkbox-10" type="checkbox" value="10" name="exemption-10" /> Access platforms
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA12</span>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of small outfall pipes and headwalls to main rivers</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-11">
-                    <input id="checkbox-11" type="checkbox" value="11" name="exemption-11" /> Outfalls
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA13</span>
-              </td>
-              <td class="exemption-description">
-                <p>The repair and protection of main river banks using natural materials</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-12">
-                    <input id="checkbox-12" type="checkbox" value="12" name="exemption-12" /> Repair and protection of banks
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA14</span>
-              </td>
-              <td class="exemption-description">
-                <p>Repair of bank slips and erosion</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-13">
-                    <input id="checkbox-13" type="checkbox" value="13" name="exemption-13" /> Repair of bank slips and erosion
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA15</span>
-              </td>
-              <td class="exemption-description">
-                <p>The installation of channel habitat structures made of natural materials excluding weirs and berms</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-14">
-                    <input id="checkbox-14" type="checkbox" value="14" name="exemption-14" /> Channel habitat structures made of natural materials
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA16</span>
-              </td>
-              <td class="exemption-description">
-                <p>The installation of rafts for surveys</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-15">
-                    <input id="checkbox-15" type="checkbox" value="15" name="exemption-15" /> Raft for surveys
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA17</span>
-              </td>
-              <td class="exemption-description">
-                <p>Gravel-cleaning for fish-spawning beds</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-16">
-                    <input id="checkbox-16" type="checkbox" value="16" name="exemption-16" /> Gravel-cleaning for fish-spawning beds
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA18</span>
-              </td>
-              <td class="exemption-description">
-                <p>Placement of stones or logs in the channel of a main river in England for habitat enhancement</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-17">
-                    <input id="checkbox-17" type="checkbox" value="17" name="exemption-17" /> Placement of stones or logs in a main river in England for habitat enhancemen
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA19</span>
-              </td>
-              <td class="exemption-description">
-                <p>Construction of eel pass devices on existing structures</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-18">
-                    <input id="checkbox-18" type="checkbox" value="18" name="exemption-18" /> Eel pass devices
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA20</span>
-              </td>
-              <td class="exemption-description">
-                <p>Construction of fish passage notches on an existing impoundment</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-19">
-                    <input id="checkbox-19" type="checkbox" value="19" name="exemption-19" /> Fish passage notches
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA21</span>
-              </td>
-              <td class="exemption-description">
-                <p>The removal of silt and sand from within bridge arches in England and any material from within culverts in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-20">
-                    <input id="checkbox-20" type="checkbox" value="20" name="exemption-20" /> Removal of silt, sand and other material in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA22</span>
-              </td>
-              <td class="exemption-description">
-                <p>The removal of silt and sand adjacent to in-river structures in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-21">
-                    <input id="checkbox-21" type="checkbox" value="21" name="exemption-21" /> Removal of silt and sand adjacent to in-river structures in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA23</span>
-              </td>
-              <td class="exemption-description">
-                <p>Dredging of no more than 1.5 kilometres of man-made ditches, land drains, agricultural drains and previously straightened watercourses classified as main rivers in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-22">
-                    <input id="checkbox-22" type="checkbox" value="22" name="exemption-22" /> Dredging of man-made ditches, land drains, agricultural drains and previously straightened watercourses in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA24</span>
-              </td>
-              <td class="exemption-description">
-                <p>Dredging of no more than 20 metres of any main river in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-23">
-                    <input id="checkbox-23" type="checkbox" value="23" name="exemption-23" />Dredging of any main river in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA25</span>
-              </td>
-              <td class="exemption-description">
-                <p>The excavation of scrapes and shallow wetland features in a floodplain</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-24">
-                    <input id="checkbox-24" type="checkbox" value="24" name="exemption-24" />Excavation of scrapes and shallow wetland features
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA26</span>
-              </td>
-              <td class="exemption-description">
-                <p>The construction of raised flood defences around one to six adjoining properties in England</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-25">
-                    <input id="checkbox-25" type="checkbox" value="25" name="exemption-25" /> Raised flood defences in England
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA27</span>
-              </td>
-              <td class="exemption-description">
-                <p>Construction of bankside wildlife refuge structures</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-26">
-                    <input id="checkbox-26" type="checkbox" value="26" name="exemption-26" /> Bankside wildlife refuge structures
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
-            <tr>
-              <td class="exemption-description">
-                <span class="bold-large">FRA28</span>
-              </td>
-              <td class="exemption-description">
-                <p>Improvement works for tracks and paths</p>
-              </td>
-              <td class="exemption-select">
-                <fieldset>
-                  <legend class="visuallyhidden">Select all your waste exemptions</legend>
-                  <label class="block-label" for="checkbox-27">
-                    <input id="checkbox-27" type="checkbox" value="27" name="exemption-27" /> Improvement works for tracks and paths
-                  </label>
-                </fieldset>
-              </td>
-            </tr>
+        <style>
+          span.exmpt{
+            font-weight:bold;
+            float:right;
+          }
 
-          </tbody>
-        </table>
+        label.exemption{
+          background-color:#ededed;
+          border-color:#ededed;
+        }
 
-        <br />
-        <br />
+        @media screen and (min-width: 320px) {
+          label.exemption{
+            width:99%;
+            }
+        }
+
+        </style>
 
         <div class="form-group">
-          <input type="submit" class="button" value="Add exemptions and continue" />
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% set exemptions = [
+          {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2' , 'desc' : 'Allows electrical cable and supports above river. Not for cable on the bed or channel or in a duct. Minimum clearances apply depending on voltage.'},
+          {'label' : 'Service crossing below river bed by directional drilling' , 'id' : 'FRA3' , 'desc' : 'Intended for directional drilling not open trench. Must be at least 1.5m under the bed.'},
+          {'label' : 'Service crossings attached to the outside a structure' , 'id' : 'FRA4' , 'desc' : 'For example, attaching a duct to bridge parapet. You cannot erect a new structure or fix a duct across the opening of a bridge. The crossing must not project more than 1m from structure.'},
+          {'label' : 'Footbridge construction' , 'id' : 'FRA5' , 'desc' : 'Footbridge max length 8m. Deck max width 1.5m. No supports in water. Must not reduce the cross-sectional area of the channel or affect bed. Parapets of open construction. Not for vehicles.'},
+          {'label' : 'Scaffolding (temporary)' , 'id' : 'FRA6' , 'desc' : 'Can\'t be up for more than four weeks or between 15 March and 15 June. Not for scaffolding across whole structures such as bridges or weirs. Should not occupy more than 10m of a bank or 1.2m or 10% of river width. At least 0.6m above water.'},
+          {'label' : 'Dewatering (temporary)' , 'id' : 'FRA7' , 'desc' : 'None'},
+          {'label' : 'Maintenance of raised river or sea defences' , 'id' : 'FRA8' , 'desc' : 'None'},
+          {'label' : 'Maintenance of structures in the channel of a river' , 'id' : 'FRA9' , 'desc' : 'None'},
+          {'label' : 'Drinking bay for cattle' , 'id' : 'FRA10' , 'desc' : 'None'},
+          {'label' : 'Access platform (eg jetty, angling platform)' , 'id' : 'FRA11' , 'desc' : 'None'},
+          {'label' : 'Outfall pipes (small) and headwalls' , 'id' : 'FRA12' , 'desc' : 'None'},
+          {'label' : 'Repair of river banks using natural materials' , 'id' : 'FRA13' , 'desc' : 'None'},
+          {'label' : 'Repair of bank slips and erosion' , 'id' : 'FRA14' , 'desc' : 'None'},
+          {'label' : 'Channel habitat structures made of natural materials' , 'id' : 'FRA15' , 'desc' : 'None'},
+          {'label' : 'Survey raft' , 'id' : 'FRA16' , 'desc' : 'None'},
+          {'label' : 'Gravel-cleaning for fish-spawning beds' , 'id' : 'FRA17' , 'desc' : 'None'},
+          {'label' : 'Placing stones or logs in a river for habitat enhancement' , 'id' : 'FRA18' , 'desc' : 'None'},
+          {'label' : 'Eel pass devices on existing structures' , 'id' : 'FRA19' , 'desc' : 'None'},
+          {'label' : 'Fish passage notches on existing structures' , 'id' : 'FRA20' , 'desc' : 'None'},
+          {'label' : 'Removal of silt from bridge arches and culverts' , 'id' : 'FRA21' , 'desc' : 'None'},
+          {'label' : 'Removal of silt and sand next to in-river structures' , 'id' : 'FRA22' , 'desc' : 'None'},
+          {'label' : 'Dredging of ditches, drains and straightened watercourses' , 'id' : 'FRA23' , 'desc' : 'None'},
+          {'label' : 'Dredging of a river' , 'id' : 'FRA24' , 'desc' : 'None'},
+          {'label' : 'Excavation of scrapes and shallow wetland features' , 'id' : 'FRA25' , 'desc' : 'None'},
+          {'label' : 'Raised flood defences (construction)' , 'id' : 'FRA26' , 'desc' : 'None'},
+          {'label' : 'Wildlife refuge structures on the bankside' , 'id' : 'FRA27' , 'desc' : 'None'},
+          {'label' : 'Track and path improvements' , 'id' : 'FRA28' , 'desc' : 'None'}
+        ] -%}
+
+        {% for ex in exemptions %}
+          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
         </div>
 
       </form>

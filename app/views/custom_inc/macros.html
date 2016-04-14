@@ -9,6 +9,16 @@
 {% macro exemption(id, label, value, name, desc, type) %}
 <label for="id_{{ id }}" class="block-label exemption">
   <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
-  {{ label|safe }} <span class="exmpt">{{ id }}</span>
+  {{ label|safe }}
+
+<details>
+  <summary><span class="summary">Details</span></summary>
+  <div class="panel panel-border-narrow">
+    <p>{{ desc|safe }}</p>
+  </div>
+</details>
+
+<span class="exmpt">{{ id }}</span>
 </label>
+
 {% endmacro %}

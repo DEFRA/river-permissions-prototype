@@ -63,7 +63,7 @@ router.get('/examples/over-18', function (req, res) {
 
 router.post('/version_1/start/check_location', function (req,res) {
   if (req.body['location_check']==="location_check_no"){
-    res.redirect('/version_1/contact/contact_ea');
+    res.redirect('/version_1/contact/contact_ea_location');
   } else if (req.body['location_check']==="location_check_yes") {
     res.redirect('/version_1/exemptions/add_exemptions');
   }

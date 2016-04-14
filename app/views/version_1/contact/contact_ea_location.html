@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <a class="link-back" href="">Back</a>
+
+  <form method="post" class="form">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Contact the Environment Agency
+        </h1>
+        <p class="bold-small">
+          You must contact us to check the location of your activity before your start this registration.
+        </p>
+        <p>
+          Call us on 03708 506 506 to check if your activities are on a main river and if they are near any sensitive areas such as a nature reserve.
+        </p>
+        <p>
+          <a href="https://www.gov.uk/guidance/flood-risk-activities-environmental-permits">
+            Flood risk activities guidance
+          </a>
+        </p>
+
+        <div class="contact">
+          <h3 class="heading-medium">Contact the Environment Agency</h3>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>
+          <br /> Telephone: 03708 506 506
+          <br /> Minicom: 03702 422 549
+          <br /> Monday to Friday, 8am to 6pm
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+
+{% endblock %}

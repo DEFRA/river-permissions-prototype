@@ -2,7 +2,7 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  <a class="link-back" href="">Back</a>
+  {% include "custom_inc/backlink.html" %}
 
   <form method="post" class="form">
 
@@ -11,7 +11,7 @@
   </h1>
 
     <p class="panel panel-border-wide">
-      We’ll send a copy of this summary in the confirmation email
+      We’ll send a copy of these details in the confirmation email.
     </p>
 
     <table class="check-your-answers">
@@ -82,15 +82,15 @@
         </tr>
         <tr>
           <td>
-            Person responsible for activity
+            Responsible for activity
           </td>
           <td>
-            Tom Riddle
-            <br />15 Maple Drive
-            <br /> Kendal
-            <br /> LA9 5BN
+            Careful Contractor Ltd
+            <br /> Road
+            <br /> Town
+            <br /> Postcode
             <br /> Tel: 01539 725 345
-            <br /> Email: tom.riddle@email.com
+            <br /> Email: someones@email.com
           </td>
           <td class="change-answer">
             <a href="/version_1/contact/main_contact_name">
@@ -103,7 +103,7 @@
             Who we will contact
           </td>
           <td>
-            Tom Riddle
+            Sarah Site manager
             <br /> Tel: 03708 506506
             <br /> Email: tom.riddle@email.com
           </td>

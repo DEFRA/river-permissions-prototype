@@ -3,7 +3,7 @@
 
   {% include "includes/phase_banner_alpha.html" %}
 
-  <a class="link-back" href="">Back</a>
+  {% include "custom_inc/backlink.html" %}
 
   <form method="post" class="form">
 
@@ -14,9 +14,15 @@
           Contact the Environment Agency
         </h1>
 
-        <p>If you have any questions, or want to change your registration details, please call our helpline.</p>
+        <p>Please call our helpline to discuss your activity and get advice about who might be the organisation or person responsible for your activity.</p>
 
-        <p>Telephone: 03708 506 506</p>
+        <div class="contact">
+          <h3 class="heading-medium">Contact the Environment Agency</h3>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>
+          <br /> Telephone: 03708 506 506
+          <br /> Minicom: 03702 422 549
+          <br /> Monday to Friday, 8am to 6pm
+        </div>
 
       </div>
     </div>

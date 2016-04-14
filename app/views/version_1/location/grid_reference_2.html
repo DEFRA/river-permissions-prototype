@@ -1,73 +1,41 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <form action="/" method="post" class="form">
+  <form method="post" class="form">
 
-    <a class="link-back" href="">Back</a>
+    {% include "custom_inc/backlink.html" %}
 
     <div class="grid-row">
       <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          Where will the activity be located?
+          Where will the exemption activity take place?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Where will the activity be located?</legend>
+          <legend class="visuallyhidden">Where will the exemption activity take place?</legend>
 
           <!-- Grid reference -->
           <div class="form-group">
-            <label class="form-label" for="grid-reference">Provide a national grid reference</label>
+            <label class="form-label" for="grid-reference">National grid reference</label>
             <p class="form-hint">For example, ST 58132 72695</p>
             <input type="text" class="form-control" id="grid-reference" />
           </div>
 
-          <!-- What is a grid reference? -->
-          <details>
-            <summary><span class="summary">What is a grid reference?</span></summary>
-            <div class="panel panel-border-narrow">
-              <p>
-                A grid reference is 8-12 numbers long and states where something in on a map.
-              </p>
-              <p>
-                We only ask for a grid reference, when postcode cannot provide a accurate enough location.
-              </p>
-            </div>
-          </details>
-
           <!-- Find grid reference -->
           <details style="padding-bottom: 18px;">
-            <summary><span class="summary">Help finding grid reference</span></summary>
+            <summary><span class="summary">Help finding a grid reference</span></summary>
             <div class="panel panel-border-narrow">
-              <p>
-                There are different ways to find a grid reference for a location.
-              </p>
-              <p>
-                Use this guide to <a href="#">find a grid reference service.</a>
-              </p>
+              <p>Use the free <a href="https://www.ordnancesurvey.co.uk/osmaps/">Ordnance Survey online map</a> to find a grid reference.</p>
+              <p>Zoom in and centre the map on the activity location and select the ‘Grid Ref' tool. You should be able to copy and paste the grid reference back into this page.</p>
             </div>
           </details>
-
-          <!-- Manual address look-up
-          <div class="form-group">
-            <label class="form-label" for="grid-reference">Provide more site details</label>
-            <p class="form-hint">Useful information might include:</p>
-            <ul class="list-bullet form-hint">
-              <li>nearby landmarks</li>
-              <li>site description</li>
-              <li>man-made features, for example: roads, walls or buildings</li>
-              <li>natural features, for example: rivers, trees or hedges</li>
-            </ul>
-            <textarea class="form-control form-control-textarea" id="location-comments" rows="6" cols="50"></textarea>
-            <p class="form-hint">500 character limit</p>
-          </div>
-          -->
 
         </fieldset>
 
         <!-- Primary button -->
         <div class="form-group">
-          <a class="button" href="/version_1/exemptions/add_exemptions" role="button">Continue</a>
+          <input type="submit" class="button" value="Continue" />
         </div>
 
       </div>

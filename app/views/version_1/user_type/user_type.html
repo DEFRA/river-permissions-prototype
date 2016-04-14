@@ -1,8 +1,8 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Who is legally responsible for the activity? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
-  <a class="link-back" href="">Back</a>
+  {% include "custom_inc/backlink.html" %}
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -10,29 +10,27 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          Who is registering?
+          Who is legally responsible for the activity?
         </h1>
-
-        <p>Choose the option that most closely describes the business, organisation or individual registering the exemption</p>
 
         <div class="form-group">
           <fieldset>
 
             <legend class="visuallyhidden">
-              Business type
+              Who is legally responsible for the activity?
             </legend>
 
             <label class="block-label" for="local_authority">
               <input id="local_authority" type="radio" name="radio-inline-group" value="local_authority" /> Local authority or public body
             </label>
             <label class="block-label" for="limited_company">
-              <input id="limited_company" type="radio" name="radio-inline-group" value="limited_company" /> Limited company
+              <input id="limited_company" type="radio" name="radio-inline-group" value="limited_company" /> Limited company (eg a registered company or plc)
             </label>
             <label class="block-label" for="limited_liability">
               <input id="limited_liability" type="radio" name="radio-inline-group" value="limited_liability" /> Limited liability partnership
             </label>
             <label class="block-label" for="individual">
-              <input id="individual" type="radio" name="radio-inline-group" value="individual" /> Individual
+              <input id="individual" type="radio" name="radio-inline-group" value="individual" /> Individual (eg a householder)
             </label>
             <label class="block-label" for="partnership">
               <input id="partnership" type="radio" name="radio-inline-group" value="partnership" /> Partnership
@@ -46,6 +44,24 @@
 
           </fieldset>
         </div>
+
+        <details style="padding-bottom: 18px;">
+          <summary><span class="summary">How to decide who is legally responsible</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>The company, body or individual who has control over the way the activity (work) is done is legally responsible. They are called the ‘operator’. If you use contractors, you need to decide if it is you or the contractors who has control. Whoever
+              has control should register the exemption.</p>
+            <p>Whoever has control will usually:</p>
+
+            <ul class="list-bullet">
+              <li>have day-to-day control of the activity</li>
+              <li>make sure the activity complies with the exemption rules</li>
+              <li>decide who holds important staff positions and stop</li>
+              <li>incompetent staff working, if needed</li>
+              <li>make financial decisions that affect the activity</li>
+              <li>take action to control the activity in an emergency</li>
+            </ul>
+          </div>
+        </details>
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />

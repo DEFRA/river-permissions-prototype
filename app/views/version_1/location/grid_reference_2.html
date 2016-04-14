@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
-  <form action="/" method="post" class="form">
+  <form method="post" class="form">
 
     <a class="link-back" href="">Back</a>
 
@@ -35,7 +35,7 @@
 
         <!-- Primary button -->
         <div class="form-group">
-          <a class="button" href="/version_1/exemptions/add_exemptions" role="button">Continue</a>
+          <input type="submit" class="button" value="Continue" />
         </div>
 
       </div>

@@ -12,9 +12,9 @@
   {{ label|safe }}
 
 <details id="desc_{{ id }}">
-  <summary><span class="summary">Details</span></summary>
+  <summary><span class="summary">Details</span><span class="visuallyhidden"> of {{ id }}</span></summary>
   <div class="panel panel-border-narrow">
-    <p>{{ desc|safe }}</p>
+    <p>{{ desc|safe }} <a href="/version_1/exemptions/details-FRA3" target="_blank">Full conditions<span class="visuallyhidden"> for exemption {{ id }}</span>.</a></p>
   </div>
 </details>
 

@@ -8,10 +8,10 @@
 
 {% macro exemption(id, label, value, name, desc, type) %}
 <label for="id_{{ id }}" class="block-label exemption">
-  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}" aria-describedby="desc_{{ id }}">
   {{ label|safe }}
 
-<details>
+<details id="desc_{{ id }}">
   <summary><span class="summary">Details</span></summary>
   <div class="panel panel-border-narrow">
     <p>{{ desc|safe }}</p>

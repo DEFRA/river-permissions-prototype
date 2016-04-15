@@ -1,4 +1,4 @@
-var express = require('express');
+  var express = require('express');
 var router = express.Router();
 
 router.use(function (req, res, next) {
@@ -552,6 +552,31 @@ router.get('/design_patterns/routing_questions/permission_types/declaration', fu
 });
 
 // phone_questions folder
+
+// emergency folder questions
+// Question for emergency index.html
+
+router.get('/design_patterns/routing_questions/phone_questions/building', function (req, res) {
+
+  console.log("WHAT");
+
+  // get the answer from the query string (eg. ?scaffolding=1)
+  var emergency = req.query.emergency;
+
+  if (emergency == "exclusion_2" ){
+
+    // if users IS using scaffolding
+    res.redirect("/design_patterns/routing_questions/phone_questions/conditions/results" + res.locals.formQuery);
+
+  } else {
+
+    // if users is NOT using scaffolding
+    res.render('design_patterns/routing_questions/phone_questions/building/index.html');
+
+  }
+
+});
+
 // building folder questions
 // Question for building index.html
 

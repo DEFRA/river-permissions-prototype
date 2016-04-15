@@ -7,481 +7,452 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form method="post" class="form">
-        
-        <h1 class="heading-large">
-          Declaration
-        </h1>
+        <!-- permits -->
+        {% if data.dredging_distance=="permit" %}
 
-        <div class="notice">
-          <i class="icon icon-important">
-            <span class="visuallyhidden">Warning</span>
-          </i>
-          <strong class="bold-small">
-            There are rules that you must follow to do this activity. 
-          </strong>
-        </div>
+          <h1 class="heading-large">
+            Conditions to do activity
+          </h1>
 
-        <br />
+          <p class="lede">You may want to change the design and scale of you activity, so you only need to <a href="#">register your details</a>.</p>
 
+          <br>
 
-        <!-- exclusion fencing -->
+        <!-- exemptions -->
+        {% elif data.on_new_thing=="exemption_1" or data.on_new_thing=="exemption_2" or data.what_you_building=="exemption_4" or data.scaffolding_ladders_time=="exemption_5" or data.dewatering=="exemption_6" or data.what_you_repairing=="exemption_7" or data.what_you_repairing=="exemption_8" or data.what_is_it=="exemption_9" or data.what_you_building=="exemption_10" or data.what_you_building=="exemption_11" or data.what_you_removing=="exemption_11" or data.what_you_repairing=="exemption_16" or data.what_you_repairing=="exemption_12" or data.what_is_it=="exemption_14" or data.on_new_thing=="exemption_14" or data.what_you_building=="exemption_15" or data.what_is_it=="exemption_16" or data.what_is_it=="exemption_17" or data.what_is_it=="exemption_18" or data.what_is_it=="exemption_19" or data.what_you_removing=="exemption_20" or data.dredging_distance=="exemption_22" or data.what_you_removing=="exemption_22" or data.dredging_distance=="exemption_23" or data.what_you_removing=="exemption_23" or data.what_you_digging=="exemption_24" or data.what_you_building=="exemption_25" or data.what_is_it=="exemption_26" or data.what_you_repairing=="exemption_27" %}
+
+          <form method="get" action="/version_1/start/gds_start" class="form">
+
+          {{formData | safe}}
+
+          <h1 class="heading-large">
+            Conditions to do activity
+          </h1>
+
+          <br>
+
+          <p class="lede">If you cannot follow these conditions <a href="#">apply for a permit</a>.</p>
+
+          <br>
+
+        <!-- exclusions -->
+        {% elif data.emergency=="exclusion_2" or data.scaffolding_ladders_time=="exclusion_4" or data.what_you_building=="exclusion_6" or data.on_existing_thing=="exclusion_6" or data.what_you_repairing=="exclusion_7" or data.what_you_building=="exclusion_10" or data.what_you_building=="exclusion_12" or data.what_you_digging=="exclusion_12" or data.on_existing_thing=="exclusion_12" %}
+
+          <form method="get" action="/design_patterns/routing_questions/phone_questions/conditions/declaration" class="form">
+
+          {{formData | safe}}
+
+          <h1 class="heading-large">
+            Conditions to do activity
+          </h1>
+
+          <br>
+
+          <p class="lede">If you cannot follow these conditions, <a href="#">register your details</a>.</p>
+
+          <br>
+
+        {% endif %}  
+
+        <!-- CONDITIONS -->
+
+        <!-- conditions / exclusion fencing -->
+        {% if data.emergency=="exclusion_2" %}
+
+          <p class="bold-small">
+            Conditions for doing emergency work
+          </p>
+
+          <ol class="list list-bullet">
+            <li>Rule</li>
+            <li>Rule</li>
+            <li>Rule</li>
+          </ol>
+
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
+
+        {% endif %}
+
+        <!-- conditions / exclusion fencing -->
         {% if data.what_you_building=="exclusion_12" %}
 
-          <h3 class="heading-medium">
-            Rules for Fencing
-          </h3>
+          <p class="bold-small">
+            Conditions for fencing
+          </p>
 
-
-          <ol class="list list-number">
-            <li>Rule</li>
-            <li>Rule</li>
-            <li>Rule</li>
+          <ol class="list list-bullet">
+            <li>cannot be on the bank or bed of the river</li>
+            <li>can be made from post, rail and wire</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
+
+          <br>
 
         {% endif %}
 
-        <!-- exclusion flood protection device -->
+        <!-- conditions / exclusion flood protection device -->
         {% if data.what_you_building=="exclusion_6" %}
 
-          <h3 class="heading-medium">
-            Rules for building flood protection device attached to a building
-          </h3>
+          <p class="bold-small">
+            Conditions for attaching flood protection device attached to a building
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
-        <!-- exclusion notice board -->
+        <!-- conditions / exclusion notice board -->
         {% if data.what_you_building=="exclusion_10" %}
 
-          <h3 class="heading-medium">
-            Rules for building a notice board
-          </h3>
+          <p class="bold-small">
+            Conditions for building a notice boar
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
-        <!-- exemption footbridges -->
+        <!-- conditions / exemption footbridges -->
         {% if data.what_you_building=="exemption_4" %}
 
-          <h3 class="heading-medium">
-            Rules for building a footbridge
-          </h3>
+          <p class="bold-small">
+            Conditions for building a footbridge
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption outfalls -->
         {% if data.what_you_building=="exemption_11" %}
 
-          <h3 class="heading-medium">
-            Rules for building a outfall or headwall
-          </h3>
+          <p class="bold-small">
+            Conditions for building a outfall or headwall
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption raised flood defence -->
         {% if data.what_you_building=="exemption_25" %}
 
-          <h3 class="heading-medium">
-            Rules for building a raised flood defence
-          </h3>
+          <p class="bold-small">
+            Conditions for building a raised flood defence
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption access platform -->
         {% if data.what_you_building=="exemption_10" %}
 
-          <h3 class="heading-medium">
-            Rules for building a access platform on the riverbank
-          </h3>
+          <p class="bold-small">
+            Conditions for building a access platform on the riverbank
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption access platform -->
         {% if data.what_you_building=="exemption_15" %}
 
-          <h3 class="heading-medium">
-            Rules for building a survey raft
-          </h3>
+          <p class="bold-small">
+            Conditions for building a survey raft
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exclusion minor works -->
         {% if data.what_you_repairing=="exclusion_7" %}
 
-          <h3 class="heading-medium">
-            Rules for doing minor works
-          </h3>
+          <p class="bold-small">
+            Conditions for doing minor works
+          </p>
 
-
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption tracks and paths -->
         {% if data.what_you_repairing=="exemption_27" %}
 
-          <h3 class="heading-medium">
-            Rules for improvement works for tracks or paths
-          </h3>
+          <p class="bold-small">
+            Conditions for improvement works for tracks or paths
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption maintaining river or sea defences -->
         {% if data.what_you_repairing=="exemption_7" %}
 
-          <h3 class="heading-medium">
-            Rules for maintaining of a raised river or sea defence
-          </h3>
+          <p class="bold-small">
+            Conditions for maintaining of a raised river or sea defence
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption Maintaining structures within the river -->
         {% if data.what_you_repairing=="exemption_8" %}
 
-          <h3 class="heading-medium">
-            Rules for maintaining structures within the river 
-          </h3>
+          <p class="bold-small">
+            Conditions for maintaining structures within the river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption repairing riverbank -->
         {% if data.what_you_repairing=="exemption_12" %}
 
-          <h3 class="heading-medium">
-            Rules for repairing a riverbank
-          </h3>
+          <p class="bold-small">
+            Conditions for repairing riverbank
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption repairing riverbank -->
         {% if data.what_you_repairing=="exemption_16" %}
 
-          <h3 class="heading-medium">
-            Rules for cleaning gravel for fish spawning
-          </h3>
+          <p class="bold-small">
+            Conditions for cleaning gravel for fish spawning
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption habitat in the river  -->
         {% if data.what_is_it=="exemption_14" %}
 
-          <h3 class="heading-medium">
-            Rules for building a habitat in the river
-          </h3>
+          <p class="bold-small">
+            Conditions for building a habitat in the river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption stones or logs in a river for habitat -->
         {% if data.what_is_it=="exemption_17" %}
 
-          <h3 class="heading-medium">
-            Rules for placing stones or logs in a river for habitat
-          </h3>
+          <p class="bold-small">
+            Conditions for placing stones or logs in a river for habitat
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption bankside wildlife structure -->
         {% if data.what_is_it=="exemption_26" %}
 
-          <h3 class="heading-medium">
-            Rules for building a bankside wildlife structure
-          </h3>
+          <p class="bold-small">
+            Conditions for building a bankside wildlife structure
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption fish passage notches -->
         {% if data.what_is_it=="exemption_19" %}
 
-          <h3 class="heading-medium">
-            Rules for constructing fish passage notches
-          </h3>
+          <p class="bold-small">
+            Conditions for constructing fish passage notches
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption eel pass devices -->
         {% if data.what_is_it=="exemption_18" %}
 
-          <h3 class="heading-medium">
-            Rules for constructing eel pass devices
-          </h3>
+          <p class="bold-small">
+            Conditions for constructing eel pass devices
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption building drinking bays -->
         {% if data.what_is_it=="exemption_9" %}
 
-          <br />
+          <p class="bold-small">
+            Conditions for building drinking bay on a riverbank
+          </p>
 
-          <h3 class="heading-medium">
-            Rules for building drinking bay on a riverbank
-          </h3>
-
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
@@ -492,63 +463,57 @@
             Rules for cleaning gravel for fish spawning
           </h3>
 
-          <ol class="list list-number">
+          <p class="bold-small">
+            Conditions for cleaning gravel for fish spawning
+          </p>
+
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exclusion scaffolding day or less -->
         {% if data.scaffolding_ladders_time=="exclusion_4" %}
 
-          <h3 class="heading-medium">
-            Rules for putting up scaffolding
-          </h3>
+          <p class="bold-small">
+            Conditions for putting up scaffolding
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Taken down each day</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
             <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
+              See <a href="/version_1/guidance/guidance">regulations</a>
             </p>
-          </div>
-
-          <br>
 
         {% endif %}
 
         <!-- exemption scaffolding day or more -->
         {% if data.scaffolding_ladders_time=="exemption_5" %}
 
-          <h3 class="heading-medium">
-            Rules for putting up scaffolding
-          </h3>
+          <p class="bold-small">
+            Conditions for putting up scaffolding
+          </p>
 
-          <ol class="list list-number">
-            <li>Less than 4 months</li>
+          <ol class="list list-bullet">
+            <li>Less than four months</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
             <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
+              See <a href="/version_1/guidance/guidance">regulations</a>
             </p>
-          </div>
 
           <br>
 
@@ -557,266 +522,209 @@
         <!-- exemption crape or shallow wetland feature -->
         {% if data.what_you_digging=="exemption_24" %}
 
-          <h3 class="heading-medium">
-            Rules for creating scrape or shallow wetland feature
-          </h3>
+          <p class="bold-small">
+            Conditions for creating scrape or shallow wetland feature
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption crape or shallow wetland feature -->
         {% if data.what_you_digging=="exemption_14" %}
 
-          <h3 class="heading-medium">
-            Rules for creating scrape or shallow wetland feature
-          </h3>
+          <p class="bold-small">
+            Conditions for creating scrape or shallow wetland feature
+          </p>
 
-          <ol class="list list-number">
-            <li>Rule</li>
+          <ol class="list list-bullet">
+            <li>Rules</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exclusion digging holes -->
         {% if data.what_you_digging=="exclusion_12" %}
 
-          <h3 class="heading-medium">
-            Rules for digging holes
-          </h3>
+          <p class="bold-small">
+            Conditions for digging holes
+          </p>
 
-          <ol class="list list-number">
-            <li>Rules</li>
+          <ol class="list list-bullet">
+            <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exclusion cables inside existing thing -->
         {% if data.on_existing_thing=="exclusion_12" %}
 
-          <h3 class="heading-medium">
-            Rules for cable, service crossing inside existing structure
-          </h3>
+          <p class="bold-small">
+            Conditions for cables, service crossing inside existing structure
+          </p>
 
-          <ol class="list list-number">
-            <li>Rules</li>
+          <ol class="list list-bullet">
+            <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exclusion cables inside existing structure -->
         {% if data.on_existing_thing=="exclusion_6" %}
 
-          <h3 class="heading-medium">
-            Rules for cable, service crossing attached to existing structure
-          </h3>
+          <p class="bold-small">
+            Conditions for cables, service crossings attached to existing structure
+          </p>
 
-          <ol class="list list-number">
-            <li>Rules</li>
+          <ol class="list list-bullet">
+            <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">register an exemption</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption cables under river -->
         {% if data.on_new_thing=="exemption_14" %}
 
-          <h3 class="heading-medium">
-            Rules for cables under the river
-          </h3>
+          <p class="bold-small">
+            Conditions for cables under the river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption cables within river -->
         {% if data.on_new_thing=="exemption_2" %}
 
-          <h3 class="heading-medium">
-            Rules for cables within the river
-          </h3>
+          <p class="bold-small">
+            Conditions for cables within the river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption cables above river -->
         {% if data.on_new_thing=="exemption_1" %}
 
-          <h3 class="heading-medium">
-            Rules for cables above the river
-          </h3>
+          <p class="bold-small">
+            Conditions for cables above the river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption dredging under 20m -->
         {% if data.dredging_distance=="exemption_23" %}
 
-          <h3 class="heading-medium">
-            Rules for dredging under under 20m
-          </h3>
+          <p class="bold-small">
+            Conditions for dredging under under 20m
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption dredging betweem 20m and 1.5km -->
         {% if data.dredging_distance=="exemption_22" %}
 
-          <h3 class="heading-medium">
-            Rules for dredging between 20m and 1.5km of a river
-          </h3>
+          <p class="bold-small">
+            Conditions for dredging between 20m and 1.5km of a river
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- permit dredging more than 1.5km -->
         {% if data.dredging_distance=="permit" %}
 
-          <h1 class="heading-large">
-            You need to apply for a permit
-          </h1>
+          <p class="bold-small">
+            Conditions for dredging over 1.5km of a river
+          </p>
 
-          <div class="notice">
-            <i class="icon icon-important">
-              <span class="visuallyhidden">Warning</span>
-            </i>
-            <strong class="bold-small">
-              There are rules that you must follow to do this activity. 
-            </strong>
-          </div>
-
-          <br />
-
-          <h3 class="heading-medium">
-            Rules for dredging between 20m and 1.5km of a river
-          </h3>
-
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
           <br>
 
@@ -825,134 +733,126 @@
         <!-- exemption for removing silt from bridges -->
         {% if data.what_you_removing=="exemption_23" %}
 
+          <p class="bold-small">
+            Conditions for removing silt or sand from around a bridge
+          </p>
 
-          <h3 class="heading-medium">
-            Rules for removing silt or sand from around a bridge
-          </h3>
-
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption for removing silt from culverts -->
         {% if data.what_you_removing=="exemption_20" %}
 
-          <h3 class="heading-medium">
-            Rules for removing silt or sand from around a culvert
-          </h3>
+          <p class="bold-small">
+            Conditions for removing silt or sand from around a culvert
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption for removing silt from around another type of structure -->
         {% if data.what_you_removing=="exemption_22" %}
 
-          <h3 class="heading-medium">
-            Rules for removing silt or sand from other stuff
-          </h3>
+          <p class="bold-small">
+            Conditions for removing silt or sand from other stuff
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption for removing silt from sediment trap -->
         {% if data.what_you_removing=="exemption_11" %}
 
-          <h3 class="heading-medium">
-            Rules for removing silt or sand from a sediment trap
-          </h3>
+          <p class="bold-small">
+            Conditions for removing silt or sand from a sediment trap
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>Rule</li>
             <li>Rule</li>
             <li>Rule</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
         <!-- exemption detwatering -->
         {% if data.dewatering=="exemption_6" %}
 
-          <h3 class="heading-medium">
-            Rules for dewatering part of a river
-          </h3>
+          <p class="bold-small">
+            Conditions for dewatering
+          </p>
 
-          <ol class="list list-number">
+          <ol class="list list-bullet">
             <li>the duration of dewatering is no longer than 4 weeks</li>
             <li>No more than 10m of the river is dewatered at any time.</li>
           </ol>
 
-          <div class="panel panel-border-wide">
-            <p>
-              If you cannot follow these rules for your activity, then <a href="#">apply for a permit</a>.
-            </p>
-          </div>
-
-          <br>
+          <p>
+            See <a href="/version_1/guidance/guidance">regulations</a>
+          </p>
 
         {% endif %}
 
+        <!-- continue buttons -->
+        <!-- permits -->
+        {% if data.dredging_distance=="permit" %}
+
         <br>
 
-        <p>I confirm that:</p>
+        <div class="form-group">
+          <input type="submit" class="button" value="Apply for permit" />
+        </div>
 
-        <ul class="list-bullet">
-          <li>the rules about will be kept to</li>
-          <li>the information I have provided is true</li>
-        </ul>
+        <!-- exemptions -->
+        {% elif data.on_new_thing=="exemption_1" or data.on_new_thing=="exemption_2" or data.what_you_building=="exemption_4" or data.scaffolding_ladders_time=="exemption_5" or data.dewatering=="exemption_6" or data.what_you_repairing=="exemption_7" or data.what_you_repairing=="exemption_8" or data.what_is_it=="exemption_9" or data.what_you_building=="exemption_10" or data.what_you_building=="exemption_11" or data.what_you_removing=="exemption_11" or data.what_you_repairing=="exemption_16" or data.what_you_repairing=="exemption_12" or data.what_is_it=="exemption_14" or data.on_new_thing=="exemption_14" or data.what_you_building=="exemption_15" or data.what_is_it=="exemption_16" or data.what_is_it=="exemption_17" or data.what_is_it=="exemption_18" or data.what_is_it=="exemption_19" or data.what_you_removing=="exemption_20" or data.dredging_distance=="exemption_22" or data.what_you_removing=="exemption_22" or data.dredging_distance=="exemption_23" or data.what_you_removing=="exemption_23" or data.what_you_digging=="exemption_24" or data.what_you_building=="exemption_25" or data.what_is_it=="exemption_26" or data.what_you_repairing=="exemption_27" %}
 
-        <br />
-
-        <p class="">See the Environment Agency's <a href="">privacy policy</a> to find out how it uses personal information</p>
+        <br>
 
         <div class="form-group">
-          <input type="submit" class="button" value="Accept - complete this registration" />
+          <input type="submit" class="button" value="Register details" />
         </div>
+
+        <!-- exclusions -->
+        {% elif data.emergency=="exclusion_2" or data.scaffolding_ladders_time=="exclusion_4" or data.what_you_building=="exclusion_6" or data.on_existing_thing=="exclusion_6" or data.what_you_repairing=="exclusion_7" or data.what_you_building=="exclusion_10" or data.what_you_building=="exclusion_12" or data.what_you_digging=="exclusion_12" or data.on_existing_thing=="exclusion_12" %}
+
+        <br>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Declare - finish" />
+        </div>
+
+        {% endif %} 
 
       </form>
 

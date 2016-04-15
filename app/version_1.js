@@ -30,12 +30,12 @@ router.post('/exemptions/add_exemptions', function(req, res) {
 // Check your exemptions                                                        /version_1/exemptions/check_exemptions
 
 router.post('/exemptions/check_exemptions', function(req, res) {
-  res.redirect( folder + '/location/grid_reference_2');
+  res.redirect( folder + '/location/grid_reference');
 });
 
 // Where will the exemption activity take place?                                /version_1/location/grid_reference_2
 
-router.post('/location/grid_reference_2', function(req, res) {
+router.post('/location/grid_reference', function(req, res) {
   res.redirect( folder + '/user_type/user_type');
 });
 
@@ -102,18 +102,6 @@ router.post('/contact/main_contact_telephone', function(req, res) {
 // What’s the email address of the person we should contact?                    /version_1/contact/main_contact_email
 
 router.post('/contact/main_contact_email', function(req, res) {
-  res.redirect( folder + '/contact/main_contact_address');
-});
-
-// What’s the postcode of the person we should contact?                         /version_1/contact/main_contact_address
-
-router.post('/contact/main_contact_address', function(req, res) {
-  res.redirect( folder + '/contact/main_contact_postcode');
-});
-
-// What’s the address of the person we should contact?                          /version_1/contact/main_contact_postcode
-
-router.post('/contact/main_contact_postcode', function(req, res) {
   res.redirect( folder + '/contact/email_someone_else');
 });
 

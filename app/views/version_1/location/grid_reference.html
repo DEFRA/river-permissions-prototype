@@ -1,41 +1,35 @@
 {% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
+  <form method="post" class="form">
 
-  {% include "custom_inc/backlink.html" %}
+    {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
-      <form method="post" class="form">
+    <div class="grid-row">
+      <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          Where is the activity taking place?
+          Where will the exemption activity take place?
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Where is the thing taking place?</legend>
+          <legend class="visuallyhidden">Where will the exemption activity take place?</legend>
 
           <!-- Grid reference -->
           <div class="form-group">
-            <label class="form-label" for="grid-reference">Provide a national grid reference</label>
+            <label class="form-label" for="grid-reference">National grid reference</label>
             <p class="form-hint">For example, ST 58132 72695</p>
             <input type="text" class="form-control" id="grid-reference" />
           </div>
 
-          <!-- Manual address look-up -->
-          <div class="form-group">
-            <label class="form-label" for="site-details">Provide more site details</label>
-            <p class="form-hint">Useful information might include:</p>
-            <ul class="list-bullet form-hint">
-              <li>nearby landmarks</li>
-              <li>site description</li>
-              <li>built features, for example: roads, walls or buildings</li>
-              <li>natural features, for example: rivers, trees or hedges</li>
-            </ul>
-            <textarea class="form-control form-control-textarea" id="site-details" rows="6" cols="50"></textarea>
-            <p class="form-hint">500 character limit</p>
-          </div>
+          <!-- Find grid reference -->
+          <details style="padding-bottom: 18px;">
+            <summary><span class="summary">Help finding a grid reference</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>Use the free <a href="https://www.ordnancesurvey.co.uk/osmaps/">Ordnance Survey online map</a> to find a grid reference.</p>
+              <p>Zoom in and centre the map on the activity location and select the ‘Grid Ref' tool. You should be able to copy and paste the grid reference back into this page.</p>
+            </div>
+          </details>
 
         </fieldset>
 
@@ -44,10 +38,10 @@
           <input type="submit" class="button" value="Continue" />
         </div>
 
-      </form>
-
+      </div>
     </div>
-  </div>
+
+  </form>
 
 </main>
 {% endblock %}

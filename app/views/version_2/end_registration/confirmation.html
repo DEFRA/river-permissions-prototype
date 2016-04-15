@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block page_title %} Confirmation page example {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <div class="govuk-box-highlight">
+          <h1 class="bold-large">Registration complete</h1>
+          <p>
+            Your reference is:
+            <br />
+            <strong class="heading-medium">HDJ2123F</strong>
+          </p>
+        </div>
+
+        <p>We've sent a confirmation email to someone@email.com</p>
+
+        <h2 class="heading-medium">What happens next</h2>
+
+        <ul class="list-bullet">
+          <li>You can begin work on the activity covered by your exemption. Exemptions don’t expire but they only cover one activity at one location.</li>
+          <li>The Environment Agency may check the activity you're doing to see if it matches the conditions of your exemption.</li>
+        </ul>
+
+        <br />
+
+        <p>You can check the conditions of your exemption in the <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.</p>
+
+        <p>If you need assistance, call the Environment Agency helpline: 03708 506506. It's open Monday to Friday, between 8am and 6pm.</p>
+
+        <p class="heading-with-border"><a href="" class="link">What do you think of this service?</a> (takes 30 seconds)</p>
+
+        <a href="/version_1/end_registration/email" class="button">Continue to email</a>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

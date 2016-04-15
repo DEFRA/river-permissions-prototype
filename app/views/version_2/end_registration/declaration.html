@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block page_title %} Declaration {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-xlarge">
+          Declaration
+        </h1>
+
+        <div class="notice"><i class="icon icon-important"><span class="visuallyhidden">Warning</span></i>
+          <strong class="bold-small">You can be prosecuted and fined if you give false or misleading information.</strong>
+        </div>
+
+        <br />
+
+        <p>I confirm that:</p>
+
+        <ul class="list-bullet">
+          <li>the information I have provided is true</li>
+          <li>the the organisation or individual responsible for the activity has authorised me to register the exemption</li>
+        </ul>
+
+        <br />
+
+        <p class="">Read the Environment Agency's <a href="/version_1/end_registration/privacy_policy">privacy policy</a> to find out how it uses personal information</p>
+
+        <br />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Accept - complete this registration" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

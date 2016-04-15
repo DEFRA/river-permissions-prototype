@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Tell us where the activity is taking place?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Tell us where the activity is taking place</legend>
+
+          <p>Please give us the Ordnance Survey National Reference</p>
+
+          <p>For activities that take place over a stretch of the watercourse, rather thna in one particular place, provide an upstream and downstream grid reference.</p>
+
+          <!-- Grid reference -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference-1">1st grid reference if needed</label>
+            <p class="form-hint">For example, ST 58132 72695</p>
+            <input type="text" class="form-control" id="grid-reference-1" />
+          </div>
+
+          <!-- Grid reference -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference-2">2nd grid reference if needed</label>
+            <p class="form-hint">For example, ST 58132 72695</p>
+            <input type="text" class="form-control" id="grid-reference-2" />
+          </div>
+
+        </fieldset>
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

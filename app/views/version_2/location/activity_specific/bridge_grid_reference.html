@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          What are the locations of each end of the bridge?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Where is the bridge located?</legend>
+
+          <p>We need to know the grid references for each end of the bridge. This is the point where the bridge meets the riverbank.</p>
+
+          <!-- Grid reference one -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference-1">Grid reference one</label>
+            <p class="form-hint">For example, ST 58132 72695</p>
+            <input type="text" class="form-control" id="grid-reference-1" />
+          </div>
+
+          <!-- Grid reference one -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference-2">Grid reference two</label>
+            <p class="form-hint">For example, ST 58132 63512</p>
+            <input type="text" class="form-control" id="grid-reference-2" />
+          </div>
+
+          <!-- Find grid reference -->
+          <details>
+            <summary><span class="summary">Help with finding grid reference</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>
+                If you’re not sure what the grid reference is...
+              </p>
+              <p>
+                <a href="#">Find a grid reference service.</a>
+              </p>
+            </div>
+          </details>
+
+        </fieldset>
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

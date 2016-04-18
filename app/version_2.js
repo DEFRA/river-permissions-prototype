@@ -5,7 +5,57 @@ var router = express.Router();
 var folder = "/version_2";
 
 // add your routes here
-// River permissions prototype version 1
+// River permissions prototype version 2
+
+
+// local authority or public body
+router.get('/address/local_authority_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What’s the postcode of the local authority or public body?"});
+});
+router.get('/address/local_authority_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : 'What’s the address of the local authority or public body?'});
+});
+
+// limited company
+router.get('/address/limited_company_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What’s the postcode of the company?"});
+});
+router.get('/address/limited_company_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : "What’s the registered address of the company?"});
+});
+
+// Limited liability partnership
+router.get('/address/limited_liability_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What’s the postcode of the partnership?"});
+});
+router.get('/address/limited_liability_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : "What’s the registered address of the partnership?"});
+});
+
+// individual
+router.get('/address/individual_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What’s the postcode for the individual?"});
+});
+router.get('/address/individual_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : "What's the address for the individual?"});
+});
+
+// Partnership
+router.get('/address/other_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What’s the postcode for Partner One"});
+});
+router.get('/address/other_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : "What’s the address for Partner One"});
+});
+
+// Other
+router.get('/address/other_postcode', function (req, res) {
+  res.render('version_2/address/postcode', {'title' : "What's the postcode of the organisation?"});
+});
+router.get('/address/other_address', function (req, res) {
+  res.render('version_2/address/address', {'title' : "What's the address of the organisation?"});
+});
+
 
 // Start
 
@@ -78,7 +128,7 @@ router.post('/user_type/local_authority', function(req, res) {
 // What’s the postcode of the local authority or public body?                   /version_x/address/local_authority_postcode
 
 router.post('/address/local_authority_postcode', function(req, res) {
-  res.redirect( folder + '/address/local_authority');
+  res.redirect( folder + '/address/local_authority_address');
 });
 
 // What’s the address of the local authority or public body?                    /version_x/address/local_authority
@@ -124,6 +174,7 @@ router.post('/end_registration/declaration', function(req, res) {
 });
 
 // Registration complete                                                        /version_x/end_registration/confirmation
+
 
 
 module.exports = router;

@@ -33,50 +33,50 @@
 
         <!-- Show and hide address-->
         <details>
-          <summary id="show-hide-details-summary-0" aria controls="details-content-0" tabindex="0" aria-controls="details-content-0" role="button">
+          <summary>
             <span class="summary">Enter address manually</span>
           </summary>
-          <span style="display:block" class="panel-indent" id="details-content-0" />
 
-          <br />
+          <div>
 
-          <!-- Manual entered address -->
-        <fieldset>
-          <legend class="visuallyhidden">Address</legend>
+            <!-- Manual entered address -->
+            <fieldset>
+              <legend class="visuallyhidden">Address for manual entry</legend>
 
-          <div class="form-group">
-            <label class="form-label" for="premises">Building name or number
-            </label>
-            <div class="form-hint">For example, a business premises name or house number</div>
-            <input type="text" class="form-control" id="premises" />
+              <div class="form-group">
+                <label class="form-label" for="premises">Building name or number
+                </label>
+                <div class="form-hint">For example, a business premises name or house number</div>
+                <input type="text" class="form-control" id="premises" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="street_address">Address line 1</label>
+                <input type="text" class="form-control" id="street_address" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="locality">Address line 2 (optional)</label>
+                <input type="text" class="form-control" id="locality" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="town">Town</label>
+                <input type="text" class="form-control" id="town" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="manual-postcode">Postcode</label>
+                <input type="text" class="form-control form-postcode" id="manual-postcode" />
+              </div>
+
+            </fieldset>
+
           </div>
-
-          <div class="form-group">
-            <label class="form-label" for="street_address">Address line 1</label>
-            <input type="text" class="form-control" id="street_address" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="locality">Address line 2 (optional)</label>
-            <input type="text" class="form-control" id="locality" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="town">Town</label>
-            <input type="text" class="form-control" id="town" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="manual-postcode">Postcode</label>
-            <input type="text" class="form-control form-postcode" id="manual-postcode" />
-          </div>
-
-        </fieldset>
 
         </details>
 
-        <br />
-
+        
         <!-- Primary button -->
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />

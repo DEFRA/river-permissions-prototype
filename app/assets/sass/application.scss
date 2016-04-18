@@ -43,3 +43,9 @@
 .form-postcode {
   width: 8em;
 }
+
+details {
+  summary {
+    margin-bottom: $gutter;
+  }
+}

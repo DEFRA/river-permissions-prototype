@@ -10,9 +10,9 @@ var folder = "version_2";
 
 // Start
 
-// Have you called us to check the location of your activity?                   /version_x/start/check_location
-// ###  location_check_no = Contact the Environment Agency                      /version_x/contact/contact_ea
-// ###  location_check_yes = Add the exemptions you want to register            /version_x/exemptions/add_exemptions
+// Have you called us to check the location of your activity?                   /version_2/start/check_location
+// ###  location_check_no = Contact the Environment Agency                      /version_2/contact/contact_ea
+// ###  location_check_yes = Add the exemptions you want to register            /version_2/exemptions/add_exemptions
 
 router.post('/start/check_location', function (req,res) {
   if (req.body['location_check']==="location_check_no"){
@@ -22,28 +22,28 @@ router.post('/start/check_location', function (req,res) {
   }
 });
 
-// Where will the exemption activity take place?                                /version_x/location/grid_reference
+// Where will the exemption activity take place?                                /version_2/location/grid_reference
 
 router.post('/location/grid_reference', function(req, res) {
   res.redirect( '/' + folder + '/exemptions/add_exemptions');
 });
 
-// Add the exemptions you want to register                                      /version_x/exemptions/add_exemptions
+// Add the exemptions you want to register                                      /version_2/exemptions/add_exemptions
 
 router.post('/exemptions/add_exemptions', function(req, res) {
   res.redirect( '/' + folder + '/exemptions/check_exemptions');
 });
 
-// Check your exemptions                                                        /version_x/exemptions/check_exemptions
+// Check your exemptions                                                        /version_2/exemptions/check_exemptions
 
 router.post('/exemptions/check_exemptions', function(req, res) {
   res.redirect( '/' + folder + '/user_type/user_type');
 });
 
 
-// Who is legally responsible for the activity?                                 /version_x/user_type/user_type
+// Who is legally responsible for the activity?                                 /version_2/user_type/user_type
 
-// ###  public = What’s the name of the local authority or public body?         /version_x/user_type/local_authority
+// ###  public = What’s the name of the local authority or public body?         /version_2/user_type/local_authority
 // Route to relevant business type journey
 
 router.post('/user_type/user_type', function (req,res) {
@@ -71,61 +71,175 @@ router.post('/user_type/user_type', function (req,res) {
 
 });
 
-// What’s the name of the local authority or public body?         /version_x/user_type/local_authority
+// What’s the name of the local authority or public body?                       /version_2/user_type/local_authority
 
 router.post('/user_type/local_authority', function(req, res) {
   res.redirect( '/' + folder + '/address/local_authority_postcode');
 });
 
-// What’s the postcode of the local authority or public body?                   /version_x/address/local_authority_postcode
+// What’s the postcode of the local authority or public body?                   /version_2/address/local_authority_postcode
 
 router.post('/address/local_authority_postcode', function(req, res) {
   res.redirect( '/' + folder + '/address/local_authority_address');
 });
 
-// What’s the address of the local authority or public body?                    /version_x/address/local_authority
+// What’s the address of the local authority or public body?                    /version_2/address/local_authority
 
-router.post('/address/local_authority', function(req, res) {
+router.post('/address/local_authority_address', function(req, res) {
   res.redirect( '/' + folder + '/contact/main_contact_name');
 });
 
-// Who should we contact about this activity?                                   /version_x/contact/main_contact_name
+// What’s the name of limited company?                                          /version_2/user_type/limited company
+
+router.post('/user_type/limited_company_number', function(req, res) {
+  res.redirect( '/' + folder + '/user_type/limited_company_name');
+});
+
+// What’s the name of limited company?                                          /version_2/user_type/limited company
+
+router.post('/user_type/limited_company_name', function(req, res) {
+  res.redirect( '/' + folder + '/address/limited_company_postcode');
+});
+
+// What’s the postcode of the limited company?                                  /version_2/address/limited company postcode
+
+router.post('/address/limited_company_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/limited_company_address');
+});
+
+// What’s the address of the limited company?                                   /version_2/address/limited company
+
+router.post('/address/limited_company_address', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// What’s the number of limited liablity partnership?                           /version_2/user_type/limited_liability_number
+
+router.post('/user_type/limited_liability_number', function(req, res) {
+  res.redirect( '/' + folder + '/user_type/limited_liability_name');
+});
+
+// What’s the name of limited liablity partnership?                             /version_2/user_type/limited liability partnership
+
+router.post('/user_type/limited_liability_name', function(req, res) {
+  res.redirect( '/' + folder + '/address/limited_liability_postcode');
+});
+
+// What’s the postcode of the limited liablity partnership?                     /version_2/address/limited liability partnership postcode
+
+router.post('/address/limited_liability_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/limited_liability_address');
+});
+
+// What’s the address of the limited liablity partnership?                      /version_2/address/limited liability partnership company
+
+router.post('/address/limited_liability_address', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// What's the individuals name?                                                 /version_2/user_type/individual_name
+
+router.post('/user_type/individual_name', function(req, res) {
+  res.redirect( '/' + folder + '/address/individual_postcode');
+});
+
+// What’s the postcode for the individual?                                      /version_2/address/individual_postcode
+
+router.post('/address/individual_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/individual_address');
+});
+
+// What’s the address for the individual?                                        /version_2/address/individual_address
+
+router.post('/address/individual_address', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// Partnership names and addresses                                              /version_2/user_type/partnership
+
+router.post('/user_type/partnership', function(req, res) {
+  res.redirect( '/' + folder + '/user_type/partnership_details');
+});
+
+// Partnership details                                                          /version_2/user_type/partnership_details
+
+router.post('/user_type/partnership_details', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// What's the name of the organisation?                                         /version_2/user_type/other
+
+router.post('/user_type/other', function(req, res) {
+  res.redirect( '/' + folder + '/address/other_postcode');
+});
+
+// What’s the postcode of the organisation?                                     /version_2/address/other_postcode
+
+router.post('/address/other_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/other_address');
+});
+
+// What’s the address of the organisation?                                      /version_2/address/other_address
+
+router.post('/address/other_address', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// What's the name of the organisation?                                         /version_2/user_type/other
+
+router.post('/user_type/other', function(req, res) {
+  res.redirect( '/' + folder + '/address/other_postcode');
+});
+
+// Contact the EA?                                                              /version_2/contact/contact_ea
+
+router.post('/address/other_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/other_address');
+});
+
+// What’s the address of the organisation?                                      /version_2/address/other_address
+
+router.post('/address/other_address', function(req, res) {
+  res.redirect( '/' + folder + '/contact/main_contact_name');
+});
+
+// Who should we contact about this activity?                                   /version_2/contact/main_contact_name
 
 router.post('/contact/main_contact_name', function(req, res) {
   res.redirect( '/' + folder + '/contact/main_contact_telephone');
 });
 
-// What’s the telephone number of the person we should contact?                 /version_x/contact/main_contact_telephone
+// What’s the telephone number of the person we should contact?                 /version_2/contact/main_contact_telephone
 
 router.post('/contact/main_contact_telephone', function(req, res) {
   res.redirect( '/' + folder + '/contact/main_contact_email');
 });
 
-// What’s the email address of the person we should contact?                    /version_x/contact/main_contact_email
+// What’s the email address of the person we should contact?                    /version_2/contact/main_contact_email
 
 router.post('/contact/main_contact_email', function(req, res) {
   res.redirect( '/' + folder + '/contact/email_someone_else');
 });
 
-// Would you like a copy of the registration email sent to someone else?        /version_x/contact/email_someone_else
+// Would you like a copy of the registration email sent to someone else?        /version_2/contact/email_someone_else
 
 router.post('/contact/email_someone_else', function(req, res) {
   res.redirect( '/' + folder + '/end_registration/check_your_answers');
 });
 
-// Check your answers before completing this registration                       /version_x/end_registration/check_your_answers
+// Check your answers before completing this registration                       /version_2/end_registration/check_your_answers
 
 router.post('/end_registration/check_your_answers', function(req, res) {
   res.redirect( '/' + folder + '/end_registration/declaration');
 });
 
-// Declaration                                                                  /version_x/end_registration/declaration
+// Declaration                                                                  /version_2/end_registration/declaration
 
 router.post('/end_registration/declaration', function(req, res) {
   res.redirect( '/' + folder + '/end_registration/confirmation');
 });
 
-// Registration complete                                                        /version_x/end_registration/confirmation
+// Registration complete                                                        /version_2/end_registration/confirmation
 
 
 // ADDRESS AND POSTCODE PAGES ##################################################

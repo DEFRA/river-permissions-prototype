@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What's the name of the organisation? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,15 +10,15 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-            What's the business or organisation name?
+          What's the name of the organisation?
           </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Business or organisation name</legend>
+          <legend class="visuallyhidden">Name of charity, trust or other organisation</legend>
 
           <!-- Business or organisation name -->
           <div class="form-group">
-            <label class="form-label" for="organisation-name">Business or organisation name</label>
+            <label class="form-label" for="organisation-name">Name of charity, trust or other organisation</label>
             <input type="text" class="form-control" id="organisation-name" />
           </div>
 

@@ -158,8 +158,17 @@ router.post('/address/individual_address', function(req, res) {
 // Partnership names and addresses                                              /version_2/user_type/partnership
 
 router.post('/user_type/partnership', function(req, res) {
+  res.redirect( '/' + folder + '/address/partner_postcode');
+});
+
+router.post('/address/partner_postcode', function(req, res) {
+  res.redirect( '/' + folder + '/address/partner_address');
+});
+
+router.post('/address/partner_address', function(req, res) {
   res.redirect( '/' + folder + '/user_type/partnership_details');
 });
+
 
 // Partnership details                                                          /version_2/user_type/partnership_details
 

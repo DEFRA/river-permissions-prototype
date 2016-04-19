@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Add another partner or continue {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %} {% include "custom_inc/backlink.html" %}
 
@@ -8,40 +8,54 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          Who's responsible for the activity?
+          Add another partner or continue
         </h1>
 
-        <table summary="partner-details-summary" class="summary-table" role="presentation">
-          <thead>
-            <tr>
-              <th colspan="3">
-                <h2 class="heading-medium">
-              Responsible partners
-              </h2>
-              </th>
-            </tr>
-          </thead>
+          <h2 class="heading-medium">
+            Business partners you’ve added to this registration
+          </h2>
+
+          <table summary="partner-details-summary" class="summary-table" role="presentation">
 
           <tbody>
 
             <tr>
               <td>
-                Tom Riddle
-                <br />15 Maple Drive
-                <br /> Kendal
-                <br /> LA9 5BN
+                Jane Smith
               </td>
-              <td><a href="/version_2/user_type/partnership" class="link">Remove details</a></td>
+              <td>
+                123 Some address<br />
+                Someshire<br />
+                SM2 3AB
+              </td>
+              <td>
+                <a href="/version_2/user_type/partnership" class="link">Remove <span class="visuallyhidden"> Jane Smith</span></a>
+              </td>
             </tr>
+
+            <tr>
+              <td>
+                Sarah Partner
+              </td>
+              <td>
+                456 Another address<br />
+                Someshire<br />
+                SM3 4AB
+              </td>
+              <td>
+                <a href="/version_2/user_type/partnership" class="link">Remove <span class="visuallyhidden"> Sarah Partner</span></a>
+              </td>
+            </tr>
+
 
           </tbody>
         </table>
 
         <br />
 
-        <div class="form-group">
+        <p>
           <a href="/version_2/user_type/partnership" class="example-back-link">Add another partner</a>
-        </div>
+        </p>
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />

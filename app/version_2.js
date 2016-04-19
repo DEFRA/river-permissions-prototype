@@ -18,14 +18,8 @@ router.post('/start/check_location', function (req,res) {
   if (req.body['location_check']==="location_check_no"){
     res.redirect( '/' + folder + '/contact/contact_ea_location');
   } else if (req.body['location_check']==="location_check_yes") {
-    res.redirect( '/' + folder + '/location/grid_reference');
+    res.redirect( '/' + folder + '/exemptions/add_exemptions');
   }
-});
-
-// Where will the exemption activity take place?                                /version_2/location/grid_reference
-
-router.post('/location/grid_reference', function(req, res) {
-  res.redirect( '/' + folder + '/exemptions/add_exemptions');
 });
 
 // Add the exemptions you want to register                                      /version_2/exemptions/add_exemptions
@@ -37,6 +31,12 @@ router.post('/exemptions/add_exemptions', function(req, res) {
 // Check your exemptions                                                        /version_2/exemptions/check_exemptions
 
 router.post('/exemptions/check_exemptions', function(req, res) {
+  res.redirect( '/' + folder + '/location/grid_reference');
+});
+
+// Where will the exemption activity take place?                                /version_2/location/grid_reference
+
+router.post('/location/grid_reference', function(req, res) {
   res.redirect( '/' + folder + '/user_type/user_type');
 });
 

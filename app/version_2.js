@@ -279,10 +279,10 @@ router.get('/address/individual_address', function (req, res) {
 });
 
 // Partnership
-router.get('/address/other_postcode', function (req, res) {
+router.get('/address/partner_postcode', function (req, res) {
   res.render( folder + '/address/postcode', {'title' : "What’s the postcode for Partner One"});
 });
-router.get('/address/other_address', function (req, res) {
+router.get('/address/partner_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What’s the address for Partner One"});
 });
 

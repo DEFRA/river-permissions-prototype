@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Who is legally responsible for the activity? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Who is responsible for the activity? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,14 +10,31 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          Who is legally responsible for the activity?
+          Who is responsible for the activity?
         </h1>
+
+        <details style="padding-bottom: 18px;">
+          <summary><span class="summary">How to decide who is responsible</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>The company, body or individual who has control over the way the activity (work) is done is responsible. They are called the ‘operator’.
+              If you use contractors, you need to decide if it is you or the contractors who has control.</p>
+            <p>Whoever has control will usually:</p>
+
+            <ul class="list-bullet">
+              <li>have day-to-day control of the activity</li>
+              <li>make sure the activity complies with the exemption rules</li>
+              <li>decide who holds important staff positions and stop incompetent staff working, if needed</li>
+              <li>make financial decisions that affect the activity</li>
+              <li>take action to control the activity in an emergency</li>
+            </ul>
+          </div>
+        </details>
 
         <div class="form-group">
           <fieldset>
 
             <legend class="visuallyhidden">
-              Who is legally responsible for the activity?
+              Who is responsible for the activity?
             </legend>
 
             <label class="block-label" for="local_authority">
@@ -45,22 +62,7 @@
           </fieldset>
         </div>
 
-        <details style="padding-bottom: 18px;">
-          <summary><span class="summary">How to decide who is legally responsible</span></summary>
-          <div class="panel panel-border-narrow">
-            <p>The company, body or individual who has control over the way the activity (work) is done is legally responsible. They are called the ‘operator’. If you use contractors, you need to decide if it is you or the contractors who has control. Whoever
-              has control should register the exemption.</p>
-            <p>Whoever has control will usually:</p>
 
-            <ul class="list-bullet">
-              <li>have day-to-day control of the activity</li>
-              <li>make sure the activity complies with the exemption rules</li>
-              <li>decide who holds important staff positions and stop incompetent staff working, if needed</li>
-              <li>make financial decisions that affect the activity</li>
-              <li>take action to control the activity in an emergency</li>
-            </ul>
-          </div>
-        </details>
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />

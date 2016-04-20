@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What's the registration number of the partnership? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -13,25 +13,13 @@
           What's the registration number of the partnership?
         </h1>
 
-        <div class="form-group">
-          <details>
-            <summary id="show-hide-details-summary-0" aria controls="details-content-0" tabindex="0" aria-controls="details-content-0" role="button">
-              <span class="summary">What's this?</span>
-            </summary>
-
-            <div style="display:block" class="panel-indent" id="details-content-0">
-              <p> A company registration number is allocated by Companies House when a limited company is registered.</p>
-              <p>It comprises an 8 digit number or 2 letters followed by a 6 digit number.</p>
-            </div>
-          </details>
-        </div>
-
         <fieldset>
           <legend class="visuallyhidden">Registration number of the partnership</legend>
 
           <!-- Company number -->
           <div class="form-group">
             <label class="form-label" for="limited-liability-number">Registration number</label>
+            <p class="form-hint">An 8 digit number, or 2 letters followed by a 6 digit number</p>
             <input type="text" class="form-control" id="limited-liability-number" />
           </div>
 

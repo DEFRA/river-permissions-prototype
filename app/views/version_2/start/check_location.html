@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Have you called us to check the location of your activity? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Have you called us to check if your activity is in an environmentally sensitive area? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
   <form method="post" class="form">
@@ -11,7 +11,7 @@
         <form method="post" class="form" action="/">
 
           <h1 class="heading-large">
-            Have you called us to check the location of your activity?
+            Have you called us to check if your activity is in an environmentally sensitive area?
           </h1>
 
           <br />
@@ -19,16 +19,22 @@
           <fieldset>
 
             <legend class="visuallyhidden">
-              Have you checked the location with us?
+              Have you called us to check if your activity is in an environmentally sensitive area?
             </legend>
 
             <div class="panel panel-border-wide">
-              <p class="bold-small text">
-                You must contact us to check the location of your activity before you start this registration.
+              <p class="text">
+                You must call us to check if your activities are:
               </p>
 
-              <p class="text">Call us to check if your activities are on a main river
-                and if they are near any sensitive areas such as a nature reserve. Our number is 03708 506 506.
+              <ul class="list list-bullet">
+                <li>on a main river</li>
+                <li>near any environmentally sensitive areas such as a nature reserve</li>
+                <li>too close to a flood defence structure</li>
+              </ul>
+
+              <p class="text">
+                You need to do this to make sure you meet the exemption conditions about location.
               </p>
 
             </div>

@@ -48,6 +48,12 @@
             }
         }
 
+        @media screen and (max-width: 320px) {
+          label.exemption{
+            width:auto;
+            }
+        }
+
         </style>
 
         <div class="form-group">
@@ -88,7 +94,7 @@
 
         {% for ex in exemptions %}
           {% if ex.live=='1' %}
-            {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
+            {{ formelement.exemption( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
           {% endif %}
         {% else %}
           <p>No radio buttons</p>

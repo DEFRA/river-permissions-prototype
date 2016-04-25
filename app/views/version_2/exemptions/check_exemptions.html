@@ -4,17 +4,20 @@
 
   {% include "custom_inc/backlink.html" %}
 
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
   <form method="post" class="form">
 
     <h1 class="heading-large">
       Check your exemptions
     </h1>
 
-    <table class="check-your-answers">
+    <table class="check-your-answers" summary="Exemptions that you selected with title, exemption code and a link to remove any you don't need">
       <tbody>
         <tr>
           <th>
-            <p class="font-small">Footbridge 8m bank to bank maximum</p>
+            <p class="font-small">Footbridge over a main river not more than 8 metres wide from bank to bank</p>
           </th>
           <td>
             <span class="bold-small">FRA5</span>
@@ -26,7 +29,7 @@
 
         <tr>
           <th>
-            <p class="font-small">Maintenance of structures in the river (not raised defences)</p>
+            <p class="font-small">Maintaining structures within the channel of a main river that are not raised defences</p>
           </th>
           <td>
             <span class="bold-small">FRA9</span>
@@ -40,15 +43,18 @@
 
     <br />
 
-    <div class="form-group">
+    <p>
       <a href="/version_2/exemptions/add_exemptions">Add another exemption</a>
-    </div>
+    </p>
 
     <div class="form-group">
       <input type="submit" class="button" value="Save and continue" />
     </div>
 
   </form>
+
+</div>
+</div>
 
 </main>
 {% endblock %}

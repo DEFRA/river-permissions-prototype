@@ -68,13 +68,13 @@
     </div>
 
     <div id="global-cookie-message">
-      
+
         {% block cookie_message %}{% endblock %}
-      
+
     </div>
     <!--end global-cookie-message-->
 
-    
+
     <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
       <div class="header-wrapper">
         <div class="header-global">
@@ -89,7 +89,7 @@
       </div>
     </header>
     <!--end header-->
-    
+
 
     {% block after_header %}{% endblock %}
 
@@ -102,6 +102,14 @@
 
       <div class="footer-wrapper">
         {% block footer_top %}{% endblock %}
+          <div class="ea-footer">
+            <p>Environment Agency (England) helpline: <a href="tel:+443708506506">03708 506506</a></p>
+            <ul>
+              <li class="inline"><a target="_blank" href="/pages/privacy">Privacy</a></li>
+              <li class="inline"><a target="_blank" href="/pages/cookies">Cookies</a></li>
+            </ul>
+          </div>
+
 
         <div class="footer-meta">
           <div class="footer-meta-inner">
@@ -109,9 +117,9 @@
 
             <div class="open-government-licence">
               <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
+
                 {% block licence_message %}<p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>{% endblock %}
-              
+
             </div>
           </div>
 

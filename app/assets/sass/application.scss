@@ -53,32 +53,29 @@ details {
 // postcode display for address select page
 .postcode-prefix {
     display: block;
-    line-height: 1.31579;
-    margin-bottom: 0.5em;
+    line-height: 1.31579; // TODO use preset
+    margin-bottom: 0.5em; // TODO use preset
 }
 span.postcode {
     text-transform: uppercase;
     font-weight: bold;
-    margin-right: 0.5em;
+    margin-right: 0.5em; // TODO use preset
 }
 
 // add exemptions styling - mainly to position FRA code
 span.exmpt{
   font-weight:bold;
   float:right;
+  margin-right:-3em;
 }
 label.exemption{
-background-color:#ededed;
-border-color:#ededed;
+  background-color:#ededed;
+  border-color:#ededed;
+  padding-right: 4em;
 }
-// TODO Not working responsively
-@media screen and (min-width: 320px) {
-label.exemption{
-  width:99%;
-  }
-}
-@media screen and (max-width: 320px) {
-label.exemption{
-  width:auto;
+
+@media (min-width: 641px) {
+  label.exemption{
+    width:99%;
   }
 }

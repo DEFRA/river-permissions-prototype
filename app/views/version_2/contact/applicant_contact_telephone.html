@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Applicant telephone {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What is your telephone number? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -14,12 +14,13 @@
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Applicant contact telephone number</legend>
+          <legend class="visuallyhidden">What is your telephone number?</legend>
 
           <!-- Telephone number -->
           <div class="form-group">
-            <label class="form-label" for="telephone">Telephone number</label>
-            <p class="form-hint">This can be a landline or mobile</p>
+            <label class="form-label" for="telephone">Telephone number
+              <span class="form-hint">This can be a landline or mobile</span>
+            </label>
             <input type="text" class="form-control" id="telephone" />
           </div>
 

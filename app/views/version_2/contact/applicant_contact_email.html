@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Applicant email {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What is your email address? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -14,12 +14,13 @@
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Applicant contact email</legend>
+          <legend class="visuallyhidden">What is your email address?</legend>
 
           <!-- Email address -->
           <div class="form-group">
-            <label class="form-label" for="email">Email address</label>
-            <p class="form-hint">We'll use this to confirm the registration</p>
+            <label class="form-label" for="email">Email address
+              <span class="form-hint">We'll use this to confirm the registration</span>
+            </label>
             <input type="text" class="form-control" id="email" />
           </div>
 

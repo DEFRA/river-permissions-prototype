@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Applicant name {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What is your name? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -14,12 +14,13 @@
         </h1>
 
         <fieldset>
-          <legend class="visuallyhidden">Applicant contact name</legend>
+          <legend class="visuallyhidden">What is your name?</legend>
 
           <!-- Full name -->
           <div class="form-group">
-            <label class="form-label" for="full-name">Full name</label>
-            <p class="form-hint">For example, John Smith</p>
+            <label class="form-label" for="full-name">Full name
+              <span class="form-hint">For example, John Smith</span>
+            </label>
             <input type="text" class="form-control" id="full-name" />
           </div>
 

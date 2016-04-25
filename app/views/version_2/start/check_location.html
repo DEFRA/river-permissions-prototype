@@ -17,12 +17,11 @@
           <br />
 
           <fieldset>
-
             <legend class="visuallyhidden">
               Have you called us to check if your activity is in an environmentally sensitive area?
             </legend>
 
-            <div class="panel panel-border-wide">
+            <div class="panel panel-border-wide" id="location_hint">
               <p class="text">
                 You must call us to check if your activities are:
               </p>
@@ -44,10 +43,10 @@
 
             <div class="form-group">
               <label class="block-label" for="location_check_yes">
-                <input id="location_check_yes" type="radio" name="location_check" value="location_check_yes" /> Yes, the location has been checked
+                <input id="location_check_yes" type="radio" name="location_check" value="location_check_yes" aria-describedby="location_hint" /> Yes, the location has been checked
               </label>
               <label class="block-label" for="location_check_no">
-                <input id="location_check_no" type="radio" name="location_check" value="location_check_no" /> No
+                <input id="location_check_no" type="radio" name="location_check" value="location_check_no" aria-describedby="location_hint" /> No
               </label>
             </div>
 

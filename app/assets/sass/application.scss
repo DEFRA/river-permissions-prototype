@@ -79,3 +79,37 @@ label.exemption{
     width:99%;
   }
 }
+
+// Footer links list
+.ea-footer {
+    padding-left: 15px; // TODO use preset
+    padding-right: 15px; // TODO use preset
+    font-size: 14px; // TODO use preset
+    line-height: 1.14286; // TODO use preset
+    font-weight: 400; // TODO use preset
+    text-transform: none;
+}
+@media (min-width: 641px){
+  .ea-footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16px; // TODO use preset
+    line-height: 1.25; // TODO use preset
+  }
+}
+.ea-footer li {
+    font-size: 14px; // TODO use preset
+    line-height: 1.14286; // TODO use preset
+    font-weight: 400; // TODO use preset
+    text-transform: none;
+    margin-right: 10px;
+}
+@media (min-width: 641px) {
+  .ea-footer li {
+      font-size: 16px;
+      line-height: 1.25;
+  }
+}
+.ea-footer .inline {
+    display: inline;
+}

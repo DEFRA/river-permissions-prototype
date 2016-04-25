@@ -24,63 +24,23 @@
 
           <!-- Postcode look-up -->
           <div class="form-group">
-            <label class="form-label" for="postcode">UK postcode</label>
-            <span class="form-hint">For example, BS1 5AH</span>
+            <label class="form-label" for="postcode">UK postcode
+              <span class="form-hint">For example, BS1 5AH</span>
+            </label>
             <input type="text" class="form-control form-postcode" id="postcode" />
           </div>
 
         </fieldset>
 
-        <!-- Show and hide address-->
-        <details>
-          <summary>
-            <span class="summary">Enter address manually</span>
-          </summary>
-
-          <div>
-
-            <!-- Manual entered address -->
-            <fieldset>
-              <legend class="visuallyhidden">Address for manual entry</legend>
-
-              <div class="form-group">
-                <label class="form-label" for="premises">Building name or number
-                </label>
-                <div class="form-hint">For example, a business premises name or house number</div>
-                <input type="text" class="form-control" id="premises" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="street_address">Street line 1</label>
-                <input type="text" class="form-control" id="street_address" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="locality">Street line 2 (optional)</label>
-                <input type="text" class="form-control" id="locality" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="town">Town</label>
-                <input type="text" class="form-control" id="town" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="manual-postcode">Postcode</label>
-                <input type="text" class="form-control form-postcode" id="manual-postcode" />
-              </div>
-
-            </fieldset>
-
-          </div>
-
-        </details>
-
-
         <!-- Primary button -->
         <div class="form-group">
-          <input type="submit" class="button" value="Continue" />
+          <input type="submit" class="button" value="Find address" />
         </div>
+
+        <p class="text"><a href="{{manual_link}}"><span class="visuallyhidden">
+          Enter address manually
+        </span>
+        I don't have the postcode</a></p>
 
       </form>
 

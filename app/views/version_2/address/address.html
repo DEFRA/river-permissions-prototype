@@ -19,13 +19,22 @@
           {{ title if title else "Title not set" }}
         </h1>
 
+        <p>
+          <span class="postcode-prefix">Postcode</span>
+          <span class="visuallyhidden">:</span>
+          <span class="postcode">BS1 5AH</span>
+          <a href="{{ pcodelink }}" class="change-postcode-button">
+              Change<span class="visuallyhidden"> postcode</span>
+          </a>
+        </p>
+
         <fieldset>
           <legend class="visuallyhidden">Address</legend>
 
           <!-- Address -->
           <div class="form-group">
-            <label class="form-label" for="the_address">Select address</label>
-            <select class="address-select form-control" id="the_address">
+            <label class="form-label" for="the_address">Address</label>
+            <select class="address-select form-control" id="the_address" aria-describedby="manual_hint">
               <option value="business_address">15 addresses found</option>
               <option value="business_address">3, GRANGE ROAD, BRISTOL, BS1 5AH</option>
               <option value="business_address">5, GRANGE ROAD, BRISTOL, BS1 5AH</option>
@@ -46,52 +55,14 @@
             </select>
           </div>
 
+          <p class="label_link" id="manual_hint"><a href="{{manual_link}}">
+            <span class="visuallyhidden">
+              Enter address manually
+            </span>
+            I can’t find the address in the list
+          </p>
+
         </fieldset>
-
-        <!-- Show and hide address-->
-        <details>
-          <summary>
-            <span class="summary">Enter address manually</span>
-          </summary>
-
-          <div>
-
-            <!-- Manual entered address -->
-            <fieldset>
-              <legend class="visuallyhidden">Address for manual entry</legend>
-
-              <div class="form-group">
-                <label class="form-label" for="premises">Building name or number
-                </label>
-                <div class="form-hint">For example, a business premises name or house number</div>
-                <input type="text" class="form-control" id="premises" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="street_address">Street line 1</label>
-                <input type="text" class="form-control" id="street_address" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="locality">Street line 2 (optional)</label>
-                <input type="text" class="form-control" id="locality" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="town">Town</label>
-                <input type="text" class="form-control" id="town" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="manual-postcode">Postcode</label>
-                <input type="text" class="form-control form-postcode" id="manual-postcode" />
-              </div>
-
-            </fieldset>
-
-          </div>
-
-        </details>
 
         <!-- Primary button -->
         <div class="form-group">

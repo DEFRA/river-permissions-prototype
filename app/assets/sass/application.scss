@@ -49,3 +49,15 @@ details {
     margin-bottom: $gutter;
   }
 }
+
+.postcode-prefix {
+    display: block;
+    line-height: 1.31579;
+    margin-bottom: 0.5em;
+}
+
+span.postcode {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 0.5em;
+}

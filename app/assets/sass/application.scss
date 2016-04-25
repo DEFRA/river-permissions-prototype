@@ -50,14 +50,35 @@ details {
   }
 }
 
+// postcode display for address select page
 .postcode-prefix {
     display: block;
     line-height: 1.31579;
     margin-bottom: 0.5em;
 }
-
 span.postcode {
     text-transform: uppercase;
     font-weight: bold;
     margin-right: 0.5em;
+}
+
+// add exemptions styling - mainly to position FRA code
+span.exmpt{
+  font-weight:bold;
+  float:right;
+}
+label.exemption{
+background-color:#ededed;
+border-color:#ededed;
+}
+// TODO Not working responsively
+@media screen and (min-width: 320px) {
+label.exemption{
+  width:99%;
+  }
+}
+@media screen and (max-width: 320px) {
+label.exemption{
+  width:auto;
+  }
 }

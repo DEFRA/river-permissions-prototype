@@ -257,15 +257,15 @@ router.post('/end_registration/declaration', function(req, res) {
 
 // local authority or public body
 router.get('/address/local_authority_postcode', function (req, res) {
-  res.render( folder + '/address/postcode', {'title' : "What’s the postcode of the local authority or public body?"});
+  res.render( folder + '/address/postcode', {'title' : "What’s the main address of the local authority or public body?"});
 });
 router.get('/address/local_authority_address', function (req, res) {
-  res.render( folder + '/address/address', {'title' : 'What’s the address of the local authority or public body?'});
+  res.render( folder + '/address/address', {'title' : 'What’s the main address of the local authority or public body?'});
 });
 
 // limited company
 router.get('/address/limited_company_postcode', function (req, res) {
-  res.render( folder + '/address/postcode', {'title' : "What’s the postcode of the company?"});
+  res.render( folder + '/address/postcode', {'title' : "What’s the registered address of the company?"});
 });
 router.get('/address/limited_company_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What’s the registered address of the company?"});
@@ -273,7 +273,7 @@ router.get('/address/limited_company_address', function (req, res) {
 
 // Limited liability partnership
 router.get('/address/limited_liability_postcode', function (req, res) {
-  res.render('version_2/address/postcode', {'title' : "What’s the postcode of the partnership?"});
+  res.render('version_2/address/postcode', {'title' : "What’s the registered address of the partnership?"});
 });
 router.get('/address/limited_liability_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What’s the registered address of the partnership?"});
@@ -281,7 +281,7 @@ router.get('/address/limited_liability_address', function (req, res) {
 
 // individual
 router.get('/address/individual_postcode', function (req, res) {
-  res.render( folder + '/address/postcode', {'title' : "What’s the postcode for the individual?"});
+  res.render( folder + '/address/postcode', {'title' : "What’s the address for the individual?"});
 });
 router.get('/address/individual_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What's the address for the individual?"});
@@ -289,7 +289,7 @@ router.get('/address/individual_address', function (req, res) {
 
 // Partnership
 router.get('/address/partner_postcode', function (req, res) {
-  res.render( folder + '/address/postcode', {'title' : "What’s the postcode for Partner One"});
+  res.render( folder + '/address/postcode', {'title' : "What’s the address for Partner One"});
 });
 router.get('/address/partner_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What’s the address for Partner One"});
@@ -297,7 +297,7 @@ router.get('/address/partner_address', function (req, res) {
 
 // Other
 router.get('/address/other_postcode', function (req, res) {
-  res.render('version_2/address/postcode', {'title' : "What's the postcode of the organisation?"});
+  res.render('version_2/address/postcode', {'title' : "What's the address of the organisation?"});
 });
 router.get('/address/other_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : "What's the address of the organisation?"});

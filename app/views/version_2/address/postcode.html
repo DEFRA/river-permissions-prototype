@@ -24,8 +24,9 @@
 
           <!-- Postcode look-up -->
           <div class="form-group">
-            <label class="form-label" for="postcode">UK postcode</label>
-            <span class="form-hint">For example, BS1 5AH</span>
+            <label class="form-label" for="postcode">UK postcode
+              <span class="form-hint">For example, BS1 5AH</span>
+            </label>
             <input type="text" class="form-control form-postcode" id="postcode" />
           </div>
 
@@ -36,7 +37,10 @@
           <input type="submit" class="button" value="Find address" />
         </div>
 
-        <p class="text"><a href="{{manual_link}}">I don't have the postcode</a></p>
+        <p class="text"><a href="{{manual_link}}"><span class="visuallyhidden">
+          Enter address manually
+        </span>
+        I don't have the postcode</a></p>
 
       </form>
 

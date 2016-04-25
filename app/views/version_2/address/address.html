@@ -20,13 +20,13 @@
         </h1>
 
         <p>
-        <span class="postcode-prefix">Postcode</span>
-        <span class="visuallyhidden">:</span>
-        <span class="postcode">BS1 5AH</span>
-        <a href="{{ pcodelink }}" class="change-postcode-button">
-            Change<span class="visuallyhidden"> postcode</span>
-        </a>
-      </p>
+          <span class="postcode-prefix">Postcode</span>
+          <span class="visuallyhidden">:</span>
+          <span class="postcode">BS1 5AH</span>
+          <a href="{{ pcodelink }}" class="change-postcode-button">
+              Change<span class="visuallyhidden"> postcode</span>
+          </a>
+        </p>
 
         <fieldset>
           <legend class="visuallyhidden">Address</legend>
@@ -34,7 +34,7 @@
           <!-- Address -->
           <div class="form-group">
             <label class="form-label" for="the_address">Address</label>
-            <select class="address-select form-control" id="the_address">
+            <select class="address-select form-control" id="the_address" aria-describedby="manual_hint">
               <option value="business_address">15 addresses found</option>
               <option value="business_address">3, GRANGE ROAD, BRISTOL, BS1 5AH</option>
               <option value="business_address">5, GRANGE ROAD, BRISTOL, BS1 5AH</option>
@@ -55,9 +55,14 @@
             </select>
           </div>
 
-        </fieldset>
+          <p class="label_link" id="manual_hint"><a href="{{manual_link}}">
+            <span class="visuallyhidden">
+              Enter address manually
+            </span>
+            I can’t find the address in the list
+          </p>
 
-        <p><a href="{{manual_link}}">I can’t find the address in the list</p>
+        </fieldset>
 
         <!-- Primary button -->
         <div class="form-group">

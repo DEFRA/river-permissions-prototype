@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Where will the exemption activity take place? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} What are the start and end points of your activity? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
   <form method="post" class="form">
@@ -9,15 +9,13 @@
       <div class="column-two-thirds">
 
         <h1 class="heading-large">
-          Where will the exemption activity take place?
+          What are the start and end points of your activity?
         </h1>
-
-        <p>Please enter the location for the centre of your activity.</p>
 
         <fieldset>
           <legend class="visuallyhidden">Enter location as</legend>
 
-          <p class="text">Enter location as</p>
+          <p class="text">Enter locations as</p>
 
           <!-- Entry type -->
           <div class="form-group">
@@ -33,14 +31,20 @@
 
         <div class="js-hidden" id="grid_ref_entry">
           <fieldset>
-            <legend class="visuallyhidden">Grid reference for where the exemption activity will take place</legend>
+            <legend class="visuallyhidden">Grid references for where the exemption activity will take place</legend>
 
-            <!-- Grid reference -->
+            <!-- Grid reference start -->
             <div class="form-group">
-              <label class="form-label" for="grid-reference">National grid reference
+              <label class="form-label" for="grid-reference"><span class="bold-small">Start</span> grid reference
                 <span class="form-hint">For example, ST 58132 72695</span>
               </label>
               <input type="text" class="form-control" id="grid-reference" aria-describedby="ngr_help" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="grid-reference-end"><span class="bold-small">End</span> grid reference
+              </label>
+              <input type="text" class="form-control" id="grid-reference-end" aria-describedby="ngr_help" />
             </div>
 
           </fieldset>
@@ -49,20 +53,40 @@
 
         <div class="js-hidden" id="east_north_entry">
           <fieldset>
-            <legend class="visuallyhidden">Easting and northing for where the exemption activity will take place</legend>
+            <legend class="visuallyhidden">Start points</legend>
 
-            <!-- Easting/northing -->
+            <p class="bold-small">Start point</p>
+
+            <!-- Easting/northing start -->
             <div class="form-group">
-              <label class="form-label" for="easting">Easting (X)
-                <span class="form-hint">For example, 448820</span>
+              <label class="form-label" for="easting">Start point easting (X)
+                <span class="form-hint inline">for example, 448820</span>
               </label>
               <input type="text" class="form-control" id="easting" />
             </div>
             <div class="form-group">
-              <label class="form-label" for="northing">Northing (Y)
-                <span class="form-hint">For example, 265443</span>
+              <label class="form-label" for="northing">Start point northing (Y)
+                <span class="form-hint inline">for example, 265443</span>
               </label>
               <input type="text" class="form-control" id="northing" />
+            </div>
+
+          </fieldset>
+
+          <fieldset>
+            <legend class="visuallyhidden">End points</legend>
+
+            <p class="bold-small">End point</p>
+
+              <div class="form-group">
+              <label class="form-label" for="easting-end">End point easting (X)
+              </label>
+              <input type="text" class="form-control" id="easting-end" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="northing-end">End point northing (Y)
+              </label>
+              <input type="text" class="form-control" id="northing-end" />
             </div>
 
           </fieldset>

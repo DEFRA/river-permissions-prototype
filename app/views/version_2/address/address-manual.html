@@ -19,6 +19,15 @@
           {{ title if title else "Title not set" }}
         </h1>
 
+        <p>
+          <span class="postcode-prefix">Postcode</span>
+          <span class="visuallyhidden">:</span>
+          <span class="postcode">BS1 5AH</span>
+          <a href="{{ pcodelink }}" class="change-postcode-button">
+              Change<span class="visuallyhidden"> postcode</span>
+          </a>
+        </p>
+
             <!-- Manual entered address -->
             <fieldset>
               <legend class="visuallyhidden">Address for manual entry</legend>
@@ -43,11 +52,6 @@
               <div class="form-group">
                 <label class="form-label" for="town">Town or city</label>
                 <input type="text" class="form-control" id="town" />
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="manual-postcode">Postcode (optional)</label>
-                <input type="text" class="form-control form-postcode" id="manual-postcode" />
               </div>
 
             </fieldset>

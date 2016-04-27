@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block page_title %} Registration complete {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight">
+          <h1 class="bold-large">Registration complete</h1>
+          <p>
+            Your reference is:
+            <br />
+            <strong class="heading-medium">HDJ2123F</strong>
+          </p>
+        </div>
+
+        <p class="text">
+          We've sent a confirmation email to someone@email.com
+        </p>
+
+        <h2 class="heading-medium">What happens next</h2>
+
+        <p class="text">
+          You can begin work on the activity covered by your exemptions.
+        </p>
+        <p class="text">
+          Exemptions don’t expire, except for those for dredging which have time limits.
+          If want to do the same activity again you must register a new exemption.
+        </p>
+        <p class="text">
+          We may check to see if your activity matches the conditions and description of your exemption.
+        </p>
+        <p class="text">
+          You can check the conditions and description of your exemption in the
+          <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.
+        </p>
+
+        <h2 class="heading-medium">If your activity changes</h2>
+        <p class="text">
+          If the location changes, you will need to register a new exemption.
+        </p>
+        <p class="text">
+          If the activity or the way you are doing the work changes, you will need to check if it is still exempt.
+        </p>
+        <p class="text">
+          If you need advice, call the Environment Agency helpline: 03708 506506. It's open Monday to Friday, between 8am and 6pm.
+        </p>
+
+        <br />
+
+        <p class="text"><a href="#" class="link">What do you think of this service?</a> (takes 30 seconds)</p>
+
+        <a href="/version_3/end_registration/email" class="button">Continue to email</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

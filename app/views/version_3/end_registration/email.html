@@ -1,0 +1,105 @@
+{% extends "layout.html" %} {% block page_title %} Example - Forms {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="bold-large">Registration confirmation</h1>
+      </div>
+
+      <h2 class="heading-medium">You have registered exemptions for flood risk activities.
+        Your reference is: HDJ2123F.
+      </h2>
+
+      <table class="check-your-answers">
+
+        <thead>
+          <tr>
+            <th colspan="2">
+              <h2 class="heading-medium">
+                  Registration details
+                </h2>
+            </th>
+            <th>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Grid reference
+            </td>
+            <td>
+              ST 58132 72695
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Exemption FRA5
+            </td>
+            <td>
+              Construction of footbridges
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Exemption FRA9
+            </td>
+            <td>
+              Maintenance of structures within the channel of a main river
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Customer type
+            </td>
+            <td>
+              Local authority
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Responsible for activity ('operator')
+            </td>
+            <td>
+              Careful Contractor Ltd
+              <br /> Road
+              <br /> Town
+              <br /> Postcode
+              <br /> Tel: 01539 725 345
+              <br /> Email: someones@email.com
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Who we will contact
+            </td>
+            <td>
+              Sarah Site manager
+              <br /> Tel: 03708 506506
+              <br /> Email: tom.riddle@email.com
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <br />
+      <br />
+
+      <p>You can check the conditions of your exemptions in the <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.</p>
+
+      <h2 class="heading-medium">Your responsibilities</h2>
+
+      <p>
+        The organisation or individual responsible must keep to the description and conditions for the exemption(s).
+        We can prosecute them if they don’t do this.
+      </p>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Registration complete {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Application complete {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -6,7 +6,12 @@
     <div class="column-two-thirds">
 
         <div class="govuk-box-highlight">
-          <h1 class="bold-large">Registration complete</h1>
+          <h1 class="bold-large">
+            Application complete<br />
+            <span class="bold-medium">
+              You must now wait for us to check the location
+            </span>
+          </h1>
           <p>
             Your reference is:
             <br />
@@ -15,25 +20,23 @@
         </div>
 
         <p class="text">
-          We've sent a confirmation email to someone@email.com
+          We've sent a confirmation email to someone@email.com. This is not approval to start work.
         </p>
 
         <h2 class="heading-medium">What happens next</h2>
 
-        <p class="text">
-          You can begin work on the activity covered by your exemptions.
-        </p>
-        <p class="text">
-          Exemptions don’t expire, except for those for dredging which have time limits.
-          If want to do the same activity again you must register a new exemption.
-        </p>
-        <p class="text">
-          We may check to see if your activity matches the conditions and description of your exemption.
-        </p>
-        <p class="text">
-          You can check the conditions and description of your exemption in the
-          <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.
-        </p>
+        <div class="panel panel-border-wide">
+          <p class="text bold-medium">
+            You must not start work until we confirm your registration.
+          </p>
+          <p class="text">
+            We will check the location of the activity in our database of environmentally sensitive and flood defence areas.
+          </p>
+          <p class="text">
+            We will contact you within 15 working days to confirm or cancel your registration.
+          </p>
+        </div>
+
 
         <h2 class="heading-medium">If your activity changes</h2>
         <p class="text">
@@ -41,9 +44,6 @@
         </p>
         <p class="text">
           If the activity or the way you are doing the work changes, you will need to check if it is still exempt.
-        </p>
-        <p class="text">
-          If you need advice, call the Environment Agency helpline: 03708 506506. It's open Monday to Friday, between 8am and 6pm.
         </p>
 
         <br />

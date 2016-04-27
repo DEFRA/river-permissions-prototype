@@ -120,8 +120,68 @@ table.check-your-answers th {
     font-size:19px;
 }
 
-// nline hints
+// Inline hints
 .form-hint.inline{
   display:inline-block;
   padding-left:5px;
+}
+
+
+// Email styles
+#email {
+  .column-one-quarter {
+    float: left;
+    width: 210px;
+  }
+  .column-three-quarter {
+    float: left;
+    width: auto;
+  }
+}
+#banner {
+  margin-bottom:20px;
+}
+#gmail_header {
+  background-image:  file-url("email/gmail_header_bg.png");
+  background-repeat: repeat-x;
+}
+#email_text {
+  width:60%;
+  margin-left:40px;
+  margin-bottom:6em;
+  ul {
+    list-style-type: disc;
+    margin-left:1em;
+    margin-top:-0.5em;
+    margin-bottom: 1em;
+  }
+  .head {
+    font-size:150%;
+    font-weight:bold;
+    margin-bottom:0.8em;
+  }
+  .subhead {
+    font-weight:bold;
+    margin-top:1em;
+    margin-bottom:0.5em;
+  }
+  td {
+    font-size:100%;
+  }
+}
+.subject {
+  font-size:110%;
+}
+.start {
+  font-weight:bold;
+}
+.subject {
+  margin-bottom:0.9em;
+  padding-bottom:0.6em;
+  border-bottom:1px solid #DEDEDE;
+}
+img.inboxicon {
+  display:inline-block;
+  margin:0 0 0 10px;
+  vertical-align: middle;
 }

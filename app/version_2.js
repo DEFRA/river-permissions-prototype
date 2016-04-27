@@ -317,7 +317,7 @@ router.get('/address/partner_address_manual', function (req, res) {
 });
 
 // Other
-var ot_title = "What's the address of the organisation?";
+var ot_title = "What's the main address of the organisation?";
 router.get('/address/other_postcode', function (req, res) {
   res.render('version_2/address/postcode', {'title' : ot_title, 'manual_link' : 'other_address_manual'});
 });

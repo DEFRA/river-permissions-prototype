@@ -14,13 +14,15 @@ var folder = "version_3";
 // ###  location_check_no = Contact the Environment Agency                      /version_2/contact/contact_ea
 // ###  location_check_yes = Add the exemptions you want to register            /version_2/exemptions/add_exemptions
 
-router.post('/start/check_location', function (req,res) {
-  if (req.body['location_check']==="location_check_no"){
-    res.redirect( '/' + folder + '/contact/contact_ea_location');
-  } else if (req.body['location_check']==="location_check_yes") {
-    res.redirect( '/' + folder + '/exemptions/add_exemptions');
-  }
-});
+
+// NOT USED in v3
+// router.post('/start/check_location', function (req,res) {
+//  if (req.body['location_check']==="location_check_no"){
+//    res.redirect( '/' + folder + '/contact/contact_ea_location');
+//  } else if (req.body['location_check']==="location_check_yes") {
+//    res.redirect( '/' + folder + '/exemptions/add_exemptions');
+//  }
+// });
 
 // Add the exemptions you want to register                                      /version_2/exemptions/add_exemptions
 

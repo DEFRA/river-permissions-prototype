@@ -30,10 +30,62 @@ router.post('/exemptions/add_exemptions', function(req, res) {
   res.redirect( '/' + folder + '/exemptions/check_exemptions');
 });
 
-// Check your exemptions                                                        /version_2/exemptions/check_exemptions
+router.post('/do_exemption_check', function(req, res) {
+  var codearray = req.body.ex;
+  var isDredging=false;
+  var isOther=false;
+  for (n in codearray){
+    // check if at least one drdging exemption has been selected
+    if(codearray[n]=='FRA23' || codearray[n]=='FRA24'){
+      isDredging=true;
+    }
+    // check if at least one OTHER non-dredging exemption has been selected
+    if(codearray[n]!='FRA23' && codearray[n]!='FRA24'){
+      isOther=true;
+    }
+  }// end foreach
+  if(isDredging && isOther)
+  {
+    //res.render(folder + '/exemptions/dredging_warning');
+      res.render(folder + '/exemptions/add_exemptions',{'error': true});
+  }
+  else
+  {
+    // get chosen exemption codes
+    var exempt1 = req.body.ex[0];
+    var exempt2 = req.body.ex[1];
+    var exempt3 = req.body.ex[2];
+    var exempt4 = req.body.ex[3];
+    var exempt5 = req.body.ex[4];
+    var exempt6 = req.body.ex[5];
+    res.render(folder + '/exemptions/check_exemptions',{
+      'exempt1':exempt1,
+      'exempt2':exempt2,
+      'exempt3':exempt3,
+      'exempt4':exempt4,
+      'exempt5':exempt5,
+      'exempt6':exempt6,
+      'isDredging':isDredging
+      }
+    );
+  } // end else
 
-router.post('/exemptions/check_exemptions', function(req, res) {
-  res.redirect( '/' + folder + '/location/grid_reference');
+});
+
+
+
+// Check your exemptions
+
+router.post('/check_grid_ref', function(req, res) {
+  var isDredging = req.body.isDredging;
+  if(isDredging=='true')
+  {
+    res.redirect( '/' + folder + '/location/grid_reference_two_points');
+  }
+  else
+  {
+    res.redirect( '/' + folder + '/location/grid_reference');
+  } // end else
 });
 
 // Where will the exemption activity take place?                                /version_2/location/grid_reference

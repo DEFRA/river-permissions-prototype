@@ -20,6 +20,19 @@
       {{ title }}
     </h1>
 
+    {% if error %}
+      <div class="error-summary" role="group" aria-labelledby="groupLabel" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+          A problem to fix
+        </h1>
+        <ul class="error-summary-list">
+          <li>
+            <a class="error-text" href="#">You picked a dedging exemption with another exemption. We can only process dredging exemptions on their own, so please remove all but one dredging exemption.</a>
+          </li>
+        </ul>
+      </div>
+    {% endif %}
+
       <p class="panel panel-border-wide">
         You can register more than one exemption but they must all be at the same location.
         You must check you can meet the conditions for each exemption.
@@ -28,7 +41,7 @@
         </a>.
       </p>
 
-      <form method="post" class="form">
+      <form method="post" class="form" action="/version_3/do_exemption_check">
 
         <div class="form-group">
           <fieldset>
@@ -58,8 +71,8 @@
           {'order' : '19' , 'live' : '1' , 'id' : 'FRA20' , 'label' : 'Fish passage notches on existing structures' , 'desc' : 'None' , 'govuktitle' : 'Constructing fish passage notches in an existing impounding structure'},
           {'order' : '20' , 'live' : '1' , 'id' : 'FRA21' , 'label' : 'Removal of silt from bridge arches and culverts' , 'desc' : 'None' , 'govuktitle' : 'Removing silt and sand from bridge arches and any material from existing culverts'},
           {'order' : '21' , 'live' : '1' , 'id' : 'FRA22' , 'label' : 'Removal of silt and sand next to in-river structures' , 'desc' : 'None' , 'govuktitle' : 'Removing silt and sand adjacent to in-river structures'},
-          {'order' : '22' , 'live' : '0' , 'id' : 'FRA23' , 'label' : 'Dredging of ditches, drains and straightened watercourses up to 1.5km' , 'desc' : 'None' , 'govuktitle' : 'Dredging to remove accumulated silt and sand from the bed of up to 1.5km of manmade ditches, land drains, agricultural drains and previously straightened watercourses that are main rivers'},
-          {'order' : '23' , 'live' : '0' , 'id' : 'FRA24' , 'label' : 'Dredging of a river up to 20m' , 'desc' : 'None' , 'govuktitle' : 'Dredging of to remove accumulated silt and sand from the bed of up to 20 metres of a main river'},
+          {'order' : '22' , 'live' : '1' , 'id' : 'FRA23' , 'label' : 'Dredging of ditches, drains and straightened watercourses up to 1.5km' , 'desc' : 'None' , 'govuktitle' : 'Dredging to remove accumulated silt and sand from the bed of up to 1.5km of manmade ditches, land drains, agricultural drains and previously straightened watercourses that are main rivers'},
+          {'order' : '23' , 'live' : '1' , 'id' : 'FRA24' , 'label' : 'Dredging of a river up to 20m' , 'desc' : 'None' , 'govuktitle' : 'Dredging of to remove accumulated silt and sand from the bed of up to 20 metres of a main river'},
           {'order' : '24' , 'live' : '1' , 'id' : 'FRA25' , 'label' : 'Excavation of scrapes and shallow wetland features' , 'desc' : 'None' , 'govuktitle' : 'Excavating scrapes and shallow wetland features totalling 0.1 hectare in a flood plain'},
           {'order' : '25' , 'live' : '1' , 'id' : 'FRA26' , 'label' : 'Raised flood defences (construction)' , 'desc' : 'None' , 'govuktitle' : 'Constructing raised flood defences around a maximum of 6 adjoining properties'},
           {'order' : '26' , 'live' : '1' , 'id' : 'FRA27' , 'label' : 'Wildlife refuge structures on the bank' , 'desc' : 'None' , 'govuktitle' : 'Constructing bankside wildlife refuge structures'},
@@ -68,7 +81,7 @@
 
         {% for ex in exemptions %}
           {% if ex.live=='1' %}
-            {{ formelement.exemption( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
+            {{ formelement.exemption3( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
           {% endif %}
         {% else %}
           <p>No radio buttons</p>
@@ -76,11 +89,6 @@
 
           </fieldset>
         </div><!-- // end .form-group -->
-
-        <p>
-          <span class="bold-small">Dredging exemptions</span><br />
-          You can’t register the exemptions for dredging, FRA23 and FRA24, online. Please contact us to register these.
-        </p>
 
         <div class="form-group">
           <input type="submit" class="button" value="Continue" />

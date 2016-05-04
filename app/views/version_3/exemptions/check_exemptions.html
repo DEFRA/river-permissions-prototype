@@ -7,37 +7,58 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-  <form method="post" class="form">
+  <form method="post" class="form" action="/version_3/check_grid_ref">
 
     <h1 class="heading-large">
       Check your exemptions
     </h1>
 
+    {% import "custom_inc/macros.html" as formelement %}
+
+    {% set exemptions = [
+      {'order' : '1' , 'live' : '1' , 'id' : 'FRA2' , 'label' : 'Electrical cable crossing a river' , 'desc' : 'Allows electrical cable and supports above river. Not for cable on the bed or channel or in a duct. Minimum clearances apply depending on voltage.' , 'govuktitle' : 'Electrical cable service crossing a main river'},
+      {'order' : '2' , 'live' : '1' , 'id' : 'FRA3' , 'label' : 'Service crossing below river bed by directional drilling' , 'desc' : 'Intended for directional drilling not open trench. Must be at least 1.5m under the bed.' , 'govuktitle' : 'Service crossing below the bed of a main river by directional drilling'},
+      {'order' : '3' , 'live' : '1' , 'id' : 'FRA4' , 'label' : 'Service crossings attached to the outside of an existing structure' , 'desc' : 'For example, attaching a duct to bridge parapet. You cannot erect a new structure or fix a duct across the opening of a bridge. The crossing must not project more than 1m from structure.' , 'govuktitle' : 'Service crossings attached to the outside of existing structures over a main river'},
+      {'order' : '4' , 'live' : '1' , 'id' : 'FRA5' , 'label' : 'Footbridge 8m bank to bank maximum' , 'desc' : 'Footbridge max length 8m. Deck max width 1.5m. No supports in water. Must not reduce the cross-sectional area of the channel or affect bed. Parapets of open construction. Not for vehicles.' , 'govuktitle' : 'Footbridge over a main river not more than 8 metres wide from bank to bank'},
+      {'order' : '5' , 'live' : '1' , 'id' : 'FRA6' , 'label' : 'Scaffolding for no more than 4 weeks' , 'desc' : 'Can\'t be up for more than four weeks or between 15 March and 15 June. Not for scaffolding across whole structures such as bridges or weirs. Should not occupy more than 10m of a bank or 1.2m or 10% of river width. At least 0.6m above water.' , 'govuktitle' : 'Temporary scaffolding in or over a main river for no more than four weeks'},
+      {'order' : '6' , 'live' : '1' , 'id' : 'FRA7' , 'label' : 'Dewatering for no more than 4 weeks' , 'desc' : 'None' , 'govuktitle' : 'Temporary dewatering of a work area for no more than four weeks'},
+      {'order' : '7' , 'live' : '1' , 'id' : 'FRA8' , 'label' : 'Maintenance of raised river or sea defences' , 'desc' : 'None' , 'govuktitle' : 'Maintaining a raised river or sea defence'},
+      {'order' : '8' , 'live' : '1' , 'id' : 'FRA9' , 'label' : 'Maintenance of structures in the river (not raised defences)' , 'desc' : 'None' , 'govuktitle' : 'Maintaining structures within the channel of a main river that are not raised defences'},
+      {'order' : '9' , 'live' : '1' , 'id' : 'FRA10' , 'label' : 'Drinking bay for cattle' , 'desc' : 'None' , 'govuktitle' : 'Constructing drinking bays for livestock on the bank of a river'},
+      {'order' : '10' , 'live' : '1' , 'id' : 'FRA11' , 'label' : 'Small access platform (eg jetty, angling platform)' , 'desc' : 'None' , 'govuktitle' : 'Constructing small access platforms on the bank of a river or that project into or over a main river'},
+      {'order' : '11' , 'live' : '1' , 'id' : 'FRA12' , 'label' : 'Outfall pipes less than 300mm diameter through a headwall' , 'desc' : 'None' , 'govuktitle' : 'Outfall pipes less than 300mm diameter through a headwall'},
+      {'order' : '12' , 'live' : '1' , 'id' : 'FRA13' , 'label' : 'Repair of up to 10m of river bank using natural materials' , 'desc' : 'None' , 'govuktitle' : 'Repairing and protecting up to 10 metres of main river banks using natural materials'},
+      {'order' : '13' , 'live' : '1' , 'id' : 'FRA14' , 'label' : 'Repair of bank slips and erosion' , 'desc' : 'None' , 'govuktitle' : 'Repairing bank slips and erosion using the fallen materials'},
+      {'order' : '14' , 'live' : '1' , 'id' : 'FRA15' , 'label' : 'Habitat structures made of natural materials (not weirs or berms)' , 'desc' : 'None' , 'govuktitle' : 'Installing channel habitat structures made of natural materials excluding weirs and berms'},
+      {'order' : '15' , 'live' : '1' , 'id' : 'FRA16' , 'label' : 'Survey raft, small and temporary' , 'desc' : 'None' , 'govuktitle' : 'Installing temporary small rafts for surveys'},
+      {'order' : '16' , 'live' : '1' , 'id' : 'FRA17' , 'label' : 'Gravel-cleaning for fish-spawning beds' , 'desc' : 'None' , 'govuktitle' : 'Gravel-cleaning for fish-spawning beds'},
+      {'order' : '17' , 'live' : '1' , 'id' : 'FRA18' , 'label' : 'Placing stones or logs in a main river to enhance habitats' , 'desc' : 'None' , 'govuktitle' : 'Placing stones or logs in a main river to enhance habitats'},
+      {'order' : '18' , 'live' : '1' , 'id' : 'FRA19' , 'label' : 'Eel pass devices on existing structures' , 'desc' : 'None' , 'govuktitle' : 'Constructing eel pass devices on existing structures'},
+      {'order' : '19' , 'live' : '1' , 'id' : 'FRA20' , 'label' : 'Fish passage notches on existing structures' , 'desc' : 'None' , 'govuktitle' : 'Constructing fish passage notches in an existing impounding structure'},
+      {'order' : '20' , 'live' : '1' , 'id' : 'FRA21' , 'label' : 'Removal of silt from bridge arches and culverts' , 'desc' : 'None' , 'govuktitle' : 'Removing silt and sand from bridge arches and any material from existing culverts'},
+      {'order' : '21' , 'live' : '1' , 'id' : 'FRA22' , 'label' : 'Removal of silt and sand next to in-river structures' , 'desc' : 'None' , 'govuktitle' : 'Removing silt and sand adjacent to in-river structures'},
+      {'order' : '22' , 'live' : '1' , 'id' : 'FRA23' , 'label' : 'Dredging of ditches, drains and straightened watercourses up to 1.5km' , 'desc' : 'None' , 'govuktitle' : 'Dredging to remove accumulated silt and sand from the bed of up to 1.5km of manmade ditches, land drains, agricultural drains and previously straightened watercourses that are main rivers'},
+      {'order' : '23' , 'live' : '1' , 'id' : 'FRA24' , 'label' : 'Dredging of a river up to 20m' , 'desc' : 'None' , 'govuktitle' : 'Dredging of to remove accumulated silt and sand from the bed of up to 20 metres of a main river'},
+      {'order' : '24' , 'live' : '1' , 'id' : 'FRA25' , 'label' : 'Excavation of scrapes and shallow wetland features' , 'desc' : 'None' , 'govuktitle' : 'Excavating scrapes and shallow wetland features totalling 0.1 hectare in a flood plain'},
+      {'order' : '25' , 'live' : '1' , 'id' : 'FRA26' , 'label' : 'Raised flood defences (construction)' , 'desc' : 'None' , 'govuktitle' : 'Constructing raised flood defences around a maximum of 6 adjoining properties'},
+      {'order' : '26' , 'live' : '1' , 'id' : 'FRA27' , 'label' : 'Wildlife refuge structures on the bank' , 'desc' : 'None' , 'govuktitle' : 'Constructing bankside wildlife refuge structures'},
+      {'order' : '27' , 'live' : '1' , 'id' : 'FRA28' , 'label' : 'Track and path improvements' , 'desc' : 'None' , 'govuktitle' : 'Improvement works for existing tracks and paths'}
+    ] -%}
+
     <table class="check-your-answers" summary="Exemptions that you selected with title, exemption code and a link to remove any you don't need">
       <tbody>
-        <tr>
-          <th>
-            <p class="font-small">Footbridge over a main river not more than 8 metres wide from bank to bank</p>
-          </th>
-          <td>
-            <span class="bold-small">FRA5</span>
-          </td>
-          <td class="change-answer">
-            <a href="/version_3/exemptions/add_exemptions">Remove<span class="visuallyhidden"> exemption FRA5</span></a>
-          </td>
-        </tr>
 
-        <tr>
-          <th>
-            <p class="font-small">Maintaining structures within the channel of a main river that are not raised defences</p>
-          </th>
-          <td>
-            <span class="bold-small">FRA9</span>
-          </td>
-          <td class="change-answer">
-            <a href="/version_3/exemptions/add_exemptions">Remove <span class="visuallyhidden"> exemption FRA9</span></a>
-          </td>
-        </tr>
+
+        {% for ex in exemptions %}
+          {% if (ex.id==exempt1 or ex.id==exempt2 or ex.id==exempt3 or ex.id==exempt4 or ex.id==exempt5 or ex.id==exempt6) %}
+            {{ formelement.printexemption( ex.id, ex.label) }}
+          {% endif %}
+        {% else %}
+          <tr><td>No radio buttons</td></tr>
+        {% endfor %}
+
+
+
       </tbody>
     </table>
 
@@ -46,6 +67,8 @@
     <p>
       <a href="/version_3/exemptions/add_exemptions">Add another exemption</a>
     </p>
+
+    <input type="hidden" name="isDredging" value="{{isDredging}}" />
 
     <div class="form-group">
       <input type="submit" class="button" value="Save and continue" />

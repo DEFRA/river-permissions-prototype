@@ -8,7 +8,28 @@
 
 {% macro exemption(id, label, value, name, desc, type) %}
 <label for="id_{{ id }}" class="block-label exemption">
-  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="1">
   {{ label|safe }} <span class="exmpt">{{ id }}</span>
 </label>
+{% endmacro %}
+
+{% macro exemption3(id, label, value, name, desc, type) %}
+<label for="id_{{ id }}" class="block-label exemption">
+  <input id="id_{{ id }}" type="{{ type }}" name="ex[]" value="{{value}}">
+  {{ label|safe }} <span class="exmpt">{{ id }}</span>
+</label>
+{% endmacro %}
+
+{% macro printexemption(id,name) %}
+<tr>
+  <th>
+    <p class="font-small">{{name}}</p>
+  </th>
+  <td>
+    <span class="bold-small">{{id}}</span>
+  </td>
+  <td class="change-answer">
+    <a href="/version_3/exemptions/add_exemptions">Remove<span class="visuallyhidden"> exemption {{id}}</span></a>
+  </td>
+</tr>
 {% endmacro %}

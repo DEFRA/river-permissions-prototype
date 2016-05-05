@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block page_title %} Who is responsible for the activity? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Who is responsible for the activity?
+        </h1>
+
+          <div class="panel panel-border-narrow form-group" id="responsible_hint">
+            <h2 class="heading-small">
+              How to decide who is responsible
+            </h2>
+            <p class="text">The company, body or individual who has control over the way the activity (work) is done is responsible. They are called the ‘operator’.
+              If you use contractors, you need to decide if it is you or the contractors who has control.</p>
+            <p>Whoever has control will usually:</p>
+
+            <ul class="list-bullet">
+              <li>have day-to-day control of the activity</li>
+              <li>make sure the activity complies with the exemption</li>
+              <li>decide who holds important staff positions and stop incompetent staff working, if needed</li>
+              <li>make financial decisions that affect the activity</li>
+              <li>take action to control the activity in an emergency</li>
+            </ul>
+
+          </div>
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden" aria-describedby="responsible_hint">
+              Who is responsible for the activity?
+            </legend>
+
+            <label class="block-label" for="local_authority">
+              <input id="local_authority" type="radio" name="radio-inline-group" value="local_authority" /> Local authority or public body
+            </label>
+            <label class="block-label" for="limited_company">
+              <input id="limited_company" type="radio" name="radio-inline-group" value="limited_company" /> Limited company (eg a registered company or plc)
+            </label>
+            <label class="block-label" for="limited_liability">
+              <input id="limited_liability" type="radio" name="radio-inline-group" value="limited_liability" /> Limited liability partnership
+            </label>
+            <label class="block-label" for="individual">
+              <input id="individual" type="radio" name="radio-inline-group" value="individual" /> Individual (eg a householder)
+            </label>
+            <label class="block-label" for="partnership">
+              <input id="partnership" type="radio" name="radio-inline-group" value="partnership" /> Partnership
+            </label>
+            <label class="block-label" for="other">
+              <input id="other" type="radio" name="radio-inline-group" value="other" /> Other organisation (eg a trust, charity or club)
+            </label>
+            <label class="block-label" for="not_known">
+              <input id="not_known" type="radio" name="radio-inline-group" value="not_known" /> I don't know
+            </label>
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

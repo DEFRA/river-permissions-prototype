@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% set title = "Add the exemptions you want to register" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+    <h1 class="heading-large">
+      {{ title }}
+    </h1>
+
+    {% if error %}
+
+      <div class="error-summary" role="group" aria-labelledby="groupLabel" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+          A problem to fix
+        </h1>
+        <ul class="error-summary-list">
+          <li>
+            <a class="error-text" href="#">Select one dredging exemption and no others.</a> Dredging exemptions must be registered on their own.
+          </li>
+        </ul>
+      </div>
+
+    {% else %}
+
+    <div class="panel panel-border-wide">
+      <p class="text">
+        You can register more than one exemption, except for dredging, but they must all be at the same location.
+      </p>
+      <p class="text">
+        You can only only register one dredging exemption at a time. If you need other exemptions ou should register them separately.
+      </p>
+      <p class="text">
+        You must check you can meet the conditions for each exemption.
+        <a target="blank" href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">
+          Exempt flood risk activities guidance
+        </a>.
+      </p>
+    </div>
+
+    {% endif %}
+
+      <form method="post" class="form" action="/version_3/do_exemption_check">
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% from "custom_inc/exemptionlist.html" import exemptions %}
+
+        {% for ex in exemptions %}
+          {% if ex.live=='1' %}
+            {{ formelement.exemption3( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
+          {% endif %}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

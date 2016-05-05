@@ -1,0 +1,60 @@
+{% extends "layout.html" %} {% block page_title %} Application complete {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight">
+          <h1 class="bold-large">
+            Application complete<br />
+            <span class="bold-medium">
+              You must now wait for us to check the location
+            </span>
+          </h1>
+          <p>
+            Your reference is:
+            <br />
+            <strong class="heading-medium">HDJ2123F</strong>
+          </p>
+        </div>
+
+        <p class="text">
+          We've sent a confirmation email to someone@email.com. This is not approval to start work.
+        </p>
+
+        <h2 class="heading-medium">What happens next</h2>
+
+        <div class="panel panel-border-wide">
+          <p class="text bold-medium">
+            You must not start work until we confirm your registration.
+          </p>
+          <p class="text">
+            We will check the location of the activity in our database of environmentally sensitive and flood defence areas.
+          </p>
+          <p class="text">
+            We will contact you within 15 working days to confirm or cancel your registration.
+          </p>
+        </div>
+
+
+        <h2 class="heading-medium">If your activity changes</h2>
+        <p class="text">
+          If the location changes, you will need to register a new exemption.
+        </p>
+        <p class="text">
+          If the activity or the way you are doing the work changes, you will need to check if it is still exempt.
+        </p>
+
+        <br />
+
+        <p class="text"><a href="#" class="link">What do you think of this service?</a> (takes 30 seconds)</p>
+
+        <a href="/version_3/end_registration/email" class="button">Continue to email</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

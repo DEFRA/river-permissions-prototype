@@ -86,6 +86,8 @@
 
         {% from "custom_inc/exemptionlist.html" import exemptions %}
 
+        {% import "custom_inc/fra-text.html" as text %}
+
         {% for ex in exemptions %}
           {% if ex.live=='1' %}
             {{ formelement.exemption3( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}

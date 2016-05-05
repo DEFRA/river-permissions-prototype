@@ -37,25 +37,25 @@
             float:right;
           }
 
-        label.exemption{
-          background-color:#ededed;
-          border-color:#ededed;
-        }
-
-        @media screen and (min-width: 320px) {
           label.exemption{
-            width:99%;
-            }
-        }
+            background-color:#ededed;
+            border-color:#ededed;
+          }
 
-        details {
-          display:inline-block;
-          padding-left:10px;
-        }
+          @media screen and (min-width: 320px) {
+            label.exemption{
+              width:99%;
+              }
+          }
 
-        details summary {
-          background: none;
-        }
+          details {
+            display:inline-block;
+            padding-left:10px;
+          }
+
+          details summary {
+            background: none;
+          }
 
         </style>
 
@@ -65,7 +65,7 @@
 
         {% import "custom_inc/macros.html" as formelement %}
 
-        {% from "custom_inc/fra3-text.html" import text_fra3 %}
+        {% from "custom_inc/fra5-text.html" import text_fra5 %}
 
         {% set exemptions = [
           {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2' , 'desc' : 'Allows electrical cable and supports above river. Not for cable on the bed or channel or in a duct. Minimum clearances apply depending on voltage.'},
@@ -98,7 +98,7 @@
         ] -%}
 
         {% for ex in exemptions %}
-          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, text_fra3, "checkbox") }}
+          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, text_fra5, "checkbox") }}
         {% else %}
           <p>No radio buttons</p>
         {% endfor %}

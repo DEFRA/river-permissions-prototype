@@ -23,7 +23,7 @@
 
 {% macro exemption4(id, label, value, name, desc, type, conditions) %}
 <label for="id_{{ id }}" class="block-label exemption">
-  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}" aria-describedby="desc_{{ id }}">
+  <input id="id_{{ id }}" type="{{ type }}" name="ex[]" value="{{ value }}" aria-describedby="desc_{{ id }}">
   {{ label|safe }}
 
 <details id="desc_{{ id }}">

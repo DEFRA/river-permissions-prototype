@@ -65,7 +65,7 @@
 
         {% import "custom_inc/macros.html" as formelement %}
 
-        {% from "custom_inc/fra5-text.html" import text_fra5 %}
+        {% import "custom_inc/fra-text.html" as text %}
 
         {% set exemptions = [
           {'label' : 'Electrical cable crossing a river' , 'id' : 'FRA2' , 'desc' : 'Allows electrical cable and supports above river. Not for cable on the bed or channel or in a duct. Minimum clearances apply depending on voltage.'},
@@ -98,7 +98,7 @@
         ] -%}
 
         {% for ex in exemptions %}
-          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, text_fra5, "checkbox") }}
+          {{ formelement.exemption( ex.id, ex.label, ex.id, "exemption-"+ex.id, text[ex.id], "checkbox") }}
         {% else %}
           <p>No radio buttons</p>
         {% endfor %}

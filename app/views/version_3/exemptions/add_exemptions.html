@@ -20,21 +20,6 @@
       {{ title }}
     </h1>
 
-    {% if error %}
-
-      <div class="error-summary" role="group" aria-labelledby="groupLabel" tabindex="-1">
-        <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
-          A problem to fix
-        </h1>
-        <ul class="error-summary-list">
-          <li>
-            <a class="error-text" href="#">Select one dredging exemption and no others.</a> Dredging exemptions must be registered on their own.
-          </li>
-        </ul>
-      </div>
-
-    {% else %}
-
     <div class="panel panel-border-wide">
       <p class="text">
         You can register more than one exemption, except for dredging, but they must all be at the same location.
@@ -49,8 +34,6 @@
         </a>.
       </p>
     </div>
-
-    {% endif %}
 
       <form method="post" class="form" action="/version_3/do_exemption_check">
 

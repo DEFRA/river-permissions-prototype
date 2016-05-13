@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block page_title %} Would you also like a copy of the registration email sent to someone else? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Would you also like a copy of the registration email sent to someone else?
+        </h1>
+
+        <p class="panel panel-border-wide">
+          We’ll send a copy of the registration to the main contact. We will also send a copy to another address if you want.
+        </p>
+
+        <br />
+
+        <fieldset>
+          <legend class="visuallyhidden">Copy contact</legend>
+
+          <!-- Email address -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email address for registration copy (optional)
+            </label>
+            <input type="text" class="form-control" id="email" />
+          </div>
+
+          <!-- Confirm email address -->
+          <div class="form-group">
+            <label class="form-label" for="confirm-email">Confirm email address if entered above</label>
+            <input type="text" class="form-control" id="confirm-email" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

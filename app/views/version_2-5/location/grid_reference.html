@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block page_title %} Where will the exemption activity take place? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <form method="post" class="form">
+
+    {% include "custom_inc/backlink.html" %}
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          Where will the exemption activity take place?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Where will the exemption activity take place?</legend>
+
+          <!-- Grid reference -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference">National grid reference
+              <span class="form-hint">
+                For example, ST 58132 72695.
+              </span>
+              <span class="form-hint">
+                For activities that take place over a stretch of the watercourse choose the middle or centre point.
+              </span>
+            </label>
+            <input type="text" class="form-control" id="grid-reference" aria-describedby="ngr_help" />
+          </div>
+
+        </fieldset>
+
+        <!-- Find grid reference -->
+        <details style="padding-bottom: 18px;" id="ngr_help">
+          <summary><span class="summary">Help finding a grid reference</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>Use the free <a href="https://www.ordnancesurvey.co.uk/osmaps/" rel="external" target="_blank">Ordnance Survey online map</a> to find a grid reference.</p>
+            <p>Zoom in and centre the map on the activity location and select the ‘Grid Ref' tool. You should be able to copy and paste the grid reference back into this page.</p>
+          </div>
+        </details>
+
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+{% endblock %}

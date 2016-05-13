@@ -1,0 +1,161 @@
+{% extends "layout_unbranded.html" %}
+
+{% set imgpath="/public/images/email/" %}
+
+{% block page_title %}
+  Gmail | Flood risk activity exemption application
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div id="email">
+
+<div id="gmail_header">
+  <img src="{{ imgpath }}gmail_header.png" alt="" />
+</div>
+
+  <div class="grid-row">
+
+    <div class="column-one-quarter">
+      <img src="{{ imgpath }}gmail_menu_left.png" alt="" />
+    </div>
+
+
+    <div class="column-three-quarter">
+
+      <p class="subject">
+        Flood risk activity exemption application <img class="inboxicon" src="{{ imgpath }}gmail_icon_inbox.png" alt="" />
+      </p>
+
+      <p class="from">
+        <img src="{{ imgpath }}gmail_from_text.png" alt="" />
+      </p>
+
+      <div id="email_text">
+
+        <div id="banner" style="background-color:#000;"><img src="{{ imgpath }}gov_uk_email_header.png" alt="GOV.UK" /></div>
+
+        <h1 class="bold-large">
+          Application complete: you must now wait for us to check the location
+          </h1>
+        <p>
+          Your reference is:
+          <br />
+          <strong class="heading-medium">HDJ2123F</strong>
+        </p>
+
+        <div class="panel panel-border-wide">
+          <p class="bold-medium">
+            You must not start work until we confirm your registration.
+          </p>
+          <p>
+            We will check the location of the activity in our database of environmentally sensitive and flood defence areas.
+          </p>
+          <p>
+            We will contact you within 15 working days to confirm or cancel your registration.
+          </p>
+        </div>
+
+        <h2 class="heading-medium">
+          Application details
+        </h2>
+
+
+          <table class="check-your-answers">
+            <tbody>
+              <tr>
+                <td>
+                  Grid reference
+                </td>
+                <td>
+                  ST 58132 72695
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Exemption FRA5
+                </td>
+                <td>
+                  Construction of footbridges
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Exemption FRA9
+                </td>
+                <td>
+                  Maintenance of structures within the channel of a main river
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Customer type
+                </td>
+                <td>
+                  Local authority
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Responsible for activity ('operator')
+                </td>
+                <td>
+                  Careful Contractor Ltd
+                  <br /> Road
+                  <br /> Town
+                  <br /> Postcode
+                  <br /> Tel: 01539 725 345
+                  <br /> Email: someones@email.com
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Who we will contact
+                </td>
+                <td>
+                  Sarah Site manager
+                  <br /> Tel: 03708 506506
+                  <br /> Email: tom.riddle@email.com
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <br />
+          <br />
+
+          <p>You can check the conditions of your exemptions in the <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.</p>
+
+          <h2 class="heading-medium">Your responsibilities</h2>
+
+          <p>
+            The organisation or individual responsible must keep to the description and conditions for the exemption(s).
+            We can prosecute them if they don’t do this.
+          </p>
+
+
+<p>&nbsp;</p>
+
+<p><a href="/version_2-5/">[For testing] Return to index page</a></p>
+
+
+
+
+      </div><!-- // end #email_text -->
+
+    </div><!-- // end .column 3/4 -->
+
+  </div><!-- // end .grid_row -->
+
+</div><!-- // end #email -->
+
+{% endblock %}

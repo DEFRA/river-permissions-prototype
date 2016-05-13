@@ -1,0 +1,171 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Register your flood risk activity: alpha prototype version 2.5</h1>
+
+      <p>
+        This is a prototype for usability testing only.
+      </p>
+
+      <h2 class="heading-medium">Step 1: navigate GOV.UK</h2>
+      <ul class="list list-bullet">
+        <li>
+          <a href="https://www.gov.uk/guidance/register-your-flood-risk-exemption-environmental-permits">Flood risk activities guidance</a>
+        </li>
+        <li>
+          <a href="/version_2-5/start/gds_start">GOV.UK start page</a>
+        </li>
+      </ul>
+
+
+
+      <h3 class="heading-medium">Step 2: add exemptions</h3>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/exemptions/add_exemptions">Add exemptions</a>
+        </li>
+        <li>
+          <a href="/version_2-5/exemptions/add_exemptions_no_conditions">Add exemptions (no conditions)</a>
+        </li>
+        <li>
+          <a href="/version_2-5/exemptions/check_exemptions">Check answers</a>
+        </li>
+      </ul>
+
+      <h4 class="heading-medium">Step 3: enter location</h4>
+      <ul class="list list-bullet">
+
+        <li>
+          <a href="/version_2-5/location/grid_reference">Grid reference</a>
+        </li>
+
+        <li>
+          <a href="/version_2-5/location/grid_reference_two_points">Grid reference for two points</a>
+        </li>
+
+        <li>
+          <a href="/version_2-5/location/grid_reference_east_northing">Grid reference and easting northing</a>
+        </li>
+
+        <li>
+          <a href="/version_2-5/location/check_location_contact">Contact the Environment Agency</a>
+        </li>
+      </ul>
+
+      <h6 class="heading-medium">Step 4: select business type</h6>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/user_type">Business types</a>
+        </li>
+      </ul>
+
+      <p>Local authority or public body</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/local_authority">Local authority or public body name</a>
+        </li>
+        <li>
+          <a href="/version_2-5/address/local_authority_postcode">Local authority or public body address</a>
+        </li>
+      </ul>
+
+      <p>Limited company</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/limited_company_number">Limited company registration number</a>
+        </li>
+        <li>
+          <a href="/version_2-5/user_type/limited_company_name">Limited company name</a>
+        </li>
+        <li>
+          <a href="/version_2-5/address/limited_company_postcode">Limited company address</a>
+        </li>
+      </ul>
+
+      <p>Limited liability partnership</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/limited_liability_number">Limited liability partnership number</a>
+        </li>
+        <li>
+          <a href="/version_2-5/user_type/limited_liability_name">Limited liability partnership name</a>
+        </li>
+        <li>
+          <a href="/version_2-5/address/limited_liability_postcode">Limited liability partnership address</a>
+        </li>
+      </ul>
+
+      <p>Individual</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/individual_name">Individual name</a>
+        </li>
+        <li>
+          <a href="/version_2-5/address/individual_postcode">Individual address</a>
+        </li>
+      </ul>
+
+      <p>Partnership</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/partnership">Partnership details</a>
+        </li>
+      </ul>
+
+      <p>Other</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/user_type/other">Other (eg a trust, charity or club)</a>
+        </li>
+      </ul>
+
+      <p>Unknown</p>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/contact/contact_ea">I don't know</a>
+        </li>
+      </ul>
+
+      <h2 class="heading-medium">Step 5: enter main contact details</h2>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/contact/main_contact_name">Person responsible for activity</a>
+        </li>
+        <li>
+          <a href="/version_2-5/contact/email_someone_else">Email someone else</a>
+        </li>
+      </ul>
+
+      <h2 class="heading-medium">Step 6: complete application</h2>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/end_registration/check_your_answers">Check answers with 2 contacts</a>
+        </li>
+        <li>
+          <a href="/version_2-5/end_registration/declaration">Declaration</a>
+        </li>
+        <li>
+          <a href="/version_2-5/end_registration/declaration_conditions_page">Exemption conditions</a>
+        </li>
+        <li>
+          <a href="/version_2-5/end_registration/confirmation">Confirmation</a>
+        </li>
+      </ul>
+
+      <h2 class="heading-medium">Step 7: receive confirmation of application</h2>
+      <ul class="list list-bullet">
+        <li>
+          <a href="/version_2-5/end_registration/email">Confirmation email</a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

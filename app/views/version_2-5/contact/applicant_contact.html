@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block page_title %} Are you the person responsible for the activity? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Are you the person responsible for the activity?
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Are you the person responsible for the activity?</legend>
+
+          <div class="form-group">
+            <label class="block-label" for="contact_yes">
+              <input id="contact_yes" type="radio" name="radio-inline-group" value="contact_yes" /> Yes
+            </label>
+            <label class="block-label" for="contact_no">
+              <input id="contact_no" type="radio" name="radio-inline-group" value="contact_no" /> No
+            </label>
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

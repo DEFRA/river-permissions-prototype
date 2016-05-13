@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  {{ title if title else "Title not set" }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          {{ title if title else "Title not set" }}
+        </h1>
+
+        <p>
+          <span class="postcode-prefix">Postcode</span>
+          <span class="visuallyhidden">:</span>
+          <span class="postcode">BS1 5AH</span>
+          <a href="{{ pcodelink }}" class="change-postcode-button">
+              Change<span class="visuallyhidden"> postcode</span>
+          </a>
+        </p>
+
+            <!-- Manual entered address -->
+            <fieldset>
+              <legend class="visuallyhidden">Address for manual entry</legend>
+
+              <div class="form-group">
+                <label class="form-label" for="premises">Building name or number
+                  <span class="form-hint">For example, a business premises name or house number</span>
+                </label>
+                <input type="text" class="form-control" id="premises" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="street_address">Street line 1</label>
+                <input type="text" class="form-control" id="street_address" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="locality">Street line 2 (optional)</label>
+                <input type="text" class="form-control" id="locality" />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="town">Town or city</label>
+                <input type="text" class="form-control" id="town" />
+              </div>
+
+            </fieldset>
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

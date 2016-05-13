@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block page_title %} You must contact the Environment Agency before you register {% endblock %} {% block content %}
+<main id="content" role="main">
+
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <form method="post" class="form">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+
+        <h1 class="heading-large">
+          You must contact the Environment Agency before you register
+        </h1>
+        <p class="text">
+          You must contact us before you start this registration to check if your activity is in a sensitive area.
+        </p>
+
+        <div class="contact">
+          <h2 class="heading-medium">Contact the Environment Agency</h2>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>
+          <br /> Telephone: 03708 506 506
+          <br /> Minicom: 03702 422 549
+          <br /> Monday to Friday, 8am to 6pm
+        </div>
+
+      </div>
+    </div>
+
+  </form>
+
+</main>
+
+{% endblock %}

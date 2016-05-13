@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  {{ title if title else "Title not set" }}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          {{ title if title else "Title not set" }}
+        </h1>
+
+        <fieldset>
+          <legend class="visuallyhidden">Postcode</legend>
+
+          <!-- Postcode look-up -->
+          <div class="form-group">
+            <label class="form-label" for="postcode">UK postcode
+              <span class="form-hint">For example, BS1 5AH</span>
+            </label>
+            <input type="text" class="form-control form-postcode" id="postcode" />
+          </div>
+
+        </fieldset>
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Find address" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

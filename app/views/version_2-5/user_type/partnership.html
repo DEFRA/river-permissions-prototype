@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block page_title %} Partner names and addresses {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          Partner names and addresses
+        </h1>
+
+        <div class="panel panel-border-wide">
+          <p>
+            We need to know the name and home address of all business partners responsible for the activity.
+          </p>
+          <p>
+            You must give us the details of at least two partners.
+          </p>
+        </div>
+
+        <h2 class="heading-medium">
+          Add a business partner
+        </h2>
+
+        <fieldset>
+          <legend class="visuallyhidden">Who's responsible for the activity?</legend>
+
+          <!-- Full name -->
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full name</label>
+            <p class="form-hint">For example, Jane Smith</p>
+            <input type="text" class="form-control" id="full-name" />
+          </div>
+
+        </fieldset>
+
+        <br />
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

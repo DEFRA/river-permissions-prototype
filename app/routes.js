@@ -4,6 +4,7 @@ var router = express.Router();
 // anything beginning with "/version_x" will go into this
 router.use('/version_1', require('./version_1'));
 router.use('/version_2', require('./version_2'));
+router.use('/version_2-5', require('./version_2-5'));
 router.use('/version_3', require('./version_3'));
 
 router.use(function (req, res, next) {

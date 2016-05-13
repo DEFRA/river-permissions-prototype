@@ -1,0 +1,131 @@
+{% extends "layout_unbranded.html" %}
+
+{% set imgpath="/public/images/email/" %}
+
+{% block page_title %}
+  Gmail | Flood risk activity exemption successfully registered
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div id="email">
+
+<div id="gmail_header">
+  <img src="{{ imgpath }}gmail_header.png" alt="" />
+</div>
+
+  <div class="grid-row">
+
+    <div class="column-one-quarter">
+      <img src="{{ imgpath }}gmail_menu_left.png" alt="" />
+    </div>
+
+
+    <div class="column-three-quarter">
+
+      <p class="subject">
+        Flood risk activity exemption successfully registered <img class="inboxicon" src="{{ imgpath }}gmail_icon_inbox.png" alt="" />
+      </p>
+
+      <p class="from">
+        <img src="{{ imgpath }}gmail_from_text.png" alt="" />
+      </p>
+
+      <div id="email_text">
+
+        <div id="banner" style="background-color:#000;"><img src="{{ imgpath }}gov_uk_email_header.png" alt="GOV.UK" /></div>
+
+        <h1 class="bold-large">
+          We’ve registered your flood risk activity exemption
+        </h1>
+
+        <p>
+            You can begin work on the activity covered by your exemption.
+        </p>
+        <p class="bold-small">
+          Your reference is: HDJ2123F
+        </p>
+
+        <p class="bold-small">
+          Exemptions registered:
+
+          <ul class="list list-bullet">
+            <li>construction of footbridges FRA5</li>
+            <li>maintenance of structures within the channel of a main river FRA9</li>
+          </ul>
+          <p>
+            at grid reference ST 58132 72695.
+        </p>
+        <p class="bold-small">
+          Date of registration
+        </p>
+        <p>
+          23 June 2016
+        </p>
+        <p>
+          [NOT DREDGING] Your exemptions don’t expire but if you want to do the same activity again you must register a new exemption.</br>
+          [IF DREDGING] Your exemption FRA23 expires in 3 years on 22 June 2019 and only covers one dredging operation.
+        </p>
+        <p class="bold-small">
+          Responsible for activity (the ‘operator’)
+        </p>
+        <p>
+          Somershire District Council</br>
+          Some address, Somershire
+        </p>
+        <p class="bold-small">
+          Who we will contact
+        </p>
+        <p>
+          Sarah Site Manager</br>
+          Tel: 01234 56788</br>
+          sara@careful.com
+        </p>
+        <p class="bold-small">
+          Your responsibilities
+        </p>
+        <p>
+          The organisation or individual responsible must keep to the description and conditions for the exemption(s). We can prosecute them if they don’t do this.
+        <p>
+          You can check the conditions of your exemptions in the <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.
+        </p>
+        <p class="bold-small">
+          If your activity changes
+        </p>
+        <p>
+          If the location changes, you will need to register a new exemption.
+        </p>
+        <p>
+          If the activity or the way you are doing the work changes, you will need to check if it is still exempt.
+        </p>
+
+
+          <p>&nbsp;</p>
+          <p class="bold-small">For testing: emails</p>
+          <ul class="list list-bullet">
+            <li><a href="/version_3/end_registration/email-confirm">Confirmation email</a></li>
+            <li><a href="/version_3/end_registration/email-nccc-valid">EA email if valid</a></li>
+            <li><a href="/version_3/end_registration/email-nccc-not-valid">EA email if not valid</a></li>
+            <li><a href="/version_3/">Return to index page</a></li>
+          </ul>
+
+
+
+
+      </div><!-- // end #email_text -->
+
+    </div><!-- // end .column 3/4 -->
+
+  </div><!-- // end .grid_row -->
+
+</div><!-- // end #email -->
+
+{% endblock %}

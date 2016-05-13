@@ -3,7 +3,7 @@
 {% set imgpath="/public/images/email/" %}
 
 {% block page_title %}
-  Gmail | Flood risk activity exemption application
+  Gmail | Flood risk activity exemption application rejected
 {% endblock %}
 
 {% block proposition_header %}
@@ -32,7 +32,7 @@
     <div class="column-three-quarter">
 
       <p class="subject">
-        Flood risk activity exemption application <img class="inboxicon" src="{{ imgpath }}gmail_icon_inbox.png" alt="" />
+        Flood risk activity exemption application rejected <img class="inboxicon" src="{{ imgpath }}gmail_icon_inbox.png" alt="" />
       </p>
 
       <p class="from">
@@ -44,113 +44,68 @@
         <div id="banner" style="background-color:#000;"><img src="{{ imgpath }}gov_uk_email_header.png" alt="GOV.UK" /></div>
 
         <h1 class="bold-large">
-          NOT VALID Application complete: you must now wait for us to check the location
-          </h1>
+          We’ve rejected your application for a flood risk activity exemption because it’s in a sensitive location
+        </h1>
+        <p class="bold-small">
+          You must not do any work on the proposed activity.
+        </p>
+        <p class="bold-small">
+          The reason why we cancelled the application
+        </p>
         <p>
-          Your reference is:
-          <br />
-          <strong class="heading-medium">HDJ2123F</strong>
+          Construction of footbridge FRA5 at grid reference ST 58132 72695 is only 230m from a Site of Special Scientific Interest (SSSI).
+        </p>
+        <p>
+          To comply with the exemption conditions the activity must be at least 500m from the SSSI.
+        </p>
+        <p>
+          [WHAT IF THIS ONE IS OK?] Maintenance of structures within the channel of a main river FRA9
+        </p>
+        <p class="bold-small">
+          What you can do
+        </p>
+        <p>
+          If you are able to do the activity at a different place you might be able to register an exemption. Contact us to check a new location.
+        </p>
+        <p>
+          If you need to do the activity at this location you will need to apply for a bespoke permit. [check all of this]
+        </p>
+        <p>
+          You can’t appeal decisions about location.
+        </p>
+        <p>
+          You can check exemption conditions in the
+          <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">
+            flood risk activities guidance
+          </a>.
+        </p>
+        <p class="bold-small">
+          Application reference
+        </p>
+        <p>
+          HDJ2123F
+        </p>
+        <p class="bold-small">
+          Contact the Environment Agency
+        </p>
+        <p>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a></br>
+          Telephone: 03708 506 506</br>
+          Minicom: 03702 422 549</br>
+          Monday to Friday, 8am to 6pm
         </p>
 
-        <div class="panel panel-border-wide">
-          <p class="bold-medium">
-            You must not start work until we confirm your registration.
-          </p>
-          <p>
-            We will check the location of the activity in our database of environmentally sensitive and flood defence areas.
-          </p>
-          <p>
-            We will contact you within 15 working days to confirm or cancel your registration.
-          </p>
-        </div>
-
-        <h2 class="heading-medium">
-          Application details
-        </h2>
 
 
-          <table class="check-your-answers">
-            <tbody>
-              <tr>
-                <td>
-                  Grid reference
-                </td>
-                <td>
-                  ST 58132 72695
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Exemption FRA5
-                </td>
-                <td>
-                  Construction of footbridges
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Exemption FRA9
-                </td>
-                <td>
-                  Maintenance of structures within the channel of a main river
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Customer type
-                </td>
-                <td>
-                  Local authority
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Responsible for activity ('operator')
-                </td>
-                <td>
-                  Careful Contractor Ltd
-                  <br /> Road
-                  <br /> Town
-                  <br /> Postcode
-                  <br /> Tel: 01539 725 345
-                  <br /> Email: someones@email.com
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Who we will contact
-                </td>
-                <td>
-                  Sarah Site manager
-                  <br /> Tel: 03708 506506
-                  <br /> Email: tom.riddle@email.com
-                </td>
-              </tr>
 
-            </tbody>
-          </table>
-
-          <br />
-          <br />
-
-          <p>You can check the conditions of your exemptions in the <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">flood risk activities guidance</a>.</p>
-
-          <h2 class="heading-medium">Your responsibilities</h2>
-
-          <p>
-            The organisation or individual responsible must keep to the description and conditions for the exemption(s).
-            We can prosecute them if they don’t do this.
-          </p>
-
-
-          <p>&nbsp;</p>
-          <p class="bold-medium">For testing: emails</p>
-          <ul class="list list-bullet">
-            <li><a href="/version_3/end_registration/email-confirm">Confirmation email</a></li>
-            <li><a href="/version_3/end_registration/email-nccc-valid">EA email if valid</a></li>
-            <li><a href="/version_3/end_registration/email-nccc-not-valid">EA email if not valid</a></li>
-            <li><a href="/version_3/">[For testing] Return to index page</a></li>
-          </ul>
+        <p>&nbsp;</p>
+        <p class="bold-medium">For testing: emails</p>
+        <ul class="list list-bullet">
+          <li><a href="/version_3/end_registration/email-confirm">Confirmation email</a></li>
+          <li><a href="/version_3/end_registration/email-nccc-valid">EA email if valid</a></li>
+          <li><a href="/version_3/end_registration/email-nccc-not-valid">EA email if not valid</a></li>
+          <li><a href="/version_3/">Return to index page</a></li>
+        </ul>
 
 
 

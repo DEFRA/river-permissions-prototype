@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Would you also like a copy of the registration email sent to someone else? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Would you also like a copy of the confirmation email sent to someone else? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_alpha.html" %}
 
@@ -10,11 +10,11 @@
       <form method="post" class="form">
 
         <h1 class="heading-large">
-          Would you also like a copy of the registration email sent to someone else?
+          Would you also like a copy of the confirmation email sent to someone else?
         </h1>
 
         <p class="panel panel-border-wide">
-          We’ll send a copy of the registration to the main contact. We will also send a copy to another address if you want.
+          We’ll send a confirmation to the main contact. We will also send a copy to another address if you want.
         </p>
 
         <br />
@@ -24,7 +24,7 @@
 
           <!-- Email address -->
           <div class="form-group">
-            <label class="form-label" for="email">Email address for registration copy (optional)
+            <label class="form-label" for="email">Email address for confirmation copy (optional)
             </label>
             <input type="text" class="form-control" id="email" />
           </div>

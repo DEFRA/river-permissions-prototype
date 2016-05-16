@@ -186,3 +186,89 @@ img.inboxicon {
   margin:0 0 0 10px;
   vertical-align: middle;
 }
+
+// Guidance fake page ##########################################################
+.column-three-quarter {
+  @include grid-column(3/4);
+}
+
+.metadata-list{
+  @include core-16;
+  dt{
+    float:left;
+    clear:left;
+    width:20%;
+  }
+  dd{
+    float:left;
+    width:75%;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+p.lede{
+  padding-top:30px;
+  clear:both;
+}
+
+.heading-with-extra{
+  padding:45px 0;
+  .type{
+    color:#6f777b;
+    font-size:130%;
+    margin:0;
+    a{
+      color:#6f777b;
+      text-decoration:none;
+    }
+  }
+  h1{
+    margin:0;
+  }
+}
+
+.detailed_guide_parts{
+  ol{
+    border-top: 1px solid #bfc1c3;
+  }
+  li{
+    list-style-type: none;
+    a{
+      text-decoration: none;
+      font-size:16px;
+      display: block;
+      padding: 5px 0;
+      border-bottom: 1px solid #bfc1c3;
+    }
+  }
+}
+.list-bullet{
+  li{
+    p{
+      margin:0;
+      padding:0;
+    }
+  }
+}
+.contact{
+  border-left: 1px solid #bfc1c3;
+    padding-left: 15px;
+    span.type{
+      display:block;
+    }
+}
+p.comments{
+    @include core-16;
+}
+
+.call-to-action {
+    margin: 30px 0;
+    background: #dee0e2 none no-repeat 98% 20px;
+    padding: 10px 60px 10px 15px;
+    position: relative;
+    p{
+      margin:0;
+    }
+}

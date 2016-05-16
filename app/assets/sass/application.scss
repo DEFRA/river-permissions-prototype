@@ -272,3 +272,59 @@ p.comments{
       margin:0;
     }
 }
+
+// Google fake pages
+#google_header{
+  text-align: right;
+}
+#g_search{
+  text-align: center;
+  background-image: url(/public/images/google/google_search_box.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  height:300px;
+  width:500px;
+  margin:0 auto;
+}
+#search_box{
+  position: relative;
+  top:108px;
+  height:28px;
+  width:480px;
+  left:0;
+  padding-left:10px;
+}
+#search_button{
+  display:block;
+  width:230px;
+    position: relative;
+    top:134px;
+    left:134px;
+    height:30px;
+}
+
+a#search_button:focus{
+  background-color: transparent;
+  outline: none;
+}
+
+#g_results{
+  background-image: url(/public/images/google/google_serp_header.png);
+  background-repeat: repeat-x;;
+  background-position: top left;
+
+  a:focus{
+    background-color: transparent;
+    outline: none;
+  }
+}
+#results_box{
+  position: absolute;
+  z-index: 99;
+  top:12px;
+  height:28px;
+  width:480px;
+  left:130px;
+  padding-left:10px;
+  border:0;
+}

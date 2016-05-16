@@ -349,4 +349,10 @@ router.get('/address/other_address_manual', function (req, res) {
   res.render( folder + '/address/address-manual', {'title' : ot_title});
 });
 
+// Fake Google search_box
+router.get('/google/results', function (req, res) {
+  res.render(folder + '/google/results', { 'search_query' : req.query.search_text });
+
+});
+
 module.exports = router;

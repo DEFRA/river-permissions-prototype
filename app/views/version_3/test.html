@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  What is your name?
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form method="post" class="form">
+
+        <h1 class="heading-large">
+          What is your name?
+        </h1>
+
+        <!-- form-control -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name1">Full name (form-control)</label>
+          <input type="text" class="form-control" id="full-name1" />
+        </div>
+        </fieldset>
+
+        <!-- .form-control-3-4 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name3">Full name (form-control-3-4)</label>
+          <input type="text" class="form-control form-control-3-4" id="full-name3" />
+        </div>
+        </fieldset>
+
+        <!-- .form-control-2-3 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name4">Full name (form-control-2-3)</label>
+          <input type="text" class="form-control form-control-2-3" id="full-name4" />
+        </div>
+          </fieldset>
+
+        <!-- form-control-1-2 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name2">Full name (form-control-1-2)</label>
+          <input type="text" class="form-control form-control-1-2" id="full-name2" />
+        </div>
+        </fieldset>
+
+
+        <!-- .form-control-1-3 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name5">Full name (form-control-1-3)</label>
+          <input type="text" class="form-control form-control-1-3" id="full-name5" />
+        </div>
+        </fieldset>
+
+        <!-- .form-control-1-4 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+        <div class="form-group">
+          <label class="form-label" for="full-name6">Full name (form-control-1-4)</label>
+          <input type="text" class="form-control form-control-1-4" id="full-name6" />
+        </div>
+        </fieldset>
+
+        <!-- .form-control-1-8 -->
+        <fieldset>
+          <legend class="visuallyhidden">What is your name?</legend>
+
+        <div class="form-group">
+          <label class="form-label" for="full-name7">Full name (form-control-1-8)</label>
+          <input type="text" class="form-control form-control-1-8" id="full-name7" />
+        </div>
+        </fieldset>
+
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+{% endblock %}

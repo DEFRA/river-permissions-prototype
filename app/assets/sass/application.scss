@@ -348,8 +348,9 @@ a#search_button:focus{
 
   // TODO: Remove 50% width set for tablet and up
   // !! BREAKING CHANGE !!
+  // width set to auto to simulate removal
   @include media(tablet) {
-    width: 25.30em;
+    width: 100%;
   }
 
 }
@@ -384,51 +385,68 @@ a#search_button:focus{
 // TODO: Update these
 // Form control widths
 
-.form-control-3-4 {
+// chars	width in ems
+// 50	    26
+// 35	    18.5
+// 25	    13.5
+// 15	    8.5
+// 10	    6
+// 5	    3.5
+// 3	    2.5
+
+.form-control-char-50 {
   width: 100%;
 
   @include media(tablet) {
-    width: 18.95em;
+    width: 26em;
   }
 }
 
-.form-control-2-3 {
+.form-control-char-35 {
   width: 100%;
 
   @include media(tablet) {
-    width: 16.8em;
+    width: 18.5em;
   }
 }
 
-.form-control-1-2 {
+.form-control-char-25 {
   width: 100%;
 
   @include media(tablet) {
-    width: 12.64em;
+    width: 13.5em;
   }
 }
 
-.form-control-1-3 {
+.form-control-char-15 {
   width: 100%;
 
   @include media(tablet) {
-    width: 8.42em;
+    width: 8.5em;
   }
 }
 
-.form-control-1-4 {
+.form-control-char-10 {
   width: 100%;
 
   @include media(tablet) {
-    width: 6.36em;
+    width: 6em;
   }
 }
 
-.form-control-1-8 {
+.form-control-char-5 {
   width: 100%;
 
   @include media(tablet) {
-    width: 3.2em;
+    width: 3.5em;
+  }
+}
+
+.form-control-char-3 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 2.5em;
   }
 }
 

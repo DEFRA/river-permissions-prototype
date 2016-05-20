@@ -304,7 +304,7 @@ router.get('/address/limited_company_address_manual', function (req, res) {
 // Limited liability partnership
 var llp_title="What’s the registered address of the partnership?";
 router.get('/address/limited_liability_postcode', function (req, res) {
-  res.render('version_2/address/postcode', {'title' : llp_title, 'manual_link' : 'limited_liability_address_manual'});
+  res.render( folder + '/address/postcode', {'title' : llp_title, 'manual_link' : 'limited_liability_address_manual'});
 });
 router.get('/address/limited_liability_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : llp_title, 'pcodelink' : 'limited_liability_postcode', 'manual_link' : 'limited_liability_address_manual'});
@@ -340,7 +340,7 @@ router.get('/address/partner_address_manual', function (req, res) {
 // Other
 var ot_title = "What's the main address of the organisation?";
 router.get('/address/other_postcode', function (req, res) {
-  res.render('version_2/address/postcode', {'title' : ot_title, 'manual_link' : 'other_address_manual'});
+  res.render( folder + '/address/postcode', {'title' : ot_title, 'manual_link' : 'other_address_manual'});
 });
 router.get('/address/other_address', function (req, res) {
   res.render( folder + '/address/address', {'title' : ot_title, 'pcodelink' : 'other_postcode', 'manual_link' : 'other_address_manual'});

@@ -4,24 +4,23 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+        <h1 class="form-title heading-large">
           What's the name of the local authority or public body?
         </h1>
+      </header>
 
         <fieldset>
           <legend class="visuallyhidden">Local authority or public body name</legend>
 
-          <!-- Local authority name -->
+          <!-- Local authority name 38 chars is longest unitary -->
           <div class="form-group">
             <label class="form-label" for="authority-name">Local authority or public body name
               <span class="form-hint">For example, Bristol City Council</span>
             </label>
-            <input type="text" class="form-control" id="authority-name" />
+            <input type="text" class="form-control form-control-char-35" id="authority-name" />
           </div>
         </fieldset>
 
@@ -30,9 +29,6 @@
         </div>
 
       </form>
-
-    </div>
-  </div>
 
 </main>
 {% endblock %}

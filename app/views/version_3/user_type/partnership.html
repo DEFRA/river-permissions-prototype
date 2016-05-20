@@ -4,20 +4,19 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+  <h1 class="form-title heading-large">
           Partner names and addresses
         </h1>
+</header>
 
         <div class="panel panel-border-wide">
-          <p>
+          <p class="text">
             We need to know the name and home address of all business partners responsible for the activity.
           </p>
-          <p>
+          <p class="text">
             You must give us the details of at least two partners.
           </p>
         </div>
@@ -33,7 +32,7 @@
           <div class="form-group">
             <label class="form-label" for="full-name">Full name</label>
             <p class="form-hint">For example, Jane Smith</p>
-            <input type="text" class="form-control" id="full-name" />
+            <input type="text" class="form-control form-control-char-35" id="full-name" />
           </div>
 
         </fieldset>
@@ -46,9 +45,6 @@
         </div>
 
       </form>
-
-    </div>
-  </div>
 
 </main>
 {% endblock %}

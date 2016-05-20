@@ -4,14 +4,13 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+  <h1 class="form-title heading-large">
           What's the registered name of the partnership?
         </h1>
+</header>
 
         <fieldset>
           <legend class="visuallyhidden">Registered partnership name</legend>
@@ -19,7 +18,7 @@
           <!-- Company name -->
           <div class="form-group">
             <label class="form-label" for="partnership-name">Partnership registered name</label>
-            <input type="text" class="form-control" id="partnership-name" />
+            <input type="text" class="form-control form-control-char-50" id="partnership-name" />
           </div>
 
         </fieldset>
@@ -29,9 +28,6 @@
         </div>
 
       </form>
-
-    </div>
-  </div>
 
 </main>
 {% endblock %}

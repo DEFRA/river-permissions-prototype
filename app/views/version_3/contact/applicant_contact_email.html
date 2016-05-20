@@ -4,14 +4,14 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
 
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+  <h1 class="form-title heading-large">
           What is your email address?
         </h1>
+</header>
 
         <fieldset>
           <legend class="visuallyhidden">What is your email address?</legend>
@@ -21,13 +21,13 @@
             <label class="form-label" for="email">Email address
               <span class="form-hint">We'll use this to confirm the registration</span>
             </label>
-            <input type="text" class="form-control" id="email" />
+            <input type="text" class="form-control form-control-char-50" id="email" />
           </div>
 
           <!-- Confirm email address -->
           <div class="form-group">
             <label class="form-label" for="confirm-email">Confirm email address</label>
-            <input type="text" class="form-control" id="confirm-email" />
+            <input type="text" class="form-control form-control-char-50" id="confirm-email" />
           </div>
 
         </fieldset>
@@ -38,8 +38,7 @@
 
       </form>
 
-    </div>
-  </div>
+
 
 </main>
 {% endblock %}

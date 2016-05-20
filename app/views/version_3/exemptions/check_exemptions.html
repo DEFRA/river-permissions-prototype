@@ -4,14 +4,13 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
   <form method="post" class="form" action="/version_3/check_grid_ref">
 
-    <h1 class="heading-large">
-      Check your exemptions
-    </h1>
+    <header class="text">
+  <h1 class="form-title heading-large">
+        Check your exemptions
+      </h1>
+</header>
 
     {% import "custom_inc/macros.html" as formelement %}
 
@@ -45,8 +44,6 @@
 
   </form>
 
-</div>
-</div>
 
 </main>
 {% endblock %}

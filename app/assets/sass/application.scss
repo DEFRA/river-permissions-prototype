@@ -336,7 +336,6 @@ a#search_button:focus{
 // By default, form controls are 50% width for desktop,
 // and 100% width for mobile
 
-#martin-test{
 .form-control {
   @include box-sizing(border-box);
   @include core-19;
@@ -394,6 +393,14 @@ a#search_button:focus{
 // 5	    3.5
 // 3	    2.5
 
+.form-control-char-auto { // intended for select options that have pre-populated text
+  width: 100%;
+
+  @include media(tablet) {
+    width: auto;
+  }
+}
+
 .form-control-char-50 {
   width: 100%;
 
@@ -448,6 +455,4 @@ a#search_button:focus{
   @include media(tablet) {
     width: 2.5em;
   }
-}
-
 }

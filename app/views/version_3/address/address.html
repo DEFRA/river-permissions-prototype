@@ -10,14 +10,13 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
-
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+        <h1 class="form-title heading-large">
           {{ title if title else "Title not set" }}
         </h1>
+    </header>
 
         <p>
           <span class="postcode-prefix">Postcode</span>
@@ -34,7 +33,7 @@
           <!-- Address -->
           <div class="form-group">
             <label class="form-label" for="the_address">Address</label>
-            <select class="address-select form-control" id="the_address" aria-describedby="manual_hint">
+            <select class="address-select form-control form-control-char-auto" id="the_address" aria-describedby="manual_hint">
               <option value="business_address">15 addresses found</option>
               <option value="business_address">3, GRANGE ROAD, BRISTOL, BS1 5AH</option>
               <option value="business_address">5, GRANGE ROAD, BRISTOL, BS1 5AH</option>
@@ -70,9 +69,6 @@
         </div>
 
       </form>
-
-    </div>
-  </div>
 
 </main>
 {% endblock %}

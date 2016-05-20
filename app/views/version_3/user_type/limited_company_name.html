@@ -4,14 +4,14 @@
 
   {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
 
       <form method="post" class="form">
 
-        <h1 class="heading-large">
+      <header class="text">
+  <h1 class="form-title heading-large">
           What's the registered name of the company?
         </h1>
+</header>
 
         <fieldset>
           <legend class="visuallyhidden">Registered company name</legend>
@@ -19,7 +19,7 @@
           <!-- Company name -->
           <div class="form-group">
             <label class="form-label" for="company-name">Registered name of company</label>
-            <input type="text" class="form-control" id="company-name" />
+            <input type="text" class="form-control form-control-char-50" id="company-name" />
           </div>
 
         </fieldset>
@@ -30,8 +30,7 @@
 
       </form>
 
-    </div>
-  </div>
+
 
 </main>
 {% endblock %}

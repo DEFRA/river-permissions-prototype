@@ -2,31 +2,35 @@
 <main id="content" role="main">
   {% include "includes/phase_banner_beta.html" %} {% include "custom_inc/backlink.html" %}
 
-  <div class="grid-row">
-    <div class="column-two-thirds">
 
       <form method="post" class="form">
 
-        <h1 class="heading-xlarge">
+      <header class="text">
+        <h1 class="form-title heading-large">
           Declaration
         </h1>
+      </header>
 
         <div class="notice"><i class="icon icon-important"><span class="visuallyhidden">Warning</span></i>
-          <strong class="bold-small">You can be prosecuted and fined if you give false or misleading information.</strong>
+          <strong class="bold-small text">You can be prosecuted and fined if you give false or misleading information.</strong>
         </div>
 
         <br />
 
         <p class="text bold-small">I confirm that:</p>
 
-        <ul class="list list-bullet">
+        <ul class="list list-bullet text">
           <li>the information I have given is true</li>
           <li>I am authorised to register the exemption(s) by the the organisation or individual responsible</li>
         </ul>
 
-        <br />
-
-        <p class="text">Read the Environment Agency's <a href="/version_3/end_registration/privacy_policy">privacy policy</a> to find out how it uses personal information</p>
+        <h2 class="heading-small">Use of your information and privacy</h2>
+        <p class="text">
+          The personal information you give is added to the public register for flood activity exemptions.
+        </p>
+        <p class="text">
+          Read about <a href="/version_3/end_registration/privacy_policy">how we use your personal information (opens new window)</a>.
+        </p>
 
         <br />
 
@@ -36,8 +40,6 @@
 
       </form>
 
-    </div>
-  </div>
 
 </main>
 {% endblock %}

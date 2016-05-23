@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set title = "Add the exemptions you want to register" %}
+{% set title = "Select the exemption you want to register" %}
 
 {% block page_title %}
   {{ title }}
@@ -21,10 +21,10 @@
 
     <div class="panel panel-border-wide">
       <p class="text">
-        You can register more than one exemption but they must all be at the same location.
+        You can only register one exemption at a time.
       </p>
       <p class="text">
-        For activities at different locations, make a new registration for each location.
+        If you need more than one, please make a new registration for each.
       </p>
     </div>
 
@@ -68,7 +68,7 @@
 
         {% for ex in exemptions %}
           {% if ex.live=='1' %}
-            {{ formelement.exemption3( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "checkbox") }}
+            {{ formelement.exemption5( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "radio") }}
           {% endif %}
         {% else %}
           <p>No radio buttons</p>

@@ -74,11 +74,20 @@ label.exemption{
   padding-right: 4em;
 }
 
-@media (min-width: 641px) {
-  label.exemption{
-    width:99%;
-  }
-}
+@media screen and (min-width: 320px) {
+   label.exemption{
+     width: 66.6666666667%;
+     }
+ }
+
+ details {
+   display:inline-block;
+   padding-left:10px;
+ }
+
+ details summary {
+   background: none;
+ }
 
 
 // Footer links list

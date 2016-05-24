@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Check your answers {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Check your answers before completing this registration {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_beta.html" %} {% include "custom_inc/backlink.html" %}
 
@@ -18,7 +18,8 @@
      Registration details
     </h2>
 
-    <table class="check-your-answers" summary="The information you've given with links to change the data">
+    <table class="check-your-answers">
+        <caption class="visuallyhidden">The information you've given with links to change the data</caption>
       <tbody>
         <tr>
           <th>

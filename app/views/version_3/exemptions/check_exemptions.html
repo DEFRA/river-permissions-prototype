@@ -1,4 +1,10 @@
-{% extends "layout.html" %} {% block page_title %} Check your exemption {% endblock %} {% block content %}
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your exemption
+{% endblock %}
+
+{% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_beta.html" %}
 
@@ -16,7 +22,8 @@
 
     {% from "custom_inc/exemptionlist.html" import exemptions %}
 
-    <table class="check-your-answers" summary="Exemption that you selected with title, exemption code and a link to chnage the one you selected">
+    <table role="presentation" class="check-your-answers">
+      <caption class="visuallyhidden">Exemption and link to change it</caption>
       <tbody>
 
         {% for ex in exemptions %}
@@ -24,7 +31,7 @@
             {{ formelement.printexemption3( ex.id, ex.govuktitle) }}
           {% endif %}
         {% else %}
-          <tr><td>No radio buttons</td></tr>
+          <tr><td>No exemptions</td></tr>
         {% endfor %}
 
       </tbody>

@@ -1,18 +1,18 @@
-{% extends "layout.html" %} {% block page_title %} Where will the exemption activity take place? {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Where will the activity take place? {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_beta.html" %}
-  <form method="post" class="form">
+  <form method="post" class="form" action="location/grid_reference">
 
     {% include "custom_inc/backlink.html" %}
 
       <header class="text">
     <h1 class="form-title heading-large">
-          Where will the exemption activity take place?
+          Where will the activity take place?
         </h1>
 </header>
 
         <fieldset>
-          <legend class="visuallyhidden">Where will the exemption activity take place?</legend>
+          <legend class="visuallyhidden">Where will the activity take place?</legend>
 
           <!-- Grid reference -->
           <div class="form-group">
@@ -27,7 +27,6 @@
             <input type="text" class="form-control form-control-char-25" id="grid-reference" aria-describedby="ngr_help" />
           </div>
 
-        </fieldset>
 
         <!-- Find grid reference -->
         <details style="padding-bottom: 18px;" id="ngr_help">
@@ -51,6 +50,38 @@
           </ul>
           </div>
         </details>
+
+
+{% if exempt1=="FRA23" %}
+          <!-- Dredging length - only show for FRA23 -->
+          <div class="form-group">
+            <label class="form-label" for="grid-reference">Approximate length of dredging in metres
+              <span class="form-hint text">
+                The maximum length you can dredge is 1,500 metres
+              </span>
+            </label>
+            <input type="text" class="form-control form-control-char-15" />
+          </div>
+{% endif %}
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="form-label" for="sitename">Site name or description
+              <span class="form-hint text">
+                For example, river name, place name, landmarks, or built or natural features
+            <textarea class="form-control form-control-char-50" id="sitename" rows="4"></textarea>
+            500 character limit
+          </span>
+        </label>
+          </div>
+
+
+
+
+
+
+
+        </fieldset>
 
 
         <!-- Primary button -->

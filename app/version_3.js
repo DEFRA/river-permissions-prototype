@@ -31,19 +31,9 @@ router.post('/do_exemption_check', function(req, res) {
   var codearray = req.body.ex;
 
   // get chosen exemption codes
-  var exempt1 = req.body.ex[0];
-  var exempt2 = req.body.ex[1];
-  var exempt3 = req.body.ex[2];
-  var exempt4 = req.body.ex[3];
-  var exempt5 = req.body.ex[4];
-  var exempt6 = req.body.ex[5];
-  res.render(folder + '/exemptions/check_exemptions',{
-    'exempt1':exempt1,
-    'exempt2':exempt2,
-    'exempt3':exempt3,
-    'exempt4':exempt4,
-    'exempt5':exempt5,
-    'exempt6':exempt6
+  var exempt1 = req.body.exemption;
+  res.render(folder + '/location/grid_reference',{
+    'exempt1':exempt1
     }
   );
 

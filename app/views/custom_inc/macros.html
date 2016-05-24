@@ -63,3 +63,18 @@
   </td>
 </tr>
 {% endmacro %}
+
+
+{% macro printexemption3(id,name) %}
+<tr>
+  <th>
+    <p class="font-small">{{name}}</p>
+  </th>
+  <td>
+    <span class="bold-small">{{id}}</span>
+  </td>
+  <td class="change-answer">
+    <a href="/version_3/exemptions/add_exemptions">Change<span class="visuallyhidden"> exemption {{id}}</span></a>
+  </td>
+</tr>
+{% endmacro %}

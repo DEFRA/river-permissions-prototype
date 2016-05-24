@@ -1,4 +1,4 @@
-{% extends "layout.html" %} {% block page_title %} Check your exemptions {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block page_title %} Check your exemption {% endblock %} {% block content %}
 <main id="content" role="main">
   {% include "includes/phase_banner_beta.html" %}
 
@@ -8,7 +8,7 @@
 
     <header class="text">
   <h1 class="form-title heading-large">
-        Check your exemptions
+        Check your exemption
       </h1>
 </header>
 
@@ -16,12 +16,12 @@
 
     {% from "custom_inc/exemptionlist.html" import exemptions %}
 
-    <table class="check-your-answers" summary="Exemptions that you selected with title, exemption code and a link to remove any you don't need">
+    <table class="check-your-answers" summary="Exemption that you selected with title, exemption code and a link to chnage the one you selected">
       <tbody>
 
         {% for ex in exemptions %}
           {% if (ex.id==exempt1 or ex.id==exempt2 or ex.id==exempt3 or ex.id==exempt4 or ex.id==exempt5 or ex.id==exempt6) %}
-            {{ formelement.printexemption( ex.id, ex.govuktitle) }}
+            {{ formelement.printexemption3( ex.id, ex.govuktitle) }}
           {% endif %}
         {% else %}
           <tr><td>No radio buttons</td></tr>
@@ -32,11 +32,7 @@
 
     <br />
 
-    <p>
-      <a href="/version_3/exemptions/add_exemptions">Add another exemption</a>
-    </p>
-
-    <input type="hidden" name="isDredging" value="{{isDredging}}" />
+    <input type="hidden" name="exempt1" value="{{exempt1}}" />
 
     <div class="form-group">
       <input type="submit" class="button" value="Save and continue" />

@@ -28,11 +28,9 @@ var folder = "version_3";
 
 // add exemptions page posts to this URL /do_exemption_check
 router.post('/do_exemption_check', function(req, res) {
-  var codearray = req.body.ex;
-
   // get chosen exemption codes
   var exempt1 = req.body.exemption;
-  res.render(folder + '/location/grid_reference',{
+  res.render(folder + '/exemptions/check_exemptions',{
     'exempt1':exempt1
     }
   );
@@ -42,7 +40,12 @@ router.post('/do_exemption_check', function(req, res) {
 // Check your exemptions posts to /version_3/check_grid_ref
 
 router.post('/check_grid_ref', function(req, res) {
-    res.redirect( '/' + folder + '/location/grid_reference');
+  // get chosen exemption codes
+  var exempt1 = req.body.exempt1;
+  res.render(folder + '/location/grid_reference',{
+    'exempt1':exempt1
+    }
+  );
 });
 
 // Where will the exemption activity take place?                                /version_2/location/grid_reference

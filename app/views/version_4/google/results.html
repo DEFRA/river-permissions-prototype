@@ -1,0 +1,31 @@
+{% extends "layout_unbranded.html" %}
+
+{% set imgpath="/public/images/google/" %}
+
+{% block page_title %}
+  Search results
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div id="google">
+
+  <div id="g_results">
+    <a href="/version_4/guidance/guide_register"><img border="0" src="{{ imgpath }}google_serp.png" alt="" /></a>
+  </div>
+
+  <form method="get" action="{{form_action}}">
+        <input id="results_box" name="search-text" type="text" value="{{search_query}}">
+  </form>
+
+</div><!-- // end #google -->
+
+{% endblock %}

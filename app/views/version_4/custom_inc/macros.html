@@ -1,0 +1,58 @@
+{% macro input(id, label, value, name, type) %}
+<label for="idnum_{{ id }}" class="block-label">
+  <input id="idnum_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  {{ label|safe }}
+</label>
+{% endmacro %}
+
+
+{% macro exemption(id, label, value, name, desc, type) %}
+<label for="id_{{ id }}" class="block-label exemption">
+  <input id="id_{{ id }}" type="{{ type }}" name="{{ name }}" value="1">
+  {{ label|safe }} <span class="exmpt">{{ id }}</span>
+</label>
+{% endmacro %}
+
+{% macro exemption3(id, label, value, name, desc, type) %}
+<label for="id_{{ id }}" class="block-label exemption">
+  <input id="id_{{ id }}" type="{{ type }}" name="ex[]" value="{{value}}">
+  {{ label|safe }} <span class="exmpt">{{ id }}</span>
+</label>
+{% endmacro %}
+
+
+{% macro exemption4(id, label, value, name, desc, type, conditions) %}
+<label for="id_{{ id }}" class="block-label exemption">
+  <input id="id_{{ id }}" type="{{ type }}" name="ex[]" value="{{ value }}" aria-describedby="desc_{{ id }}">
+  {{ label|safe }}
+
+<details id="desc_{{ id }}">
+  <summary><span class="summary">Conditions</span><span class="visuallyhidden"> for {{ id }}</span></summary>
+  <div>
+    <p>{{ conditions|safe }} <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/513793/LIT_10444.pdf" target="_blank">Full conditions<span class="visuallyhidden"> for exemption {{ id }} opens in new tab or window</span>.</a></p>
+  </div>
+</details>
+
+<span class="exmpt">{{ id }}</span>
+</label>
+
+{% endmacro %}
+
+
+
+
+
+
+{% macro printexemption(id,name) %}
+<tr>
+  <th>
+    <p class="font-small">{{name}}</p>
+  </th>
+  <td>
+    <span class="bold-small">{{id}}</span>
+  </td>
+  <td class="change-answer">
+    <a href="/version_4/exemptions/add_exemptions">Remove<span class="visuallyhidden"> exemption {{id}}</span></a>
+  </td>
+</tr>
+{% endmacro %}

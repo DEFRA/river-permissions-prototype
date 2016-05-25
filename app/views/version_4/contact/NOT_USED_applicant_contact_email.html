@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block page_title %} What is your email address? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+
+      <form method="post" class="form">
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          What is your email address?
+        </h1>
+</header>
+
+        <fieldset>
+          <legend class="visuallyhidden">What is your email address?</legend>
+
+          <!-- Email address -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email address
+              <span class="form-hint">We'll use this to confirm the registration</span>
+            </label>
+            <input type="text" class="form-control form-control-char-50" id="email" />
+          </div>
+
+          <!-- Confirm email address -->
+          <div class="form-group">
+            <label class="form-label" for="confirm-email">Confirm email address</label>
+            <input type="text" class="form-control form-control-char-50" id="confirm-email" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "layout_unbranded.html" %}
+
+{% set imgpath="/public/images/email/" %}
+
+{% block page_title %}
+  Gmail | Flood risk activity exemption - application update
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div id="email">
+
+<div id="gmail_header">
+  <img src="{{ imgpath }}gmail_header.png" alt="" />
+</div>
+
+  <div class="grid-row">
+
+    <div class="column-one-quarter">
+      <img src="{{ imgpath }}gmail_menu_left.png" alt="" />
+    </div>
+
+
+    <div class="column-three-quarter">
+
+      <p class="subject">
+        Flood risk activity exemption - application update <img class="inboxicon" src="{{ imgpath }}gmail_icon_inbox.png" alt="" />
+      </p>
+
+      <p class="from">
+        <img src="{{ imgpath }}gmail_from_text.png" alt="" />
+      </p>
+
+      <div id="email_text">
+
+        <div id="banner" style="background-color:#000;"><img src="{{ imgpath }}gov_uk_email_header.png" alt="GOV.UK" /></div>
+
+        <h1 class="bold-large">
+          You can’t register your flood risk activity exemption because it’s in a sensitive location
+        </h1>
+</header>
+        <p class="bold-small">
+          You must not do any work on the proposed activity.
+        </p>
+        <p class="bold-small">
+          The reason why we rejected the application
+        </p>
+        <p>
+          Construction of footbridge FRA5 at grid reference ST 58132 72695 is only 230m from a Site of Special Scientific Interest (SSSI).
+        </p>
+        <p>
+          To comply with the exemption conditions the activity must be at least 500m from the SSSI.
+        </p>
+
+        <p class="bold-small">
+          What you can do
+        </p>
+        <p>
+          If you are able to do the activity at a different place you might be able to register an exemption. Contact us to check a new location.
+        </p>
+        <p>
+          If you need to do the activity at this location you will need to apply for a bespoke permit. [check all of this]
+        </p>
+        <p>
+          You can’t appeal decisions about location.
+        </p>
+        <p>
+          You can check exemption conditions in the
+          <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">exempt flood risk activities guidance</a>.
+        </p>
+        <p class="bold-small">
+          Application reference
+        </p>
+        <p>
+          HDJ2123F
+        </p>
+        <p class="bold-small">
+          Contact the Environment Agency
+        </p>
+        <p>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a></br>
+          Telephone: 03708 506 506</br>
+          Minicom: 03702 422 549</br>
+          Monday to Friday, 8am to 6pm
+        </p>
+
+
+
+
+        <p>&nbsp;</p>
+        <p class="bold-medium">For testing: emails</p>
+        <ul class="list list-bullet">
+          <li><a href="/version_4/end_registration/email-confirm">Confirmation email</a></li>
+          <li><a href="/version_4/end_registration/email-nccc-valid">EA email if valid</a></li>
+          <li><a href="/version_4/end_registration/email-nccc-not-valid">EA email if not valid</a></li>
+          <li><a href="/version_4/">Return to index page</a></li>
+        </ul>
+
+
+
+
+      </div><!-- // end #email_text -->
+
+    </div><!-- // end .column 3/4 -->
+
+  </div><!-- // end .grid_row -->
+
+</div><!-- // end #email -->
+
+{% endblock %}

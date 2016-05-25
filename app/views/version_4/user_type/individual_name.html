@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block page_title %} What's the individual’s name? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+      <form method="post" class="form">
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          What's the individual’s name?
+        </h1>
+</header>
+
+        <fieldset>
+          <legend class="visuallyhidden">Individual’s name?</legend>
+
+          <!-- Full name -->
+          <div class="form-group">
+            <label class="form-label" for="full-name">Full name
+              <span class="form-hint">For example, Jane Smith</span>
+            </label>
+            <input type="text" class="form-control form-control-char-35" id="full-name" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+
+</main>
+{% endblock %}

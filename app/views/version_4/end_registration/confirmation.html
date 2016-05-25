@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block page_title %}
+Registration submitted
+{% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <div class="govuk-box-highlight">
+          <h1 class="bold-large">
+            Registration submitted<br />
+            <span class="bold-medium">
+              Please wait for us to confirm it
+            </span>
+          </h1>
+
+          <p>
+            Your reference is:
+            <br />
+            <strong class="heading-medium">XFRA1023</strong>
+          </p>
+        </div>
+
+        <p class="text">
+          We've sent a confirmation email to someone@email.com and someoneelse@email.com. This is not approval to start work.
+        </p>
+
+        <p class="text">
+          <a href="/version_4/exemptions/add_exemptions">Register another exemption</a>
+        </p>
+
+        <h2 class="heading-medium">What happens next</h2>
+
+        <p class="text">
+          We’ll email you within 10 working days to tell you if your registration is valid.
+        </p>
+
+        <div class="panel panel-border-wide">
+          <p class="text">
+            You must not start work until we confirm your registration.
+          </p>
+        </div>
+
+        <h3 class="heading-small">What we’ll check</h3>
+        <p class="text">
+          We’ll check if there are reasons why you can’t register an exemption at the location you gave.
+          For example, a location that is environmentally sensitive or too close to a flood defence structure.
+        </p>
+        <h3 class="heading-small">What you must check</h3>
+        <p class="text">
+          You are responsible for checking that you can meet the description and conditions in the
+          <a href="https://www.gov.uk/government/publications/environmental-permitting-regulations-exempt-flood-risk-activities">exempt flood risk activities guidance</a>.
+        </p>
+
+        <h2 class="heading-medium">If your activity changes</h2>
+        <p class="text">
+          If the location changes, you will need to register a new exemption.
+        </p>
+        <p class="text">
+          If the activity or the way you are doing the work changes, you will need to check if it is still exempt.
+        </p>
+
+        <br />
+
+        <p class="text"><a href="#" class="link">What do you think of this service?</a> (takes 30 seconds)</p>
+
+        <p>&nbsp;</p>
+        <p class="bold-medium">For testing: emails</p>
+        <ul class="list list-bullet">
+          <li><a href="/version_4/end_registration/email-confirm">Confirmation email</a></li>
+          <li><a href="/version_4/end_registration/email-nccc-valid">EA email if valid</a></li>
+          <li><a href="/version_4/end_registration/email-nccc-not-valid">EA email if not valid</a></li>
+        </ul>
+
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block page_title %} What's the registered name of the company? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+
+      <form method="post" class="form">
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          What's the registered name of the company?
+        </h1>
+</header>
+
+        <fieldset>
+          <legend class="visuallyhidden">Registered company name</legend>
+
+          <!-- Company name -->
+          <div class="form-group">
+            <label class="form-label" for="company-name">Registered name of company</label>
+            <input type="text" class="form-control form-control-char-50" id="company-name" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+
+
+</main>
+{% endblock %}

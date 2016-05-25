@@ -1,0 +1,45 @@
+{% extends "layout.html" %} {% block page_title %} Declaration {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %} {% include "custom_inc/backlink.html" %}
+
+
+      <form method="post" class="form">
+
+      <header class="text">
+        <h1 class="form-title heading-large">
+          Declaration
+        </h1>
+      </header>
+
+        <div class="notice"><i class="icon icon-important"><span class="visuallyhidden">Warning</span></i>
+          <strong class="bold-small text">You can be prosecuted and fined if you give false or misleading information.</strong>
+        </div>
+
+        <br />
+
+        <p class="text bold-small">I confirm that:</p>
+
+        <ul class="list list-bullet text">
+          <li>the information I have given is true</li>
+          <li>I am authorised to register the exemption by the organisation or individual responsible</li>
+        </ul>
+
+        <h2 class="heading-small">Use of your information and privacy</h2>
+        <p class="text">
+          Some of the information you give will be added to the public register of exemptions.
+        </p>
+        <p class="text">
+          Read about <a href="/version_4/end_registration/privacy_policy" target="_blank">how we use your personal information (opens new window)</a>.
+        </p>
+
+        <br />
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Accept and complete this registration" />
+        </div>
+
+      </form>
+
+
+</main>
+{% endblock %}

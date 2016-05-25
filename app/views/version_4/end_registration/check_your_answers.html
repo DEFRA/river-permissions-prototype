@@ -1,0 +1,149 @@
+{% extends "layout.html" %} {% block page_title %} Check your answers before completing this registration {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %} {% include "custom_inc/backlink.html" %}
+
+  <form method="post" class="form">
+
+  <header class="text">
+  <h1 class="form-title heading-large">
+    Check your answers before completing this registration
+  </h1>
+</header>
+
+
+    <h2 class="heading-medium">
+     Registration details
+    </h2>
+
+    <table class="check-your-answers">
+        <caption class="visuallyhidden">The information you've given with links to change the data</caption>
+      <tbody>
+        <tr>
+          <th>
+            Exemption FRA5
+          </th>
+          <td>
+            Footbridge over a main river not more than 8 metres wide from bank to bank
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/exemptions/check_exemptions">
+            Change <span class="visuallyhidden"> exemption FRA5</span>
+          </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            Grid reference
+          </th>
+          <td>
+            ST 58132 72695
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/location/grid_reference">
+            Change <span class="visuallyhidden"> grid reference</span>
+          </a>
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <th>
+            Customer type
+          </th>
+          <td>
+            Limited company
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/user_type/user_type">
+            Change <span class="visuallyhidden">customer type</span>
+          </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            Responsible for activity (‘operator’)
+          </th>
+          <td>
+            Careful Contractor Ltd
+          </td>
+          <td class="change-answer">
+            <a href="#">
+            Change <span class="visuallyhidden"> who is responsible</span>
+          </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            Their address
+          </th>
+          <td>
+            Some address, Someshire
+          </td>
+          <td class="change-answer">
+            <a href="#">
+            Change <span class="visuallyhidden"> address</span>
+          </a>
+          </td>
+        </tr>
+
+
+        <tr>
+          <th>
+            Who we will contact
+          </th>
+          <td>
+            Sarah Site Manager
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/contact/main_contact_name">
+            Change <span class="visuallyhidden"> contact name</span>
+          </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            Telephone
+          </th>
+          <td>
+            03708 506506
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/contact/main_contact_telephone">
+            Change <span class="visuallyhidden"> contact telephone</span>
+          </a>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            Email
+          </th>
+          <td>
+            sara@careful.com
+          </td>
+          <td class="change-answer">
+            <a href="/version_3/contact/main_contact_email">
+            Change <span class="visuallyhidden"> contact email</span>
+          </a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <br />
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Continue" />
+    </div>
+
+  </form>
+
+</main>
+
+{% endblock %}

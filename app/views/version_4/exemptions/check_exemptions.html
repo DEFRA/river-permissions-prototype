@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirm your exemption
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <form method="post" class="form" action="/version_3/check_grid_ref">
+
+    <header class="text">
+  <h1 class="form-title heading-large">
+        Confirm your exemption
+      </h1>
+</header>
+
+    {% import "custom_inc/macros.html" as formelement %}
+
+    {% from "custom_inc/exemptionlist.html" import exemptions %}
+
+    <table role="presentation" class="check-your-answers">
+      <caption class="visuallyhidden">Exemption and link to change it</caption>
+      <tbody>
+
+        {% for ex in exemptions %}
+          {% if (ex.id==exempt1 or ex.id==exempt2 or ex.id==exempt3 or ex.id==exempt4 or ex.id==exempt5 or ex.id==exempt6) %}
+            {{ formelement.printexemption3( ex.id, ex.govuktitle) }}
+          {% endif %}
+        {% else %}
+          <tr><td>No exemptions</td></tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+
+    <br />
+
+    <input type="hidden" name="exempt1" value="{{exempt1}}" />
+
+    <div class="form-group">
+      <input type="submit" class="button" value="Save and continue" />
+    </div>
+
+  </form>
+
+
+</main>
+{% endblock %}

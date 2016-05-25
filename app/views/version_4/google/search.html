@@ -1,0 +1,38 @@
+{% extends "layout_unbranded.html" %}
+
+{% set imgpath="/public/images/google/" %}
+
+{% block page_title %}
+  Search Google
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<div id="google">
+
+  <div id="google_header">
+    <a href="/"><img border="0" src="{{ imgpath }}google_home_page_header.png" alt="" /></a>
+  </div>
+
+  <div id="g_search">
+
+    <form method="get" action="/version_3/google/results" id="gsa">
+          <input id="search_box" name="search_text" type="text">
+    </form>
+
+      <a href="#" onclick="document.getElementById('gsa').submit();" id="search_button"></a>
+
+
+
+
+  </div><!-- // end #google -->
+
+{% endblock %}

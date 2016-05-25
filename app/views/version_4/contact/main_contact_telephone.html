@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block page_title %} 
+What’s the telephone number of the person we should contact?
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+      <form method="post" class="form">
+
+      <header class="text">
+        <h1 class="form-title heading-large">
+          What’s the telephone number of the person we should contact?
+        </h1>
+    </header>
+
+        <fieldset>
+          <legend class="visuallyhidden">Contact telephone</legend>
+
+          <!-- Telephone number -->
+          <div class="form-group">
+            <label class="form-label" for="telephone">Telephone number
+              <span class="form-hint">This can be a landline or mobile</span>
+            </label>
+            <input type="text" class="form-control form-control-char-25" id="telephone" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+</main>
+{% endblock %}

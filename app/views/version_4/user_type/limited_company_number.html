@@ -1,0 +1,36 @@
+{% extends "layout.html" %} {% block page_title %} What's the registration number of the company? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+      <form method="post" class="form">
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          What's the registration number of the company?
+        </h1>
+</header>
+
+        <fieldset>
+          <legend class="visuallyhidden">Registration number of the company</legend>
+
+          <!-- Company number -->
+          <div class="form-group">
+            <label class="form-label" for="company-registration-number">Company registration number
+              <span class="form-hint">An 8 digit number, or 2 letters followed by a 6 digit number</span>
+            </label>
+            <input type="text" class="form-control form-control-char-10" id="company-registration-number" />
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+
+</main>
+{% endblock %}

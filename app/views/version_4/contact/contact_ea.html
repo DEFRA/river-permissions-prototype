@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block page_title %} Contact the Environment Agency {% endblock %} {% block content %}
+<main id="content" role="main">
+
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+  <form method="post" class="form">
+
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          Contact the Environment Agency
+        </h1>
+</header>
+
+        <h2 class="heading-medium">You chose ‘I don’t know’ for the organisation type</h2>
+
+        <p class="text">Please call our helpline to get advice about who might be the organisation or person responsible for your activity.</p>
+
+        <div class="contact">
+          <h2 class="heading-medium">Contact the Environment Agency</h2>
+          <a href="mailto:enquiries@environment-agency.gov.uk">enquiries@environment-agency.gov.uk</a>
+          <br /> Telephone: 03708 506 506
+          <br /> Minicom: 03702 422 549
+          <br /> Monday to Friday, 8am to 6pm
+        </div>
+
+
+
+  </form>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block page_title %} What's the name of the local authority or public body? {% endblock %} {% block content %}
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+      <form method="post" class="form">
+
+      <header class="text">
+  <h1 class="form-title heading-large">
+          What's the name of the local authority or public body?
+        </h1>
+</header>
+
+        <fieldset>
+          <legend class="visuallyhidden">Local authority or public body name</legend>
+
+          <!-- Local authority name 38 chars is longest unitary -->
+          <div class="form-group">
+            <label class="form-label" for="authority-name">Local authority or public body name
+              <span class="form-hint">For example, Bristol City Council</span>
+            </label>
+            <input type="text" class="form-control form-control-char-35" id="authority-name" />
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+</main>
+{% endblock %}

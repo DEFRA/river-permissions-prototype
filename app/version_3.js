@@ -4,6 +4,11 @@ var router = express.Router();
 // this file deals with all paths starting /version_x
 var folder = "version_3";
 
+router.use(function (req, res, next) {
+  res.locals.version_num=folder;
+  next();
+});
+
 // add your routes here
 // River permissions prototype version 2
 

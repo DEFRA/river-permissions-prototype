@@ -347,7 +347,8 @@ a#search_button:focus{
 
 // In this prototype we've added a body class to the version_3 routing so these
 // form-control classes don't break previous versions
-body.version_3 {
+body.version_3,
+body.version_4 {
 
   .form-control {
     @include box-sizing(border-box);

@@ -42,7 +42,7 @@ router.post('/do_exemption_check', function(req, res) {
 
 });
 
-// Check your exemptions posts to /version_3/check_grid_ref
+// Check your exemptions posts to /version_4/check_grid_ref
 
 router.post('/check_grid_ref', function(req, res) {
   // get chosen exemption codes

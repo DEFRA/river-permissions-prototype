@@ -4,6 +4,11 @@ var router = express.Router();
 // this file deals with all paths starting /version_x
 var folder = "version_3";
 
+router.use(function (req, res, next) {
+  res.locals.version_num=folder;
+  next();
+});
+
 // add your routes here
 // River permissions prototype version 2
 
@@ -307,7 +312,7 @@ router.get('/address/limited_liability_address_manual', function (req, res) {
 });
 
 // individual
-var in_title = "What’s the address for the individual?";
+var in_title = "What’s the address of the individual?";
 router.get('/address/individual_postcode', function (req, res) {
   res.render( folder + '/address/postcode', {'title' : in_title, 'manual_link' : 'individual_address_manual'});
 });

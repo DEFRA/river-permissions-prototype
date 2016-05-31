@@ -59,12 +59,12 @@ Where will the activity take place?
 {% if exempt1=="FRA23" %}
           <!-- Dredging length - only show for FRA23 -->
           <div class="form-group">
-            <label class="form-label" for="grid-reference">Approximate length of dredging in metres
+            <label class="form-label" for="dredging-length">Approximate length of dredging in metres
               <span class="form-hint text">
                 The maximum length you can dredge is 1,500 metres
               </span>
+              <input type="text" id="dredging-length" class="form-control form-control-char-10" /> metres
             </label>
-            <input type="text" class="form-control form-control-char-15" />
           </div>
 {% endif %}
 

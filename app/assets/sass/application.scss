@@ -125,9 +125,12 @@ label.exemption{
 }
 
 // summary table
-table.check-your-answers th {
+table.check-your-answers {
+  margin-bottom:$gutter;
+   th{
     font-weight: 400;
-    font-size:19px;
+    font-size:19px
+  }
 }
 
 // Inline hints

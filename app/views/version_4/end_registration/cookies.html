@@ -7,6 +7,13 @@ Cookies
   {% include "custom_inc/backlink.html" %}
 
 
+<!--
+/* Add CSS style: */
+table.cookies-table{
+  margin:$gutter-half 0;
+}
+-->
+
       <header class="text">
         <h1 class="form-title heading-large">
           Cookies
@@ -40,8 +47,10 @@ Cookies
          <li>what you click on while you’re using the service</li>
        </ul>
 
-
-       <table class="cookies-table" role="presentation" summary="Google analytics cookie collection">
+       <table class="cookies-table" role="presentation">
+         <caption class="visually-hidden">
+            Google analytics cookie details
+         </caption>
          <thead>
            <tr>
              <th>Name</th>
@@ -64,7 +73,10 @@ Cookies
 
        <p>We store session cookies on your computer to help keep your information secure while you use the service.</p>
 
-       <table class="cookies-table" role="presentation" summary="Session cookie collection">
+       <table class="cookies-table" role="presentation">
+         <caption class="visually-hidden">
+            Session cookie details
+         </caption>
          <thead>
            <tr>
              <th>Name</th>
@@ -74,20 +86,21 @@ Cookies
          </thead>
          <tbody>
            <tr>
-             <td>_XXXXXXXX-exemptions_session</td>
+             <td>flood-risk-front-office</td>
              <td>Used for session management and authentication</td>
              <td>When you close your browser</td>
            </tr>
          </tbody>
        </table>
 
-       <br/>
-
        <h2 class="heading-medium">Introductory message cookie</h2>
 
        <p>When you first use the service, you may see a cookie message appear at the top of the screen. Once you’ve seen the message, we store a cookie on your computer so it knows not to show it again.</p>
 
-       <table class="cookies-table" role="presentation" summary="Introductory message cookie collection">
+       <table class="cookies-table" role="presentation" summary="">
+         <caption class="visually-hidden">
+            Introductory message cookie details
+         </caption>
          <thead>
            <tr>
              <th>Name</th>

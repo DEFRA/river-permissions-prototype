@@ -61,10 +61,23 @@
 
   <!--[if IE 8]>
     <style type="text/css">
-      label.exemption{
-        display:block;
-        width:66.6666667%;
-      }
+    // add exemptions styling - mainly to position FRA code
+    span.exmpt{
+      font-weight:bold;
+      float:right;
+      margin-right:-3em;
+    }
+    label.exemption{
+      background-color:#ededed;
+      border-color:#ededed;
+      padding-right: 4em;
+    }
+
+    @media screen and (min-width: 320px) {
+       label.exemption{
+         width: 66.6666666667%;
+         }
+     }
     </style>
   <![endif]-->
 

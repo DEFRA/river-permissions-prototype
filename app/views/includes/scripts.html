@@ -3,3 +3,40 @@
 <script src="/public/javascripts/jquery-1.11.3.js"></script>
 <script src="/public/javascripts/govuk/selection-buttons.js"></script>
 <script src="/public/javascripts/application.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  var ToC = "";
+
+  var franum = 1;
+
+  var newLine, el, title, link;
+
+  $("#main_text h2").each(function() {
+
+    franum = franum+1;
+
+    $(this).attr( "id", "fra"+franum );
+
+    el = $(this);
+    title = el.text();
+    link = "#" + "fra"+franum;
+
+    newLine =
+      "<li>" +
+        "<a href='" + link + "'>" +
+          title +
+        "</a>" +
+      "</li>";
+
+    ToC += newLine;
+
+  });
+
+
+  $("#document_sections").append(ToC);
+
+});
+
+</script>

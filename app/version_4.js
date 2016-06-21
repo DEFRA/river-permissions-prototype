@@ -29,6 +29,11 @@ router.use(function (req, res, next) {
 //  }
 // });
 
+// Start// What’s the postcode of the organisation?                                     /version_2/address/other_postcode
+router.post('/start/service_start', function(req, res) {
+  res.redirect( '/' + folder + '/exemptions/add_exemptions');
+});
+
 // Add the exemptions you want to register                                      /version_2/exemptions/add_exemptions
 
 // add exemptions page posts to this URL /do_exemption_check

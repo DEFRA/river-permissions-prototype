@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Register a flood risk activity exemption
+{% endblock %}
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+      <form method="post" class="form">
+
+      <header class="text">
+        <h1 class="form-title heading-large">
+          Register a flood risk activity exemption
+        </h1>
+      </header>
+
+      <h2 class="heading-small">You must:</h2>
+
+      <ul class="list list-bullet text">
+        <li>
+          check you can meet the exemption conditions - we don’t ask for work details or site plans because they are your responsibility
+        </li>
+        <li>
+          have authority to register, if you register for an organisation or as an agent
+        </li>
+      </ul>
+
+      <h2 class="heading-small">We will:</h2>
+
+      <ul class="list list-bullet text">
+        <li>
+          check if the location is environmentally sensitive or too close to a flood defence structure
+        </li>
+        <li>
+          tell you whether you can register at that location within 10 working days
+        </li>
+      </ul>
+
+
+      <!-- Find grid reference -->
+      <details>
+        <summary><span class="summary bold-small">You will need:</span></summary>
+        <div class="panel panel-border-narrow">
+          <ul class="list list-bullet text">
+            <li>
+              the grid reference where the work will happen
+            </li>
+            <li>
+              the name and address of the organisation or person who is responsible for the work
+            </li>
+            <li>
+              for a company, its registration number and registered address
+            </li>
+            <li>
+              for a partnership, the name and address of all partners
+            </li>
+            <li>
+              contact details for the person we should contact about the work
+            </li>
+          </ul>
+        </div>
+      </details>
+
+
+      <div class="form-group">
+        <input type="submit" class="button" value="Continue" />
+      </div>
+
+      </form>
+
+
+</main>
+{% endblock %}

@@ -485,3 +485,11 @@ table.cookies-table{
   vertical-align:top;
   }
 }
+
+// Start step details styles
+details.heading_section{
+  padding-left:0;
+  h2{
+    display:inline;
+  }
+}

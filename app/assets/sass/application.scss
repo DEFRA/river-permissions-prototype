@@ -63,20 +63,26 @@ span.postcode {
 }
 
 // add exemptions styling - mainly to position FRA code
-span.exmpt{
-  font-weight:bold;
-  float:right;
-  margin-right:-3em;
-}
+
 label.exemption{
   background-color:#ededed;
   border-color:#ededed;
   padding-right: 4em;
 }
 
-@media screen and (min-width: 320px) {
+span.label{
+
+}
+
+span.exmpt{
+  font-weight:bold;
+  float:right;
+  margin-right:-3em;
+}
+
+@media screen and (min-width: 420px) {
    label.exemption{
-     width: 66.6666666667%;
+   width: 66.6666666667%;
      }
  }
 

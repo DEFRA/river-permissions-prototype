@@ -27,4 +27,13 @@ $(document).ready(function() {
 
   $("#document_sections").append(ToC);
 });
+
+$(document).ready(function() {
+
+  $('html, body').keyup(function() {
+    $('html, body').animate({ scrollTop: $(":focus").offset().top - 50 }, 100, "linear");
+  });
+
+});
+
 </script>

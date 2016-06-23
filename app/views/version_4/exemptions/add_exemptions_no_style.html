@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% set title = "Select the exemption you want to register" %}
+
+{% block page_title %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+
+  {% include "custom_inc/backlink.html" %}
+
+
+  <header class="text">
+  <h1 class="form-title heading-large">
+      {{ title }}
+    </h1>
+</header>
+
+    <div class="panel panel-border-wide">
+      <p class="text">
+        You can only register one exemption at a time.
+      </p>
+      <p class="text">
+        If you need more than one, please make a new registration for each.
+      </p>
+    </div>
+
+      <form method="post" class="form" action="/version_4/do_exemption_check">
+
+
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="visuallyhidden">{{ title }}</legend>
+
+        {% import "custom_inc/macros.html" as formelement %}
+
+        {% from "custom_inc/exemptionlist.html" import exemptions %}
+
+
+
+        {% for ex in exemptions %}
+          {% if ex.live=='1' %}
+            {{ formelement.exemption6( ex.id, ex.govuktitle, ex.id, "exemption-"+ex.id, ex.desc, "radio", loop.index) }}
+          {% endif %}
+        {% else %}
+          <p>No radio buttons</p>
+        {% endfor %}
+
+
+
+          </fieldset>
+        </div><!-- // end .form-group -->
+
+        <div class="form-group" id="scrollhere">
+          <input type="submit" class="button" value="Continue" />
+        </div>
+
+      </form>
+
+
+</main>
+{% endblock %}

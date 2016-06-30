@@ -13,11 +13,13 @@
 
 <script type="text/javascript">
 //<![CDATA[
-// Replaces mailto href with string containing page title
-  var href_str_mailto='mailto:glancyea@gmail.com?subject=Feedback%20about%20registering%20a%20flood%20risk%20activity%20exemption&body=I%20was%20on%20this%20page:%20' + document.title + '%0D%0A%20%0D%0AMy%20feedback%20is:%20';
-
-  var href_str='https://www.smartsurvey.co.uk/s/W1QTW/?referringpage=' + encodeURI(document.title);
-
-  document.getElementById("feedbacklink").href = href_str;
+(function () {
+"use strict";
+// Replaces href with string containing page title
+// Construct a URL with query string and URI-encoded page title
+var href_str = "https://www.smartsurvey.co.uk/s/W1QTW/?referringpage=" + encodeURI(document.title);
+// replace HREF of element with ID feedbacklink with new link URL containing page title
+document.getElementById("feedbacklink").href = href_str;
+}());
 //]]>
 </script>

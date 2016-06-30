@@ -13,11 +13,12 @@
 
 <script type="text/javascript">
 //<![CDATA[
+// ***************** THIS HAS PREVIEW PARAM FOR TESTING - REMOVE IN PRODUCTION *******************
 (function () {
 "use strict";
 // Replaces href with string containing page title
 // Construct a URL with query string and URI-encoded page title
-var href_str = "https://www.smartsurvey.co.uk/s/W1QTW/?referringpage=" + encodeURI(document.title);
+var href_str = "https://www.smartsurvey.co.uk/s/floodexemptions/?preview=yes&referringpage=" + encodeURI(document.title);
 // replace HREF of element with ID feedbacklink with new link URL containing page title
 document.getElementById("feedbacklink").href = href_str;
 }());

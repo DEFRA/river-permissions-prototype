@@ -43,8 +43,8 @@ $(document).ready(function() {
   // Check we are on Chrome or Safari (both have Safri in user agent string)
   if (navigator.userAgent.indexOf('Safari') != -1) {
 
-    // How it works: every time a key is released
-    // on an exemption label - avoid this working on other elements because
+    // How it works: every time a key is released on
+    // an exemption label - avoid this working on other elements because
     // it is then not possible to use arrow keys when eg the continue button has focused
     // also ignore first element because it was jarring to have the screen move on first entry to list
     $(".exemption:gt(0)").keyup(function(e) {  //:gt(0) not the first element

@@ -505,3 +505,48 @@ h2.emailhead{
   padding-top:1em;
   margin-top:1em;
 }
+
+
+// Experimental guide/collection
+.guide2 {
+  .inner-block {
+    padding: 0 15px;
+  }
+  .head-section {
+    float: left;
+    clear: both;
+    width: 33.33333%;
+  }
+  .content {
+    float: right;
+    width: 66.66667%;
+  }
+  h2{
+    font-size: 19px;
+    line-height: 1.31579;
+    padding-right:20px;
+    font-weight:bold;
+  }
+  ol{
+    margin-bottom: 30px;
+    list-style: none;
+  }
+  li {
+    font-size: 19px;
+    line-height: 1.31579;
+    font-weight: 700;
+    text-transform: none;
+    padding-bottom: 10px;
+  }
+  li a{
+    color: #005ea5;
+    text-decoration: none;
+  }
+  li a:hover{
+    text-decoration: underline;
+  }
+}
+
+details.in-guidance summary {
+  margin-bottom: 0px;
+}
